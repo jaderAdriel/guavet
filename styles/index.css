@@ -1,0 +1,21 @@
+:root {
+    --pd-section: clamp(1rem, 2vw, 5rem),
+    --c-gray-1: #FFFFFF,
+    --c-gray-2: #F8F9FA,
+    --c-gray-3: #E9ECEF,
+    --c-gray-4: #DEE2E6,
+    --c-gray-5: #CED4DA,
+    --c-gray-6: #ADB5BD,
+    --c-gray-7: #6C757D,
+    --c-gray-8: #495057,
+    --c-gray-9: #343A40,
+    --c-gray-10: #212529,
+}
+
+/* 
+    padding section: 5rem
+*/
+
+.c-menu {
+    padding: var(--pd-section);
+}
