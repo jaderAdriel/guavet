@@ -1,6 +1,15 @@
 @use "index";
 @use "variables" as v;
 
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section--hero {
+    padding-left: 2.928vw;
+}
+
 .hero {
     display: flex;
     margin-bottom: 5.49vw;
