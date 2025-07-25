@@ -1,0 +1,206 @@
+@use "reset";
+@use "variables" as v;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  overflow: auto;
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE 10+ */
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari, Opera */
+}
+
+
+body.no-scroll {
+    overflow: hidden !important;
+}
+
+
+.--pd-x {
+    padding-left: v.$padding-x;
+    padding-right: v.$padding-x;
+}
+
+.--bg-brand {
+    background-color: v.$brand-1;
+    color: v.$gray-4;
+    --nav-active-color: #{v.$gray-1};
+}
+
+.--bg-brand-dark {
+    background-color: v.$brand-1-dark;
+    color: v.$gray-4;
+    --nav-active-color: #{v.$gray-1};
+}
+
+.--bg-white {
+    background-color: v.$gray-1;
+    color: v.$gray-7;
+    --nav-active-color: #{v.$brand-1};
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem v.$padding-x;
+    padding-bottom: 2rem;
+
+    &--fixed {
+        padding-top: 1.5em;
+        position: fixed; 
+        inset: 0; /* shorthand para top:0; right:0; bottom:0; left:0 */
+        z-index: 1000;
+        overflow-y: hidden;   
+    }
+
+    .nav{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+
+        .nav__logo {
+            width: 6.6rem;
+            height: auto;
+        }
+
+        .nav__menu-button {
+            padding: 1rem 0 1rem 1rem ;
+            display: none;
+            background-color: transparent;
+            svg {
+                width: 1.5rem;
+            }
+        }
+
+        .nav__list {
+            display: flex;
+            gap: 1rem;
+            font-size: 1rem;
+            align-items: center;
+        }
+
+        .nav__link{
+            line-height: 1.5;
+            padding-bottom: 0.5rem;
+            font-weight: 400;
+            position: relative;
+
+            &--active, &:hover {
+                color: var(--nav-active-color);
+            }
+
+            &--active::after {
+                content: "";
+                position: absolute;
+                bottom: 0; left: 0;
+                width: 100%; height: 2px;
+                border-radius: 2px;
+                background-color: var(--nav-active-color);
+            }
+        }
+
+        &--mobile {
+            
+            .nav__menu-button {
+                display: block;
+            }
+
+            &--close {
+                .nav__list {
+                    display: none;
+                    appearance: none;
+                }
+            }
+
+            &--open {
+                display: grid;
+                grid-template-areas:
+                    "logo button"
+                    "list list";
+                grid-template-columns: 1fr 1fr;
+                width: 100%;
+                height: fit-content;
+                
+
+                .nav__list {
+                    width: 100%;
+                    grid-area: list;
+                    display: flex;
+                    justify-content: baseline;
+                    align-items: baseline;
+                    flex-direction: column;
+                    padding-top: 3.875rem;
+                    gap: 2rem;
+                }
+
+                .nav__item {
+                    width: 100%;
+                }
+
+                .nav__link {
+                    display: block;
+                    color: v.$gray-7;
+                    &--active {color: v.$brand-1;}
+                    &--active::after { background-color: v.$brand-1;}
+                }
+
+
+                .nav__menu-button { 
+                    grid-area: button;
+                    justify-self: end;
+                    color: v.$brand-1;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                .nav__logo-link { grid-area: logo;}
+            }
+        }
+    }
+}
+
+.footer-section {
+    position: relative;
+    min-height: 30vh;
+    overflow: hidden;
+
+    &__pata-img {
+        position: absolute;
+        object-fit: fill;
+
+        &:first-child {
+            left: 0;
+            top: 0;
+            width: 5.5rem;
+            transform: translate(-20%, 20%) scaleX(-1);
+        }
+
+        &:nth-child(2) {
+            right: 0;
+            top: 0;
+            width: 5.5rem;
+            transform: translate(20%, 20%);
+        }
+        &:nth-child(3) {
+            bottom: 0;
+            left: 0;
+            transform: translate(-20%, 20%);
+        }
+        &:last-child {
+            transform: translate(20%, 20%) scaleX(-1);
+            bottom: 0; right: 0;
+        }
+
+        @media (max-width: 750px ) {
+            
+        }
+    }
+}

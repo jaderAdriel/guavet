@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="../dist/"/>
+    <link rel="stylesheet" href="styles/contate-nos.css">
+</head>
+
+<body>
+    <header class="header --bg-white" id="page-header">
+        <nav class="nav " id="page-navbar" role="navigation" aria-label="Menu principal">
+            <!-- Depois substituir pelo link do home -->
+            <a href="." class="nav__logo-link" aria-label="Página inicial">
+                <img class="nav__logo" src="assets/images/logo/guavet-header-logo-colorida.svg" alt="Logo da Guavet no Cabeçalho">
+            </a>
+
+            <button class="nav__menu-button" id="nav__menu-button" aria-label="Abrir ou fechar menu" aria-expanded="false" aria-controls="page-tabs">
+                <!-- icone é adicionado dinamicamente aqui -->
+            </button>
+
+            <ul class="nav__list" id="page-tabs">
+                <li class="nav__item"><a class="nav__link" href="#">Início</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Serviços</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Equipe</a></li>
+                <li class="nav__item"><a class="nav__link nav__link--active" href="#">Contate-nos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section section--hero --pd-x --bg-white" id="hero-section">
+        <div class="section__content">
+            <header class="section__header">
+                <h1 class="section__title">22 anos de excelência e amor pela vida dos pets!</h1>
+                <h2 class="section__subtitle">Fale com a gente! Estamos prontos pra cuidar do seu pet com carinho e atenção.</h2> 
+            </header>
+
+            <img class="section__image" src="assets/images/people/01.jpg" alt="Mulher cuidando de cachorro">
+
+            <div class="review">
+                <img class="review__image" src="assets/images/logo/google.png" alt="Logo do google">
+                <div class="review__content">
+                    <span class="review__count">+de 500 <br></span>
+                    avaliações no google
+                </div>
+                <img class="review__stars" src="assets/images/stars.svg" alt="4.5 de 5 nas avaliações do google">
+            </div>
+        </div>
+
+        <div class="form-container">
+            <form action="." class="form">
+                <p class="form__description">Precisa falar com a gente? É só preencher o formulário e retornamos rapidinho</p>
+                
+                <div class="form__content">
+                    <div class="form__field">
+                        <label class="form__label" for="nome">Nome <span aria-label="Campo obrigatório">*</span> </label>
+                        <input class="form__input" required type="text" name="nome" placeholder="Seu nome" >
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label" for="telefone">Telefone <span aria-label="Campo obrigatório">*</span> </label>
+                        <input class="form__input" required type="text" name="nome" placeholder="Telefone/WhatsApp">
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label" for="mensagem">Mensagem<span aria-label="Campo obrigatório">*</span> </label>
+                        <textarea cols="2" class="form__input" required name="mensagem" id="mensagemTextarea" placeholder="Em quê podemos ajudar"></textarea>
+                    </div>
+                    
+                    <div class="form__field  form__field--checkbox">
+                        <label class="form__label" for="aceitoContato">Aceito contato via WhatsApp<span aria-label="Campo obrigatório">*</span> </label>
+                        <input class="form__input form__input" required type="checkbox" name="aceitoContato" >
+                    </div>
+
+                    <button type="submit" class="form__button-submit">Enviar mensagem</button>
+                </div>
+
+
+            </form>
+
+        </div>
+    </section>
+
+    <footer class="footer-section --bg-brand" id="page-footer">
+        <img class="footer-section__pata-img" src="assets/images/pata.png" aria-hidden="true" alt="imagem de pata">
+        <img class="footer-section__pata-img" src="assets/images/pata.png" aria-hidden="true" alt="imagem de pata">
+        <img class="footer-section__pata-img" src="assets/images/pata.png" aria-hidden="true" alt="imagem de pata">
+        <img class="footer-section__pata-img" src="assets/images/pata.png" aria-hidden="true" alt="imagem de pata">
+        
+    </footer>
+</body>
+<script>
+    const navbar = document.getElementById("page-navbar");
+    const header = document.getElementById("page-header")
+    const buttonMenu = navbar.querySelector(".nav__menu-button");
+    const logoImg = navbar.querySelector(".nav__logo")
+    const body = document.querySelector("body");
+
+    const closeMenuIconHTML = `
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.9844 2.42188L9.40625 8L14.9844 13.5781L13.5781 14.9844L8 9.40625L2.42188 14.9844L1.01562 13.5781L6.59375 8L1.01562 2.42188L2.42188 1.01562L8 6.59375L13.5781 1.01562L14.9844 2.42188Z" fill="currentColor"/>
+        </svg>`;
+
+    const openMenuIconHTMl = `
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`;
+
+
+    const handleWindowSize = () => {
+
+        if (window.innerWidth < 550) {
+            closeMenu();
+            navbar.classList.add("nav--mobile");
+        } else {
+            closeMenu();
+            navbar.classList.remove("nav--mobile");
+            navbar.classList.remove("nav--mobile--close");
+        }
+    }
+
+    window.addEventListener('load', (e) => { handleWindowSize() });
+    window.addEventListener('resize', (e) => { handleWindowSize() });
+
+    const openMenu = () => {
+        buttonMenu.innerHTML = closeMenuIconHTML;
+        // logoImg.src = 'assets/images/logo/guavet-header-logo-colorida.svg'
+
+        navbar.classList.add("nav--mobile--open");
+        navbar.classList.remove("nav--mobile--close");
+
+        buttonMenu.setAttribute("aria-expanded", "true");
+        
+        header.classList.add("header--fixed");
+        body.classList.add("no-scroll");
+    }
+
+    const closeMenu = () => {
+        buttonMenu.innerHTML = openMenuIconHTMl;
+        // logoImg.src = 'assets/images/logo/guavet-header-logo.svg';
+
+        navbar.classList.add("nav--mobile--close");
+        navbar.classList.remove("nav--mobile--open");
+        
+        buttonMenu.setAttribute("aria-expanded", "false");
+
+        header.classList.remove("header--fixed");
+        body.classList.remove("no-scroll");
+    }
+
+    buttonMenu.addEventListener("click", () => {
+        if (navbar.classList.contains("nav--mobile--open")) {
+            closeMenu();
+            return;
+        }
+
+        openMenu();
+    })
+
+</script>
+</html>

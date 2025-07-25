@@ -1,0 +1,164 @@
+@use "index";
+@use "variables" as v;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+#hero-section {
+    $gap : v.$padding-md;
+    $radius: clamp(1rem, 2vw, 1.5rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: v.$padding-md;
+    gap: $gap;
+
+    @media (max-width: 67rem) {
+        grid-template-columns: 1fr;
+    }
+
+    .section__content {
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "image  review";
+        grid-template-columns: 1fr 1fr;
+        gap: $gap;
+        .section__header {
+            grid-area: header;
+            background-color: v.$brand-1-dark;
+            padding: v.$padding-md;
+            width: 100%;
+            border-radius: $radius;
+
+            color: v.$gray-1;
+            .section__title{
+                font-size: clamp(1.5rem, 3vw, 2.5rem);
+                line-height: 150%;
+                font-family: 'Raleway', 'Poppins', sans-serif;
+            }
+            .section__subtitle{
+                font-size: clamp(0.9rem, 3vw, 1.1rem);
+                padding-top: 1.5rem;
+                font-weight: 700;
+            }
+        }
+
+        .section__image {
+            grid-area: image;
+            width: 100%;
+            height: 100%;
+            border-radius: $radius;
+            object-fit: cover;
+        }
+
+        .review {
+            grid-area: review;
+            width: 100%;
+            background-color: v.$gray-3;
+            border-radius: $radius;
+            padding: clamp(1rem, 2vw, 1.5rem);
+            &__image {
+                width: clamp(2.5rem, 4.68vw, 4rem);
+                height: clamp(2.5rem, 4.68vw, 4rem);
+                border-radius: 50%;
+                margin-bottom: clamp(0.8125rem, 1.171vw, 1rem);
+            }
+
+            &__content {
+                font-family: 'Raleway', 'Poppins', sans-serif;
+                font-weight: 400;
+                font-size: clamp(0.75rem, 3vw, 1.125rem); 
+                color: v.$gray-10;
+            }
+
+            &__count {
+                font-size: clamp(1.25rem, 5vw, 2rem);
+            }
+            &__stars {
+                margin-top: clamp(0.8125rem, 2vw, 2rem);
+            }
+        }
+    }
+
+
+    .form-container {
+        background-color: v.$gray-3;
+        background-image: url("./../assets/images/grama.svg");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        border-radius: $radius;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: v.$padding-md;
+            right: v.$padding-md;
+            width: clamp(4.671rem, 7vw, 6.502rem);
+            height: clamp(6rem, 9vw, 8.352rem);
+            background-image: url("./../assets/images/animals/cat-2.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .form {
+            width: 100%;
+            max-width: 27rem;
+            padding: v.$padding-md;
+            padding-bottom: 6rem;
+            &__description {
+                color: v.$brand-1;
+                font-size: clamp(0.875rem, 3vw, 1.125rem);
+                font-weight: 700;
+                line-height: clamp(0.875rem, 5vw, 1.75rem);
+                padding-bottom: v.$padding-sm-xl;
+            }
+
+            &__content {
+                display: flex;
+                flex-direction: column;
+                gap: v.$padding-sm;
+            }
+
+            &__field {
+                width: 100%;
+
+                &--checkbox {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    justify-content: start;
+
+                    .form__label {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            &__label{
+                display: block;
+                padding: 0.25rem 1rem;
+                font-size: 0.75rem;
+                span { color: red;}
+            }
+
+            input[type="text"].form__input, textarea.form__input {
+                width: 100%;
+                display: block;
+                font-size: 1rem;
+                line-height: 150%;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                border: 1px solid v.$gray-5; 
+            }
+
+            input[type="text"].form__input {
+            }
+        }
+    }
+    
+}

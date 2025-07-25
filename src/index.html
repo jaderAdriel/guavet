@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="../dist/"/>
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+
+<body>
+    <header class="header --bg-brand-dark" id="page-header">
+        <nav class="nav " id="page-navbar" role="navigation" aria-label="Menu principal">
+            <!-- Depois substituir pelo link do home -->
+            <a href="." class="nav__logo-link" aria-label="Página inicial">
+                <img class="nav__logo" src="assets/images/logo/guavet-header-logo-colorida.svg" alt="Logo da Guavet no Cabeçalho">
+            </a>
+
+            <button class="nav__menu-button" id="nav__menu-button" aria-label="Abrir ou fechar menu" aria-expanded="false" aria-controls="page-tabs">
+                <!-- icone é adicionado dinamicamente aqui -->
+            </button>
+
+            <ul class="nav__list" id="page-tabs">
+                <li class="nav__item"><a class="nav__link" href="#">Início</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Serviços</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Equipe</a></li>
+                <li class="nav__item"><a class="nav__link nav__link--active" href="#">Contate-nos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <section class="section section--hero --bg-brand-dark">
+        <div class="hero">
+            <div class="hero__left">
+                <div class="hero__text">
+                    <h1 class="hero__text-title"><span class="hero__text-title-highlight">Seu pet</span> cuidado com
+                        amor, 24h por dia</h1>
+                    <p class="hero__text-subtitle">Clínica e petshop com atendimento de confiança em um só lugar.</p>
+                </div>
+
+                <button class="hero__button">
+                    <a class="hero__button-link" href="#">Vamos começar?</a>
+                    <img class="hero__button-icon" src="assets/icons/message-icon.svg" alt="Ícone de mensagem">
+                </button>
+            </div>
+
+            <div class="hero__right">
+                <div class="hero__cubes">
+                    <div class="hero__cube hero__cube--top">
+                        <img src="assets/images/animals/hamister.svg" alt="Imagem de um Hamster"
+                            class="hero__cube-hamister">
+                    </div>
+
+                    <div class="hero__cube hero__cube--bottom">
+                        <img src="assets/images/logo/logo-cube.svg" alt="Logo da Guavet" class="hero__cube-logo">
+                    </div>
+                </div>
+
+                <div class="hero__image">
+                    <img class="hero__img" src="assets/images/people/employees-1.png" alt="Funcionários da Guavet">
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__info">
+            <div class="hero__info-top">
+                <div class="hero__info-corner hero__info-corner--left"></div>
+                <div class="hero__info-center">
+                    <img class="hero__info-center-img" src="assets/images/hospital-24h.svg" alt="Aqui tem hospital 24h">
+                </div>
+                <div class="hero__info-corner hero__info-corner--right"></div>
+
+                <div class="hero__info-cat">
+                    <img class="hero__info-cat-img" src="assets/images/animals/cat-1.svg" alt="Gatinho espreguiçando">
+                </div>
+                <div class="hero__info-dog">
+                    <img class="hero__info-dog-img" src="assets/images/animals/dog-2.svg"
+                        alt="Cachorrinho olhando para o lado">
+                </div>
+            </div>
+
+            <div class="hero__info-bottom">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section section--services">
+        <h2 class="services__title">Tudo para o bem-estar do seu pet!</h2>
+
+        <div class="services__list">
+            <article class="service-card">
+                <img class="service-card__img" src="assets/images/card-facade.svg" alt="Fachada da Guavet">
+                <div class="service-card__body">
+                    <h3 class="service-card__title">Hospital 24 horas</h3>
+                    <p class="service-card__description">Atendimento integrado para emergências e atendimentos
+                        essenciais 24 horas por dia.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <img class="service-card__img" src="assets/images/card-veterinarian.svg"
+                    alt="Veterinários cuidando de um cachorrinho">
+                <div class="service-card__body">
+                    <h3 class="service-card__title">Clínica</h3>
+                    <p class="service-card__description">Procedimentos clínicos especializados para a saúde e bem-estar
+                        do seu amigo.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <img class="service-card__img" src="assets/images/card-dog.svg"
+                    alt="Cachorrinho feliz deitado em cima de uma mesa">
+                <div class="service-card__body">
+                    <h3 class="service-card__title">Petshop</h3>
+                    <p class="service-card__description">Mimos e cuidados especiais: encontre tudo que seu pet precisa
+                        em nosso petshop.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <img class="service-card__img service-card__img--delivery" src="assets/images/card-help.png"
+                    alt="Entregador da Guavet fazendo uma entrega">
+                <div class="service-card__body">
+                    <h3 class="service-card__title">Delivery</h3>
+                    <p class="service-card__description">Oferecemos serviço de delivery, sabemos que a rotina pode ser
+                        corrida.</p>
+                </div>
+            </article>
+        </div>
+
+        <a class="services__button" href="#">Confira mais serviços</a>
+
+        <img class="services__grass" src="assets/images/grass-1.svg" alt="Grama decorativa">
+
+        <img class="services__dog" src="assets/images/animals/dog-1.svg" alt="Cachorrinho deitado com a língua de fora">
+    </section>
+
+    <section class="competence">
+        <div class="competence__content">
+            <div class="competence__left">
+                <h2 class="competence__title">
+                    Competência e dedicação para cuidar do seu melhor amigo!
+                </h2>
+
+                <div class="competence__text">
+                    <p class="competence__paragraph">
+                        Somos um hospital veterinário dedicado a oferecer o mais alto padrão de cuidados aos animais.
+                    </p>
+                    <p class="competence__paragraph">
+                        Nossa missão é garantir a saúde e o bem-estar dos seus companheiros de quatro patas…
+                    </p>
+                </div>
+
+                <a class="competence__button" href="#">Saiba mais</a>
+            </div>
+
+            <div class="competence__right">
+                <img class="competence__image competence__image--veterinarian"
+                    src="assets/images/people/veterinarian-1.svg" alt="Veterinária cuidando de um cachorro">
+                <div class="competence__logo">
+                    <img class="competence__logo-img" src="assets/images/logo/logo-clipboard.svg" alt="Logo da Guavet">
+                </div>
+                <div class="competence__card">
+                    <div class="competence__card-row">
+                        <img class="competence__card-icon" src="assets/icons/paw-1.svg"
+                            alt="Ícone de patinha de cachorro">
+                        <p class="competence__card-text">Conforto e bem-estar</p>
+                    </div>
+
+                    <div class="competence__card-row">
+                        <img class="competence__card-icon" src="assets/icons/paw-1.svg"
+                            alt="Ícone de patinha de cachorro">
+                        <p class="competence__card-text">Atendimento 24 horas</p>
+                    </div>
+
+                    <div class="competence__card-row">
+                        <img class="competence__card-icon" src="assets/icons/paw-1.svg"
+                            alt="Ícone de patinha de cachorro">
+                        <p class="competence__card-text">Tudo em um só lugar</p>
+                    </div>
+                </div>
+                <img class="competence__image competence__image--employees" src="assets/images/people/employees-2.svg"
+                    alt="Funcionários da Guavet">
+                <img class="competence__image competence__image--cat" src="assets/images/animals/cat-2.svg"
+                    alt="Gatinho feliz">
+            </div>
+        </div>
+    </section>
+
+    <section class="delivery">
+        <div class="delivery__content">
+            <div class="delivery__left">
+                <img class="delivery__image" src="assets/images/people/delivery-paw.png"
+                    alt="Entregador com uniforme segurando uma caixa, com uma pegada de cachorro ao fundo">
+            </div>
+
+            <div class="delivery__right">
+                <h2 class="delivery__title">Delivery com carinho</h2>
+                <div class="delivery__text">
+                    <p class="delivery__slogan">A gente cuida de tudo pra você e seu pet.</p>
+                    <p class="delivery__paragraph">Seja para levar seu pet com todo cuidado até a clínica ou para
+                        entregar os produtinhos favoritos dele em casa, nosso serviço de delivery foi feito para tornar
+                        sua rotina mais leve e segura.</p>
+                    <p class="delivery__paragraph">Porque quem ama, cuida — e a gente cuida até nos detalhes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    const navbar = document.getElementById("page-navbar");
+    const header = document.getElementById("page-header")
+    const buttonMenu = navbar.querySelector(".nav__menu-button");
+    const logoImg = navbar.querySelector(".nav__logo")
+    const body = document.querySelector("body");
+
+    const closeMenuIconHTML = `
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.9844 2.42188L9.40625 8L14.9844 13.5781L13.5781 14.9844L8 9.40625L2.42188 14.9844L1.01562 13.5781L6.59375 8L1.01562 2.42188L2.42188 1.01562L8 6.59375L13.5781 1.01562L14.9844 2.42188Z" fill="currentColor"/>
+        </svg>`;
+
+    const openMenuIconHTMl = `
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`;
+
+
+    const handleWindowSize = () => {
+
+        if (window.innerWidth < 550) {
+            closeMenu();
+            navbar.classList.add("nav--mobile");
+        } else {
+            closeMenu();
+            navbar.classList.remove("nav--mobile");
+            navbar.classList.remove("nav--mobile--close");
+        }
+    }
+
+    window.addEventListener('load', (e) => { handleWindowSize() });
+    window.addEventListener('resize', (e) => { handleWindowSize() });
+
+    const openMenu = () => {
+        buttonMenu.innerHTML = closeMenuIconHTML;
+        // logoImg.src = 'assets/images/logo/guavet-header-logo-colorida.svg'
+
+        navbar.classList.add("nav--mobile--open");
+        navbar.classList.remove("nav--mobile--close");
+
+        buttonMenu.setAttribute("aria-expanded", "true");
+        
+        header.classList.add("header--fixed");
+        body.classList.add("no-scroll");
+    }
+
+    const closeMenu = () => {
+        buttonMenu.innerHTML = openMenuIconHTMl;
+        // logoImg.src = 'assets/images/logo/guavet-header-logo.svg';
+
+        navbar.classList.add("nav--mobile--close");
+        navbar.classList.remove("nav--mobile--open");
+        
+        buttonMenu.setAttribute("aria-expanded", "false");
+
+        header.classList.remove("header--fixed");
+        body.classList.remove("no-scroll");
+    }
+
+    buttonMenu.addEventListener("click", () => {
+        if (navbar.classList.contains("nav--mobile--open")) {
+            closeMenu();
+            return;
+        }
+
+        openMenu();
+    })
+
+</script>
+</html>

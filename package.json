@@ -1,0 +1,30 @@
+{
+  "name": "guavet",
+  "version": "1.0.0",
+  "description": "landing page guavet petshot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass src/styles:dist/styles",
+    "sass:watch": "sass --watch src/styles:dist/styles",
+    "build:css": "sass src/styles:dist/styles",
+    "copy:assets": "cpy \"src/assets/**/*\" dist/assets --parents",
+    "build": "npm run build:css && npm run copy:assets"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaderAdriel/guavet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jaderAdriel/guavet/issues"
+  },
+  "homepage": "https://github.com/jaderAdriel/guavet#readme",
+  "devDependencies": {
+    "cpy-cli": "^5.0.0",
+    "sass": "^1.89.2"
+  }
+}

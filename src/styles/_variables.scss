@@ -1,0 +1,89 @@
+// Definição das cores base como variáveis SCSS
+$gray-1: #FFFFFF;
+$gray-2: #F8F9FA;
+$gray-3: #E9ECEF;
+$gray-4: #DEE2E6;
+$gray-5: #CED4DA;
+$gray-6: #ADB5BD;
+$gray-7: #6C757D;
+$gray-8: #495057;
+$gray-9: #343A40;
+$gray-10: #212529;
+
+$brand-1: #72A45C;
+$brand-1-light: #DDE9D8;
+$brand-1-dark: #24341D;
+
+$brand-2: #A45C89;
+$brand-2-light: #E9D8E3;
+$brand-2-dark: #341D2C;
+
+$success: #5DA857;
+$success-light: #FAFEF7;
+$success-dark: #588450;
+
+$alert: #FFCE73;
+$alert-light: #FFF9F6;
+$alert-dark: #BA9452;
+
+$error: #FF0909;
+$error-light: #FEF5F7;
+$error-dark: #A92B2E;
+
+
+$padding-xs: clamp(0.25rem, 1vw, 0.5rem);
+$padding-sm: clamp(0.5rem, 1.5vw, 1rem);
+$padding-sm-xl: clamp(1rem, 2vw, 1.5rem);
+$padding-md: clamp(1rem, 2vw, 2rem);
+$padding-lg: clamp(1.5rem, 3vw, 3rem);
+$padding-xl: clamp(2rem, 4vw, 4rem);
+$padding-xxl: clamp(3rem, 5vw, 6rem);
+
+$padding-x: clamp(1em, 5vw, 5.625em);
+
+@media (min-width: 1367px) {
+  $padding-x: clamp(6rem, 10vw, calc((100vw - 50rem) / 2));
+}
+
+
+:root {
+  --pd-x-default: $padding-x;
+
+  --c-gray-1: #{$gray-1};
+  --c-gray-2: #{$gray-2};
+  --c-gray-3: #{$gray-3};
+  --c-gray-4: #{$gray-4};
+  --c-gray-5: #{$gray-5};
+  --c-gray-6: #{$gray-6};
+  --c-gray-7: #{$gray-7};
+  --c-gray-8: #{$gray-8};
+  --c-gray-9: #{$gray-9};
+  --c-gray-10: #{$gray-10};
+
+  --color-brand-1: #{$brand-1};
+  --color-brand-1-light: #{$brand-1-light};
+  --color-brand-1-dark: #{$brand-1-dark};
+
+  --color-brand-2: #{$brand-2};
+  --color-brand-2-light: #{$brand-2-light};
+  --color-brand-2-dark: #{$brand-2-dark};
+
+  --color-success: #{$success};
+  --color-success-light: #{$success-light};
+  --color-success-dark: #{$success-dark};
+
+  --color-alert: #{$alert};
+  --color-alert-light: #{$alert-light};
+  --color-alert-dark: #{$alert-dark};
+
+  --color-error: #{$error};
+  --color-error-light: #{$error-light};
+  --color-error-dark: #{$error-dark};
+
+  --padding-xs: $padding-xs;
+  --padding-sm: $padding-sm;
+  --padding-md: $padding-md;
+  --padding-lg: $padding-lg;
+  --padding-xl: $padding-xl;
+  --padding-xxl: $padding-xxl;
+}
