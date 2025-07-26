@@ -7,7 +7,7 @@
 }
 
 .section--hero {
-    padding-left: 2.928vw;
+    padding-left: 5.857vw;
 }
 
 .hero {
@@ -180,7 +180,7 @@
     background: rgb(255 255 255 / 0.25);
     width: 99.2vw;
     height: 1.8vw;
-    margin: 0 -2.928vw;
+    margin: 0 -6.5vw;
     border-radius: 2.928vw 2.928vw 0 0;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(20px);
@@ -209,9 +209,9 @@
 
 .services__list {
     display: flex;
-    justify-content: center;
+    
     gap: 2.343vw;
-    margin: 0 8.8vw 1.757vw 2.928vw;
+    margin: 0 8.8vw 1.757vw 5.857vw;
 }
 
 .services__title {
@@ -220,7 +220,7 @@
     font-weight: 400;
     color: v.$brand-1;
     margin-bottom: 5.857vw;
-    margin-left: 2.928vw;
+    margin-left: 5.857vw;
 }
 
 .service-card {
@@ -271,7 +271,7 @@
     font-size: 1.318vw;
     color: v.$gray-1;
     border-radius: 0.586vw;
-    margin-left: 2.928vw;
+    margin-left: 5.857vw;
 }
 
 .services__grass {
@@ -293,7 +293,7 @@
 .competence {
     display: flex;
     flex-direction: column;
-    padding: 2.928vw;
+    padding: 5.857vw;
     background-color: v.$brand-1;
 }
 
@@ -335,7 +335,7 @@
     justify-content: center;
     align-items: center;
     font-size: 1.318vw;
-    background-color: v.$gray-1;
+    background-color: v.$gray-2;
     width: 10.908vw;
     height: 3.807vw;
     color: v.$brand-1;
@@ -419,7 +419,7 @@
 /* Section Delivery */
 
 .delivery {
-    background-color: v.$gray-1;
+    background-color: v.$gray-2;
     padding-bottom: 0.994vw;
 }  
 
@@ -468,4 +468,162 @@
     color: v.$brand-1;
     font-size: 1.171vw;
     margin-bottom: -0.586vw;
+}
+
+/* Section Professionals */
+
+.professionals {
+    background-color: v.$gray-2;
+    padding: 0 5.857vw 2.928vw 5.857vw;
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 1.171vw;
+        
+    }
+
+    &__card {
+        position: relative;
+        display: flex;
+        background-color: v.$gray-3;
+        height: 19.693vw;
+        
+        border-radius: 1.171vw;
+
+        &-info {
+            position: absolute;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            margin: 1.171vw;
+            gap: 0.293vw;
+
+            &--stefane {
+                right: 0;
+            }
+
+            &--higor {
+
+            }
+
+            &--breno {
+                display: flex;
+                flex-direction: column-reverse;
+                bottom: 0;
+                right: 0;
+            }
+
+            &--julia {
+
+            }
+        }
+        
+        &--stefane {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            height: 40.556vw
+        }
+
+        &--higor {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        &--breno {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        &--julia {
+            color: v.$gray-1;
+            background-color: v.$brand-1;
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        &-name {
+            color: v.$brand-1;
+            font-weight: bold;
+            font-size: 1.318vw;
+
+            &--julia {
+                color: v.$gray-1;
+            }
+        }
+    }
+
+    &__image {
+        &--stefane {
+            border-radius: 1.171vw;
+        }
+        &--higor {
+            position: relative;
+            left: 3vw;
+        }
+
+        &--breno {
+        }
+        &--julia {
+            position: absolute;
+            border-radius: 1.171vw;
+            right: 0;
+            height: 19.619vw;
+        }
+    }
+
+    &__icon {
+        &--heart {
+            position: relative;
+            left: 9.2vw;
+            width: 2.44vw;
+        }
+        &--bone {
+            width: 2.44vw;
+        }
+        &--dog {
+            position: relative;
+            left: 8vw;
+            height: 2.44vw;
+        }
+        &--paw {
+            width: 2.264vw;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        
+        justify-items: center;
+        grid-column: 3;
+        grid-row: 1;
+        width: 26.208vw;
+        height: 19.693vw;
+
+        &-title {
+            font-family: "Raleway", sans-serif;
+            font-weight: 600;
+            font-size: 2.343vw;
+            color: v.$brand-1;
+            margin-bottom: 2.343vw;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.586vw;
+        font-size: 1.318vw;
+        color: v.$brand-1;
+        background-color: v.$gray-1;
+        width: 18.96vw;
+        height: 3.807vw;
+        border-radius: 0.586vw;
+        &-icon {
+            width: 1.171vw;
+        }
+    }
 }
