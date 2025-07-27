@@ -305,7 +305,7 @@
 .services {
     &__list {
         display: flex;
-        gap: 2.343vw;
+        gap: clamp(0.5rem, -0.1059rem + 2.4666vw, 2rem);;
         margin: 0 8.8vw 1.757vw 5.857vw;
     }
 
@@ -368,12 +368,30 @@
     &__title {
         font-family: "Raleway", sans-serif;
         font-size: 1.757vw;
+        font-weight: bold;
     }
 
     &__description {
         font-family: "Poppins", sans-serif;
         font-size: 1.171vw;
         width: 17.936vw;
+    }
+
+    &--delivery {
+        position: relative;
+    }
+
+    &--delivery::after {
+        position: absolute;
+        left: 15.1vw;
+        bottom: 24.2vw;
+        content: "";
+        background-image: url(../../dist/assets/images/animals/bird.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 5.354vw;
+        height: 4.685vw;
     }
 }
 
