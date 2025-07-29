@@ -281,7 +281,7 @@
             }
 
             &-bottom {
-                width: 101vw;
+                width: 99vw;
                 height: 7.379vw;
                 border-radius: 7.125vw 7.125vw 0 0;
             }
@@ -305,57 +305,101 @@
 .services {
     &__list {
         display: flex;
-        gap: clamp(0.5rem, -0.1059rem + 2.4666vw, 2rem);;
-        margin: 0 8.8vw 1.757vw 5.857vw;
+        gap: clamp(0.5rem, -0.1059rem + 2.4666vw, 2rem);
+        margin: 0 clamp(1rem, -0.6156rem + 6.5776vw, 5rem) 1.757vw clamp(1rem, -0.6156rem + 6.5776vw, 5rem);
     }
 
     &__title {
         font-family: "Raleway", sans-serif;
-        font-size: 2.343vw;
+        font-size: clamp(1.25rem, 1.149rem + 0.4111vw, 1.5rem);
         font-weight: 400;
         color: v.$brand-1;
-        margin-bottom: 5.857vw;
+        margin-bottom: 2.343vw;
         margin-left: 5.857vw;
     }
 
     &__button {
         background-color: v.$brand-1;
-        padding: 0.878vw 1.757vw;
-        max-width: 17.716vw;
-        font-size: 1.318vw;
+        padding: clamp(0.5rem, 0.399rem + 0.4111vw, 0.75rem) clamp(1rem, 0.798rem + 0.8222vw, 1.5rem);
+        max-width: clamp(12.8125rem, 11.8785rem + 3.8027vw, 15.125rem);
+        font-size: clamp(1rem, 0.9495rem + 0.2055vw, 1.125rem);
         color: v.$gray-1;
-        border-radius: 0.586vw;
+        border-radius: clamp(0.5rem, 0.5rem + 0vw, 0.5rem);
         margin-left: 5.857vw;
+    }
+
+    &__grass {
+        background-image: url(../../dist/assets/images/grass-1.svg);
+        background-size: cover;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 12.5vw;
     }
 
     &__dog {
         position: absolute;
         transform: scaleX(-1);
-        right: 21vw;
-        bottom: 0;
+        right: 20vw;
+        bottom: 1vw;
         width: 12.518vw;
     }
+
+    @media (max-width: 768px){
+        &__list {
+            flex-direction: column;
+            margin-bottom: 4.071vw;
+        }
+
+        &__title {
+            display: none;
+        }
+
+        &__button {
+            margin-bottom: 1.5vw;
+        }
+
+        &__grass {
+            
+            background-image: url(../../dist/assets/images/grass-2.svg);
+            background-position: bottom;
+            background-size: cover;
+            width: 100%;
+            height: 17.9vw;
+        }
+
+        &__dog {
+            transform: scaleX(1);
+            width: 31.008vw;
+            right: 10vw;
+        } //falta o cachorrinho
+    }
 }
+
 
 .service-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    gap: 1.171vw;
+    gap: 1.757vw;
     padding: 1.171vw;
     background-color: v.$gray-3;
     width: 20.278vw;
     height: 24.597vw;
-    border-radius: 1.171vw;
+    border-radius: clamp(1rem, 1rem + 0vw, 1rem);
 
     &__img {
         width: 17.936vw;
         height: 11.274vw;
         object-fit: cover;
 
+        &--facade {
+            border-radius: clamp(0.5rem, 0.5rem + 0vw, 0.5rem);
+        }
+
         &--delivery {
-            border-radius: 0.586vw;
+            border-radius: clamp(0.5rem, 0.5rem + 0vw, 0.5rem);
         }
     }
 
@@ -392,6 +436,55 @@
         background-position: center;
         width: 5.354vw;
         height: 4.685vw;
+    }
+
+    @media (max-width: 768px){
+        & {
+            width: 100%;
+            height: 36.896vw;
+            box-sizing: border-box;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 4.071vw;
+            gap: 4.071vw;
+        }
+
+        &__img {
+            width: 28.753vw;
+            height: 28.753vw;
+            border-radius: 2.036vw;
+        }
+
+        &__title {
+            font-size: 5.089vw;
+        }
+
+        &__description {
+            font-size: 3.562vw;
+            width: 100%;
+        }
+
+        &--delivery::after {
+            display: none;
+        }
+
+        &--facade {
+            position: relative;
+        }
+
+        &--facade::after {
+            position: absolute;
+            left: 80vw;
+            bottom: 36vw;
+            content: "";
+            background-image: url(../../dist/assets/images/animals/bird.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 10.687vw;
+            height: 9.351vw;
+        }
     }
 }
 
@@ -506,7 +599,6 @@
         margin-bottom: -2vw;
         border-radius: 1.171vw;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
-        overflow: hidden;
 
         &-row {
             display: flex;
