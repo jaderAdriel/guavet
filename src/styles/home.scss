@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 // Mixin para o efeito de glassmorphism
-@mixin glass-effect($color: rgb(255 255 255 / 0.25), $blur: 20px) {
+@mixin glass-effect($color: rgb(255 255 255 / 0.25), $blur: 5px) {
     background: $color;
     backdrop-filter: blur($blur);
     -webkit-backdrop-filter: blur($blur);
@@ -372,7 +372,7 @@
             transform: scaleX(1);
             width: 31.008vw;
             right: 10vw;
-        } //falta o cachorrinho
+        }
     }
 }
 
@@ -382,11 +382,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    gap: 1.757vw;
-    padding: 1.171vw;
+    gap: clamp(0.940rem, 1.757vw, 2.108rem);
+    padding: clamp(0.626rem, 1.171vw, 1.405rem);
     background-color: v.$gray-3;
-    width: 20.278vw;
-    height: 24.597vw;
+    width: clamp(10.849rem, 20.278vw, 24.334rem);
+    height: clamp(13.159rem, 24.597vw, 29.516rem);
     border-radius: clamp(1rem, 1rem + 0vw, 1rem);
 
     &__img {
@@ -411,14 +411,14 @@
 
     &__title {
         font-family: "Raleway", sans-serif;
-        font-size: 1.757vw;
+        font-size: clamp(0.940rem, 1.757vw, 2.108rem);
         font-weight: bold;
     }
 
     &__description {
         font-family: "Poppins", sans-serif;
-        font-size: 1.171vw;
-        width: 17.936vw;
+        font-size: clamp(0.626rem, 1.171vw, 1.405rem);
+        width: clamp(9.596rem, 17.936vw, 21.523rem);
     }
 
     &--delivery {
@@ -441,27 +441,27 @@
     @media (max-width: 768px){
         & {
             width: 100%;
-            height: 36.896vw;
+            height: clamp(8.302rem, 36.896vw, 17.710rem);
             box-sizing: border-box;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding: 4.071vw;
-            gap: 4.071vw;
+            padding: clamp(0.916rem, 4.071vw, 1.954rem);
+            gap: clamp(0.916rem, 4.071vw, 1.954rem)
         }
 
         &__img {
-            width: 28.753vw;
-            height: 28.753vw;
-            border-radius: 2.036vw;
+            width: clamp(6.469rem, 28.753vw, 13.801rem);
+            height: clamp(6.469rem, 28.753vw, 13.801rem);
+            border-radius: clamp(0.458rem, 2.036vw, 0.977rem);
         }
 
         &__title {
-            font-size: 5.089vw;
+            font-size: clamp(1.145rem, 5.089vw, 2.443rem);
         }
 
         &__description {
-            font-size: 3.562vw;
+            font-size: clamp(0.801rem, 3.562vw, 1.710rem);
             width: 100%;
         }
 
@@ -482,8 +482,8 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
-            width: 10.687vw;
-            height: 9.351vw;
+            width: clamp(2.405rem, 10.687vw, 5.130rem);
+            height: clamp(2.104rem, 9.351vw, 4.488rem);
         }
     }
 }
@@ -495,20 +495,29 @@
 .competence {
     display: flex;
     flex-direction: column;
-    padding: 5.857vw;
+    padding: clamp(3.133rem, 5.857vw, 7.028rem);
     background-color: v.$brand-1;
 
     &__content {
         display: flex;
-        gap: 3.807vw;
+        gap: clamp(2.037rem, 3.807vw, 4.568rem);
+    }
+
+    @media (max-width: 768px){
+        padding: clamp(0.916rem, 4.071vw, 1.399rem) clamp(0.916rem, 4.071vw, 1.399rem) clamp(3.836rem, 17.048vw, 5.860rem) clamp(0.916rem, 4.071vw, 1.399rem);
+
+        &__content {
+            flex-direction: column;
+            gap: clamp(1.660rem, 7.379vw, 3.542rem);
+        }
     }
 
     &__left {
         display: flex;
         flex-direction: column;
         color: v.$gray-1;
-        gap: 2.928vw;
-        margin-top: 3.953vw;
+        gap: clamp(1.566rem, 2.928vw, 3.514rem);
+        margin-top: clamp(2.115rem, 3.953vw, 4.744rem);
     }
 
     &__right {
@@ -518,40 +527,65 @@
 
     &__title {
         font-family: "Raleway", sans-serif;
-        font-size: 2.343vw;
-        width: 37.994vw;
+        font-weight: bold;
+        font-size: clamp(1.254rem, 0.0006rem + 2.3429vw, 2.812rem);
+        width: clamp(20.327rem, 37.994vw, 45.593rem);
         line-height: 1.50;
+    }
+
+    @media (max-width: 768px){
+        &__title {
+            font-size: clamp(1.374rem, 6.107vw, 2.099rem);
+            width: 100%;
+        }
     }
 
     &__text {
         display: flex;
         flex-direction: column;
-        gap: 1.171vw;
-        font-size: 1.318vw;
-        width: 37.994vw;
+        gap: clamp(0.626rem, 1.171vw, 1.405rem);
+        font-size: clamp(0.705rem, 1.318vw, 1.582rem);
+        width: clamp(20.327rem, 37.994vw, 45.593rem);
+    }
+
+    @media (max-width: 768px){
+        &__text {
+            gap: clamp(0.458rem, 2.036vw, 0.700rem);
+            font-size: clamp(0.916rem, 4.071vw, 1.399rem);
+            width: 100%;
+        }
     }
 
     &__button {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.318vw;
+        font-size: clamp(0.705rem, 1.318vw, 1.582rem);
         background-color: v.$gray-2;
-        width: 10.908vw;
-        height: 3.807vw;
+        width: clamp(5.836rem, 10.908vw, 13.090rem);
+        height: clamp(2.037rem, 3.807vw, 4.568rem);
         color: v.$brand-1;
-        border-radius: 0.586vw;
+        border-radius: clamp(0.314rem, 0.586vw, 0.703rem);
+    }
+
+    @media (max-width: 768px){
+        &__button {
+            font-size: clamp(1.030rem, 4.58vw, 1.574rem);
+            width: clamp(8.530rem, 37.913vw, 13.033rem);
+            height: clamp(2.977rem, 13.232vw, 4.548rem);
+            border-radius: clamp(0.458rem, 2.036vw, 0.700rem);
+        }
     }
 
     &__image {
         &--veterinarian {
-            width: 7.253vw;
+            width: clamp(3.880rem, 7.253vw, 8.704rem);
             position: absolute;
         }
 
         &--employees {
-            width: 46.485vw;
-            height: 36.31vw;
+            width: clamp(24.869rem, 46.485vw, 55.782rem);
+            height: clamp(19.426rem, 36.31vw, 43.572rem);
         }
 
         &--cat {
@@ -559,7 +593,24 @@
             transform: scaleX(-1);
             right: 0;
             bottom: 0;
-            width: 7.627vw;
+            width: clamp(4.080rem, 7.627vw, 9.152rem);
+        }
+    }
+
+    @media (max-width: 768px){
+        &__image {
+            &--veterinarian {
+                width: 14.308vw;
+            }
+
+            &--employees {
+                width: 91.855vw;
+                height: 71.501vw;
+            }
+
+            &--cat {
+                width: 15.071vw;
+            }
         }
     }
 
@@ -570,15 +621,30 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0.586vw;
+        padding: clamp(0.314rem, 0.586vw, 0.703rem);
         @include glass-effect(color-mix(in srgb, v.$brand-1-dark 50%, transparent));
-        border-radius: 1.171vw;
+        border-radius: clamp(0.626rem, 1.171vw, 1.405rem);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
         overflow: hidden;
 
         &-img {
-            width: 5.857vw;
-            height: 5.71vw;
+            width: clamp(3.133rem, 5.857vw, 7.028rem);
+            height: clamp(3.055rem, 5.71vw, 6.852rem);
+        }
+    }
+
+    @media (max-width: 768px){
+        &__logo {
+            padding: clamp(0.458rem, 2.036vw, 0.700rem);
+            border-radius: clamp(0.916rem, 4.071vw, 1.399rem);
+            right: 1.2vw;
+            top: -5vw;
+            
+
+            &-img {
+                width: clamp(3.550rem, 15.776vw, 5.423rem);
+                height: clamp(3.550rem, 15.776vw, 5.423rem);
+            }
         }
     }
 
@@ -590,28 +656,50 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: 1.171vw;
-        padding-left: 1.171vw;
-        width: 15.227vw;
-        height: 7.906vw;
+        gap: clamp(0.626rem, 1.171vw, 1.405rem);
+        padding-left: clamp(0.626rem, 1.171vw, 1.405rem);
+        width: clamp(8.146rem, 15.227vw, 18.272rem);
+        height: clamp(4.230rem, 7.906vw, 9.487rem);
         @include glass-effect(color-mix(in srgb, v.$brand-1-dark 50%, transparent));
         margin-left: -2vw;
         margin-bottom: -2vw;
-        border-radius: 1.171vw;
+        border-radius: clamp(0.626rem, 1.171vw, 1.405rem);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
 
         &-row {
             display: flex;
-            gap: 0.586vw;
+            gap: clamp(0.314rem, 0.586vw, 0.703rem);
         }
 
         &-icon {
-            width: 0.848vw;
+            width: clamp(0.454rem, 0.848vw, 1.018rem);
         }
 
         &-text {
             color: v.$gray-1;
-            font-size: 1.025vw;
+            font-size: clamp(0.548rem, 1.025vw, 1.230rem);
+        }
+    }
+
+    @media (max-width: 768px){
+        &__card {
+            padding-left: clamp(0.916rem, 4.071vw, 1.399rem);
+            width: clamp(11.908rem, 52.926vw, 18.193rem);
+            height: clamp(6.183rem, 27.481vw, 9.447rem);
+            border-radius: clamp(0.916rem, 4.071vw, 1.399rem);
+            gap: clamp(0.916rem, 4.071vw, 1.399rem);
+
+            &-row {
+                gap: clamp(0.458rem, 2.036vw, 0.700rem);
+            }
+
+            &-icon {
+                width: clamp(0.664rem, 2.949vw, 1.014rem);
+            }
+
+            &-text {
+                font-size: clamp(0.801rem, 3.562vw, 1.224rem);
+            }
         }
     }
 }
