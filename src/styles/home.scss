@@ -717,13 +717,41 @@
         gap: 7.028vw;
     }
 
+    @media (max-width: 768px){
+        padding: clamp(0.916rem, 4.071vw, 1.221rem);
+        &__content {
+            flex-direction: column-reverse;
+            gap: clamp(0.916rem, 4.071vw, 1.221rem);
+        }
+    }
+
     &__left {
         width: 47.176vw;
     }
 
+    @media (max-width: 768px){
+        &__left {
+            margin: 0 auto;
+            width: 60%;
+        }
+    }
+
+    @media (max-width: 480px){
+        &__left {
+            width: 100%;
+        }
+    }
+
+
     &__image {
         margin-top: 4.685vw;
         margin-left: -4.1vw;
+    }
+
+    @media (max-width: 768px){
+        &__image {
+            margin: 0;
+        }
     }
 
     &__right {
@@ -734,11 +762,24 @@
         margin-top: 18.521vw;
     }
 
+    @media (max-width: 768px){
+        &__right {
+            width: fit-content;
+            margin: 0;
+        }
+    }
+
     &__title {
         color: v.$brand-1;
         font-weight: 600;
         font-family: "Raleway", sans-serif;
         font-size: 2.343vw;
+    }
+
+    @media (max-width: 768px){
+        &__title {
+            font-size: clamp(1.145rem, 5.089vw, 1.527rem);
+        }
     }
 
     &__text {
@@ -748,14 +789,34 @@
         color: v.$gray-10;
     }
 
+    @media (max-width: 768px){
+        &__text {
+            gap: clamp(0.916rem, 4.071vw, 1.221rem);
+        }
+    }
+
     &__paragraph {
+        color: v.$gray-7;
         font-size: 1.318vw;
+    }
+
+    @media (max-width: 768px){
+        &__paragraph {
+            font-size: clamp(1.030rem, 4.58vw, 1.374rem)
+        }
     }
 
     &__slogan {
         color: v.$brand-1;
         font-size: 1.171vw;
         margin-bottom: -0.586vw;
+    }
+
+    @media (max-width: 768px){
+        &__slogan {
+            font-size: clamp(0.916rem, 4.071vw, 1.221rem);
+            margin-bottom: clamp(0.458rem, 2.036vw, 0.611rem);
+        }
     }
 }
 
