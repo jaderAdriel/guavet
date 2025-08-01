@@ -826,13 +826,22 @@
    ========================================================================== */
 .professionals {
     background-color: v.$gray-2;
-    padding: 0 5.857vw 2.928vw 5.857vw;
+    padding: 0 clamp(2.815rem, 5.857vw, 7.028rem) clamp(1.407rem, 2.928vw, 3.514rem) clamp(2.815rem, 5.857vw, 7.028rem);
 
     &__content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 1fr;
-        gap: 1.171vw;
+        gap: clamp(0.563rem, 1.171vw, 1.405rem);
+    }
+
+    @media (max-width: 768px){
+        padding: 0 4.071vw 2.928vw 4.071vw;
+        &__content {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            gap: 3.817vw;
+        }
     }
 
     &__card {
@@ -840,15 +849,15 @@
         display: flex;
         background-color: v.$gray-3;
         height: 19.693vw;
-        border-radius: 1.171vw;
+        border-radius: clamp(0.563rem, 1.171vw, 1.405rem);
 
         &-info {
             position: absolute;
             display: flex;
             align-items: flex-start;
             flex-direction: column;
-            margin: 1.171vw;
-            gap: 0.293vw;
+            margin: clamp(0.788rem, 1.64vw, 1.968rem);
+            gap: clamp(0.141rem, 0.293vw, 0.352rem);
 
             &--stefane {
                 right: 0;
@@ -864,7 +873,7 @@
         &-name {
             color: v.$brand-1;
             font-weight: bold;
-            font-size: 1.318vw;
+            font-size: clamp(0.633rem, 1.318vw, 1.582rem);
 
             &--julia {
                 color: v.$gray-1;
@@ -874,7 +883,7 @@
         &--stefane {
             grid-column: 1;
             grid-row: 1 / 3;
-            height: 40.556vw;
+            height: clamp(19.492rem, 40.556vw, 48.667rem);
         }
 
         &--higor {
@@ -895,21 +904,119 @@
         }
     }
 
+    @media (max-width: 768px){
+        &__card {
+            flex-direction: column;
+            height: 69.211vw;
+            border-radius: clamp(0.916rem, 4.071vw, 1.247rem);
+            padding: clamp(0.458rem, 2.036vw, 0.624rem) 0 0 0;
+            overflow: hidden;
+
+            &-info {
+                width: 100%;
+                gap: clamp(0.458rem, 2.036vw, 0.624rem);
+                &--stefane {
+                    padding-left: clamp(0.458rem, 2.036vw, 0.624rem);
+                    right: auto;
+                }
+
+                &--breno {
+                    padding-left: clamp(0.458rem, 2.036vw, 0.624rem);
+                    flex-direction: column;
+                    bottom: auto;
+                    right: auto;
+                }
+
+                &--higor {
+                    padding-left: clamp(0.458rem, 2.036vw, 0.624rem);
+                }
+            }
+
+            &-name {
+                font-size: clamp(0.916rem, 4.071vw, 1.247rem);
+            }
+
+            &--stefane {
+                grid-column: 1;
+                grid-row: 2;
+                height: auto;
+            }
+
+            &--higor {
+                grid-column: 2;
+                grid-row: 2;
+            }
+
+            &--breno {
+                grid-column: 1;
+                grid-row: 3;
+            }
+
+            &--julia {
+                color: v.$gray-1;
+                background-color: v.$brand-1;
+                grid-column: 2;
+                grid-row: 3;
+            }
+        }
+    }
+
     &__image {
         &--stefane {
-            border-radius: 1.171vw;
+            border-radius: clamp(0.563rem, 1.171vw, 1.405rem);
         }
 
         &--higor {
             position: relative;
-            left: 3vw;
+            left: 3.5vw;
+            object-fit: contain;
+            width: 25vw;
         }
 
         &--julia {
             position: absolute;
-            border-radius: 1.171vw;
+            border-radius: clamp(0.563rem, 1.171vw, 1.405rem);
             right: 0;
-            height: 19.619vw;
+            height: clamp(9.429rem, 19.619vw, 23.543rem);
+        }
+    }
+
+    @media (max-width: 768px){
+        &__image {
+            &--stefane {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                border-radius: 4.071vw;
+                transform: scaleX(-1);
+                height: 52vw;
+            }
+
+            &--higor {
+                position: absolute;
+                object-fit: contain;
+                transform: scale(1.45);
+                bottom: 8vw;
+                right: 9vw;
+                left: auto;
+                width: auto;
+            }
+
+            &--breno {
+                position: absolute;
+                bottom: -2vw;
+                transform: scale(0.95);
+            }
+
+            &--julia {
+                position: absolute;
+                object-fit: cover;
+                width: 100vw;
+                transform: scale(1.22);
+                right: auto;
+                height: auto;
+                bottom: 3vw;
+            }
         }
     }
 
@@ -935,21 +1042,59 @@
         }
     }
 
+    @media (max-width: 768px){
+        &__icon {
+            &--heart {
+                width: 8.481vw;
+                left: 0;
+            }
+    
+            &--bone {
+                width: 8.481vw;
+            }
+    
+            &--dog {
+                height: 8.481vw;
+                left: auto;
+            }
+    
+            &--paw {
+                width: 9.5vw;
+                padding-left: 2.036vw;
+            }
+        }
+    }
+
     &__info {
         display: flex;
         flex-direction: column;
         justify-items: center;
         grid-column: 3;
         grid-row: 1;
-        width: 26.208vw;
-        height: 19.693vw;
+        width: clamp(12.596rem, 26.208vw, 31.450rem);
+        height: clamp(9.465rem, 19.693vw, 23.632rem);
+        
 
         &-title {
             font-family: "Raleway", sans-serif;
             font-weight: 600;
-            font-size: 2.343vw;
+            font-size: clamp(1.126rem, 2.343vw, 2.812rem);
             color: v.$brand-1;
-            margin-bottom: 2.343vw;
+            margin-bottom: clamp(1.126rem, 2.343vw, 2.812rem);
+        }
+    }
+
+    @media (max-width: 768px){
+        &__info {
+            grid-column: 1 / -1;
+            grid-row: 1;
+            width: 100%;
+            height: clamp(9.389rem, 41.73vw, 12.780rem);
+            
+
+            &-title {
+                font-size: clamp(1.374rem, 6.107vw, 1.870rem);
+            }
         }
     }
 
@@ -957,16 +1102,30 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 0.586vw;
-        font-size: 1.318vw;
+        gap: clamp(0.282rem, 0.586vw, 0.703rem);
+        font-size: clamp(0.633rem, 1.318vw, 1.582rem);
         color: v.$brand-1;
         background-color: v.$gray-1;
-        width: 18.96vw;
-        height: 3.807vw;
-        border-radius: 0.586vw;
+        width: clamp(9.113rem, 18.96vw, 22.752rem);
+        height: clamp(1.830rem, 3.807vw, 4.568rem);
+        border-radius: clamp(0.282rem, 0.586vw, 0.703rem);
 
         &-icon {
-            width: 1.171vw;
+            width: clamp(0.563rem, 1.171vw, 1.405rem);
+        }
+    }
+
+    @media (max-width: 768px){
+        &__button {
+            width: clamp(12.767rem, 56.743vw, 17.378rem);
+            height: clamp(2.290rem, 10.178vw, 3.117rem);
+            font-size: clamp(0.916rem, 4.071vw, 1.247rem);
+            border-radius: clamp(0.458rem, 2.036vw, 0.624rem);
+            gap: clamp(0.458rem, 2.036vw, 0.624rem);
+
+            &-icon {
+                width: clamp(0.916rem, 4.071vw, 1.247rem);
+            }
         }
     }
 }
