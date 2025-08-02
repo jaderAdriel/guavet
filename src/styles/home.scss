@@ -826,7 +826,7 @@
    ========================================================================== */
 .professionals {
     background-color: v.$gray-2;
-    padding: 0 clamp(2.815rem, 5.857vw, 7.028rem) clamp(1.407rem, 2.928vw, 3.514rem) clamp(2.815rem, 5.857vw, 7.028rem);
+    padding: 0 clamp(2.815rem, 5.857vw, 7.028rem) 11.127vw clamp(2.815rem, 5.857vw, 7.028rem);
 
     &__content {
         display: grid;
@@ -1125,6 +1125,235 @@
 
             &-icon {
                 width: clamp(0.916rem, 4.071vw, 1.247rem);
+            }
+        }
+    }
+}
+
+
+.feedback {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: v.$gray-2;
+    &__container {
+        display: flex;
+        align-items: center;
+        background-color: v.$brand-1;
+        width: clamp(42.433rem, 88.287vw, 105.944rem);
+        height: clamp(19.492rem, 40.556vw, 48.667rem);
+        border-radius: clamp(1.126rem, 2.343vw, 2.812rem);
+        gap: clamp(0.844rem, 1.757vw, 2.108rem);
+        padding-left: clamp(1.407rem, 2.928vw, 3.514rem);
+    }
+
+    &__image-side {
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        width: clamp(2.346rem, 4.881vw, 5.857rem);
+    }
+
+    &__image {
+        width: clamp(17.065rem, 35.505vw, 42.606rem);
+        height: clamp(16.678rem, 34.7vw, 41.640rem);
+        z-index: 0;
+    }
+
+    &__card {
+        @include glass-effect($blur: 4px);
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: clamp(7.178rem, 14.934vw, 17.921rem);
+        height: clamp(6.544rem, 13.616vw, 16.339rem);
+        background-color: rgba(v.$brand-1-dark, 0.35);
+        padding: clamp(0.844rem, 1.757vw, 2.108rem);
+        bottom: -1vw;
+        right: 22vw;
+        z-index: 3;
+        border-radius: clamp(0.563rem, 1.171vw, 1.405rem);
+        gap: clamp(0.282rem, 0.586vw, 0.703rem);
+
+        &-logo {
+            width: clamp(1.126rem, 2.343vw, 2.812rem);
+        }
+
+        &-texts {
+            &--title {
+                font-family: "Raleway", sans-serif;
+                font-size: clamp(1.126rem, 2.343vw, 2.812rem);
+                font-weight: 400;
+                color: v.$gray-1;
+            }
+
+            &--subtitle {
+                font-size: clamp(0.422rem, 0.878vw, 1.054rem);
+                color: v.$gray-1;
+            }
+        }
+
+        &-rating {
+
+        }
+    }
+
+    &__content-side {
+        position: relative;
+    }
+
+    &__header {
+        position: relative;
+        bottom: clamp(2.802rem, 5.83vw, 6.996rem);
+        display: flex;
+        background-color: v.$gray-2;
+        border-radius: 0 0 clamp(1.126rem, 2.343vw, 2.812rem) clamp(1.126rem, 2.343vw, 2.812rem);
+        padding: clamp(0.422rem, 0.878vw, 1.054rem) clamp(1.442rem, 3.001vw, 3.601rem) clamp(1.055rem, 2.196vw, 2.635rem) clamp(1.442rem, 3.001vw, 3.601rem);
+    }
+
+    &__title {
+        font-family: "Raleway", sans-serif;
+        font-size: clamp(1.266rem, 2.635vw, 3.162rem);
+        font-weight: 600;
+        color: v.$brand-1;
+    }
+
+    &__header-icon {
+        position: absolute;
+        right: 0;
+        top: 4.7vw;
+        transform: scaleX(-1);
+        width: clamp(2.390rem, 4.972vw, 5.966rem);
+    }
+
+    &__testimonial {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: clamp(20.302rem, 42.24vw, 50.688rem);
+        border-radius: clamp(0.563rem, 1.171vw, 1.405rem);
+        padding: clamp(0.844rem, 1.757vw, 2.108rem);
+        background-color: v.$brand-1-light;
+        gap: clamp(0.282rem, 0.586vw, 0.703rem);
+        margin-bottom: clamp(0.481rem, 1vw, 1.200rem);
+    }
+
+    &__testimonial-quote {
+        position: absolute;
+        width: clamp(3.624rem, 7.54vw, 9.048rem);
+        right: 0;
+        bottom: clamp(8.651rem, 18vw, 21.600rem);
+    }
+
+    &__testimonial-author {
+        font-size: clamp(0.844rem, 1.757vw, 2.108rem);
+        font-weight: bold;
+    }
+
+    &__testimonial-text {
+        font-size: clamp(0.633rem, 1.318vw, 1.582rem);
+    }
+
+    &__pagination {
+        display: flex;
+        gap: clamp(0.704rem, 1.464vw, 1.757rem);
+        margin: clamp(1.442rem, 3vw, 3.600rem) 0 0 clamp(0.481rem, 1vw, 1.200rem);
+    }
+
+    &__arrow {
+        width: clamp(0.288rem, 0.6vw, 0.720rem)
+        &--left {
+        }
+        &--right {
+            transform: scaleX(-1);
+        }
+    }
+
+    &__dots {
+        display: flex;
+        
+        gap: clamp(0.282rem, 0.586vw, 0.703rem)
+    }
+
+    &__dot {
+        fill: v.$gray-6;
+        width: clamp(0.282rem, 0.586vw, 0.703rem)
+    
+        &--active {
+            fill: v.$gray-1;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        background-color: v.$gray-2;
+        outline: solid v.$gray-2 clamp(0.563rem, 1.171vw, 1.405rem);
+        right: 5vw;
+        top: 34vw;
+        border-radius: 100%;
+        z-index: 2;
+    }
+
+    &__logo-img {
+        width: clamp(3.378rem, 7.028vw, 8.434rem);
+    }
+
+    &__round {
+        &-bottom {
+            &--left {
+                position: absolute;
+                background-color: red;
+                background-color: v.$gray-2;
+                right: 12.02vw;
+                top: 37.8vw;
+                width: clamp(1.923rem, 4vw, 4.800rem);
+                height: clamp(1.923rem, 4vw, 4.800rem);
+                z-index: 1;
+                -webkit-mask: radial-gradient(circle 2.83vw at top left, transparent 100%, black calc(100% + 1px));
+                mask: radial-gradient(circle 2.83vw at top left, transparent 100%, black calc(100% + 1px));
+            }
+
+            &--right {
+                position: absolute;
+                background-color: v.$gray-2;
+                right: 4.3vw;
+                top: 30vw;
+                width: clamp(1.923rem, 4vw, 4.800rem);
+                height: clamp(1.923rem, 4vw, 4.800rem);
+                z-index: 1;
+                -webkit-mask: radial-gradient(circle 2.83vw at top left, transparent 100%, black calc(100% + 1px));
+                mask: radial-gradient(circle 2.83vw at top left, transparent 100%, black calc(100% + 1px));
+            }
+        }
+
+        &-top {
+            &--left {
+                position: absolute;
+                background-color: v.$gray-2;
+                bottom: 37.7vw;
+                left: 42.79vw;
+                width: clamp(1.923rem, 4vw, 4.800rem);
+                height: clamp(1.923rem, 4vw, 4.800rem);
+                z-index: 1;
+                -webkit-mask: radial-gradient(circle 2.83vw at bottom left, transparent 100%, black calc(100% + 1px));
+                mask: radial-gradient(circle 2.83vw at bottom left, transparent 100%, black calc(100% + 1px));
+            }
+
+            &--right {
+                position: absolute;
+                background-color: v.$gray-2;
+                bottom: 38vw;
+                right: 8.78vw;
+                width: clamp(1.923rem, 4vw, 4.800rem);
+                height: clamp(1.923rem, 4vw, 4.800rem);
+                z-index: 1;
+                -webkit-mask: radial-gradient(circle 2.8vw at bottom right, transparent 100%, black calc(100% + 1px));
+                mask: radial-gradient(circle 2.5vw at bottom right, transparent 100%, black calc(100% + 1px));
             }
         }
     }
