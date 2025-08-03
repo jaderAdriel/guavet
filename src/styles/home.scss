@@ -1147,6 +1147,17 @@
         padding-left: clamp(1.407rem, 2.928vw, 3.514rem);
     }
 
+    @media (max-width: 768px){
+        padding: 4.071vw;
+        &__container {
+            flex-direction: column;
+            width: 100%;
+            height: 210vw;
+            padding: 31.298vw 3.308vw 6.87vw 3.308vw;
+            gap: 10.178vw;
+        }
+    }
+
     &__image-side {
         position: relative;
     }
@@ -1159,10 +1170,23 @@
         width: clamp(2.346rem, 4.881vw, 5.857rem);
     }
 
+    @media (max-width: 768px){
+        &__icon {
+            width: 9.669vw;
+        }
+    }
+
     &__image {
         width: clamp(17.065rem, 35.505vw, 42.606rem);
         height: clamp(16.678rem, 34.7vw, 41.640rem);
         z-index: 0;
+    }
+
+    @media (max-width: 768px){
+        &__image {
+            width: 83.715vw;
+            height: auto;
+        }
     }
 
     &__card {
@@ -1203,6 +1227,37 @@
         }
     }
 
+    @media (max-width: 768px){
+        &__card {
+            width: 41.476vw;
+            height: 34.097vw;
+            right: 45vw;
+            bottom: -6vw;
+            border-radius: 4.071vw;
+            padding: 4.071vw;
+            gap: 1.018vw;
+            
+            &-logo {
+                width: 6.107vw;
+            }
+    
+            &-texts {
+                &--title {
+                    font-size: 6.107vw;
+                }
+    
+                &--subtitle {
+                    font-size: 3.053vw;
+                }
+            }
+    
+            &-rating {
+                width: 26.463vw;
+            }
+        }
+
+    }
+
     &__content-side {
         position: relative;
     }
@@ -1216,11 +1271,33 @@
         padding: clamp(0.422rem, 0.878vw, 1.054rem) clamp(1.442rem, 3.001vw, 3.601rem) clamp(1.055rem, 2.196vw, 2.635rem) clamp(1.442rem, 3.001vw, 3.601rem);
     }
 
+    @media (max-width: 768px){
+        &__header {
+            position: absolute;
+            z-index: 20;
+            padding: 0 0 0 4.071vw;
+            
+            // bottom: 141.7vw;
+            bottom: 177.8vw;
+            left: 5.3vw;
+            width: 83.461vw;
+            border-radius: 0 0 0 8.142vw;
+        }
+    }
+
     &__title {
         font-family: "Raleway", sans-serif;
         font-size: clamp(1.266rem, 2.635vw, 3.162rem);
         font-weight: 600;
         color: v.$brand-1;
+    }
+
+    @media (max-width: 768px){
+        &__title {
+            width: 55.98vw;
+            font-size: 8.142vw;
+            line-height: 1.5;
+        }
     }
 
     &__header-icon {
@@ -1229,6 +1306,14 @@
         top: 4.7vw;
         transform: scaleX(-1);
         width: clamp(2.390rem, 4.972vw, 5.966rem);
+    }
+
+    @media (max-width: 768px){
+        &__header-icon {
+            width: 15.247vw;
+            top: 18vw;
+            right: 4vw;
+        }
     }
 
     &__testimonial {
@@ -1243,6 +1328,14 @@
         margin-bottom: clamp(0.481rem, 1vw, 1.200rem);
     }
 
+    @media (max-width:768px){
+        &__testimonial {
+            width: 100%;
+            border-radius: 4.071vw;
+            gap: 2.036vw;
+        }
+    }
+
     &__testimonial-quote {
         position: absolute;
         width: clamp(3.624rem, 7.54vw, 9.048rem);
@@ -1250,13 +1343,35 @@
         bottom: clamp(8.651rem, 18vw, 21.600rem);
     }
 
+    @media (max-width:768px){
+        &__testimonial-quote {
+            width: 14.504vw;
+            right: 3vw;
+            bottom: auto;
+            top: -7vw;
+        }
+    }
+
     &__testimonial-author {
         font-size: clamp(0.844rem, 1.757vw, 2.108rem);
         font-weight: bold;
     }
 
+    @media (max-width:768px){
+        &__testimonial-author {
+            z-index: 3;
+            font-size: 4.58vw;
+        }
+    }
+
     &__testimonial-text {
         font-size: clamp(0.633rem, 1.318vw, 1.582rem);
+    }
+
+    @media (max-width:768px){
+        &__testimonial-text {
+            font-size: 3.562vw;
+        }
     }
 
     &__pagination {
@@ -1276,7 +1391,6 @@
 
     &__dots {
         display: flex;
-        
         gap: clamp(0.282rem, 0.586vw, 0.703rem)
     }
 
@@ -1286,6 +1400,24 @@
     
         &--active {
             fill: v.$gray-1;
+        }
+    }
+
+    @media (max-width: 768px){
+        &__pagination {
+            gap: 5.089vw;
+        }
+
+        &__arrow {
+            width: 2.1vw;
+        }
+
+        &__dots {
+            gap: 2.036vw;
+        }
+
+        &__dot {
+            width: 2.036vw;
         }
     }
 
@@ -1299,8 +1431,24 @@
         z-index: 2;
     }
 
+    @media (max-width: 768px){
+        &__logo {
+            outline: solid v.$gray-2 3.562vw;
+            right: 4vw;
+            top: auto;
+            bottom: -4.5vw;
+            z-index: 19;
+        }
+    }
+
     &__logo-img {
         width: clamp(3.378rem, 7.028vw, 8.434rem);
+    }
+
+    @media (max-width: 768px){
+        &__logo-img {
+            width: 16.794vw;
+        }
     }
 
     &__round {
@@ -1354,6 +1502,60 @@
                 z-index: 1;
                 -webkit-mask: radial-gradient(circle 2.8vw at bottom right, transparent 100%, black calc(100% + 1px));
                 mask: radial-gradient(circle 2.5vw at bottom right, transparent 100%, black calc(100% + 1px));
+            }
+        }
+    }
+
+    @media (max-width:768px){
+        &__round {
+            &-bottom {
+                &--left {
+                    background-color: v.$gray-2;
+                    right: 22.5vw;
+                    top: auto;
+                    bottom: 2.2vw;
+                    width: 6vw;
+                    height: 7vw;
+                    z-index: 20;
+                    -webkit-mask: radial-gradient(circle 8vw at top left, transparent 100%, black calc(100% + 0.5px));
+                    mask: radial-gradient(circle 5vw at top left, transparent 100%, black calc(100% + 0.5px));
+                }
+
+                &--right {
+                    background-color: v.$gray-2;
+                    right: 0.06vw;
+                    top: auto;
+                    bottom: 11.7vw;
+                    width: 10vw;
+                    height: 10vw;
+                    z-index: 20;
+                    -webkit-mask: radial-gradient(circle 6vw at top left, transparent 100%, black calc(100% + 0.5px));
+                    mask: radial-gradient(circle 6vw at top left, transparent 100%, black calc(100% + 0.5px));
+                }
+            }
+
+            &-top {
+                &--left {
+                    bottom: auto;
+                    left: 8.6vw;
+                    top: 2.2vw;
+                    width: 6vw;
+                    height: 6vw;
+                    z-index: 11;
+                    -webkit-mask: radial-gradient(circle 4vw at bottom left, transparent 100%, black calc(100% + 0.5px));
+                    mask: radial-gradient(circle 4vw at bottom left, transparent 100%, black calc(100% + 0.5px));
+                }
+
+                &--right {
+                    bottom: auto;
+                    top: 26.68vw;
+                    right: 2.2vw;
+                    width: 6vw;
+                    height: 6vw;
+                    z-index: 11;
+                    -webkit-mask: radial-gradient(circle 4vw at bottom left, transparent 100%, black calc(100% + 0.5px));
+                    mask: radial-gradient(circle 4vw at bottom left, transparent 100%, black calc(100% + 0.5px));
+                }
             }
         }
     }
