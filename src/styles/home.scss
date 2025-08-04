@@ -1130,7 +1130,9 @@
     }
 }
 
-
+/* ==========================================================================
+   Seção Feedback
+   ========================================================================== */
 .feedback {
     display: flex;
     justify-content: center;
@@ -1559,4 +1561,245 @@
             }
         }
     }
+}
+
+/* ==========================================================================
+   Seção Form
+   ========================================================================== */
+.form {
+    background-color: v.$brand-1;
+    color: v.$gray-1;
+    overflow: hidden;
+
+    &__content {
+        display: flex;
+        
+        align-items: center;
+        gap: 2.928vw;
+        padding: 9.37vw 5.857vw;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 3.807vw;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 1.757vw;
+        color: v.$gray-1;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 2.343vw;
+    }
+
+    &__subtitle {
+        font-size: 1.318vw;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.757vw;
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        color: v.$gray-1;
+        padding-left: 1.171vw;
+        padding-bottom: 0.293vw;
+        &--required {
+            color: v.$error-dark;
+        }
+    }
+
+    &__input {
+        color: v.$gray-10;
+        background-color: v.$gray-2;
+        border: 0.073vw solid v.$gray-5;
+        padding: 0.586vw 1.171vw;
+        border-radius: 0.586vw;
+        width: 32.43vw;
+
+        &--message {
+            padding: 0.586vw 1.171vw 1.757vw 0.586vw;
+        }
+    }
+
+    &__checkbox-group {
+        display: flex;
+        gap: 1.171vw;
+    }
+
+    &__checkbox {
+    }
+
+    &__checkbox-label {
+        color: v.$gray-1;
+        padding-top: 0.23vw;
+        &--required {
+            color:v.$error-dark;
+        }
+    }
+
+    &__button {
+        background-color: v.$gray-1;
+        color: v.$brand-1;
+        font-size: 1.171vw;
+        width: 13.031vw;
+        height: 2.928vw;
+        border-radius: 0.586vw;
+    }
+
+    &__right {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        height: 40.556vw;
+    }
+
+    &__contact {
+        @include glass-effect($blur: 4px);
+        background-color: rgba(v.$brand-1-dark, 0.95);
+        clip-path: url(#form__path);
+        -webkit-clip-path: url(#form__path);
+        position: relative;
+        top: 0;
+        width: 52.635vw;
+        height: 9.883vw;
+        z-index: 2;
+    }
+
+    &__contact-icons {
+        display: flex;
+        position: relative;
+        left: 1.171vw;
+        top: 1.025vw;
+        gap: 1.757vw;
+        &--paw {
+            width: 1.698vw;
+        }
+
+        &--heart {
+            width: 1.757vw;
+        }
+
+        &--bone {
+            width: 1.757vw;
+        }
+    }
+
+    &__contact-text {
+        position: absolute;
+        color: v.$gray-1;
+        font-size: 0.878vw;
+        right: 4.539vw;
+    }
+
+    &__social {
+        display: flex;
+        position: absolute;
+        gap: 2.416vw;
+        right: 3.075vw;
+        bottom: 1.632vw;
+    }
+
+    &__social-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.1vw;
+
+        &--tiktok {
+            margin-top: 0.19vw;
+            width: 4.3vw;
+        }
+    }
+
+    &__social-img {
+        width: 100%;
+    }
+
+    &__image {
+        position: absolute;
+        top: 4.5vw;
+        width: 52.635vw;
+    }
+
+    &__image-img {
+        object-fit: cover;
+    }
+
+    &__card {
+        @include glass-effect($blur: 4px);
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        padding: 1.171vw 1.757vw;
+        background-color: rgba(v.$brand-1-dark, 0.50);
+        gap: 1.171vw;
+        width: 24.597vw;
+        height: 8.199vw;
+        border-radius: 1.171vw;
+        bottom: 0.586vw;
+        left: 0.586vw;
+    }
+
+    &__card-title {
+        font-weight: bold;
+        font-size: 1.318vw;
+    }
+
+    &__card-body {
+        display: flex;
+        gap: 1.171vw;
+        font-size: 0.878vw;
+    }
+
+    &__card-icon {
+    }
+
+    &__card-text {
+    }
+
+    &__decoration {
+        position: absolute;
+        width: 20vw;
+        right: -10vw;
+        bottom: -5vw;
+    }
+}
+
+input[type="checkbox"] {
+  appearance: none;          /* remove estilo padrão */
+  width: 1.171vw;
+  height: 1.171vw;
+  border: 0.2vw solid v.$gray-2;
+  border-radius: 0.146vw;
+  background: v.$gray-1;
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+}
+
+input[type="checkbox"]:checked {
+  background: v.$brand-1-dark;
+  border:none;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  color: #fff;
+  position: absolute;
+  left: 2px;
+  top: -2px;
+  font-size: 14px;
 }

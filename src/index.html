@@ -279,26 +279,31 @@
         <div class="feedback__container">
             <div class="feedback__image-side">
                 <img class="feedback__icon" src="../dist/assets/icons/message.svg" aria-hidden="true">
-                <img class="feedback__image" src="../dist/assets/images/people/guavet-employees-3.webp" alt="Funcionários da Guavet">
+                <img class="feedback__image" src="../dist/assets/images/people/guavet-employees-3.webp"
+                    alt="Funcionários da Guavet">
 
                 <div class="feedback__card">
-                    <img class="feedback__card-logo" src="../dist/assets/images/logo/google-logo.svg" alt="Logo do google">
+                    <img class="feedback__card-logo" src="../dist/assets/images/logo/google-logo.svg"
+                        alt="Logo do google">
                     <div class="feedback__card-texts">
                         <h2 class="feedback__card-texts--title">+de 500</h2>
                         <h3 class="feedback__card-texts--subtitle">avaliações no Google</h3>
                     </div>
-                    <img class="feedback__card-rating" src="../dist/assets/icons/stars.svg" alt="A Guavet tem uma avaliação de 4.5 estrelas no google!">
+                    <img class="feedback__card-rating" src="../dist/assets/icons/stars.svg"
+                        alt="A Guavet tem uma avaliação de 4.5 estrelas no google!">
                 </div>
             </div>
 
             <div class="feedback__content-side">
                 <div class="feedback__header">
                     <h2 class="feedback__title">O que nossos clientes dizem</h2>
-                    <img class="feedback__header-icon" src="../dist/assets/images/animals/hamister.svg" aria-hidden="true">
+                    <img class="feedback__header-icon" src="../dist/assets/images/animals/hamister.svg"
+                        aria-hidden="true">
                 </div>
 
                 <div class="feedback__testimonial">
-                    <img class="feedback__testimonial-quote" src="../dist/assets/icons/double-quote.svg" aria-hidden="true">
+                    <img class="feedback__testimonial-quote" src="../dist/assets/icons/double-quote.svg"
+                        aria-hidden="true">
                     <h3 class="feedback__testimonial-author">Day Novack, tutor da Amora 🐶</h3>
                     <p class="feedback__testimonial-text">
                         Minha princesinha enfrentou um dos momentos mais difíceis de sua vida ao ser diagnosticada com
@@ -310,23 +315,28 @@
                 </div>
 
                 <div class="feedback__pagination">
-                    <img class="feedback__arrow feedback__arrow--left" src="../dist/assets/icons/pagination-arrow.svg" alt="Botão para ir para o comentário anterior">
+                    <img class="feedback__arrow feedback__arrow--left" src="../dist/assets/icons/pagination-arrow.svg"
+                        alt="Botão para ir para o comentário anterior">
 
                     <div class="feedback__dots">
-                        <svg class="feedback__dot feedback__dot--active" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="4" cy="4" r="4" fill="custom"/>
+                        <svg class="feedback__dot feedback__dot--active" width="8" height="8" viewBox="0 0 8 8"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="4" cy="4" r="4" fill="custom" />
                         </svg>
 
-                        <svg class="feedback__dot" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="4" cy="4" r="4" fill="custom"/>
+                        <svg class="feedback__dot" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="4" cy="4" r="4" fill="custom" />
                         </svg>
 
-                        <svg class="feedback__dot" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="4" cy="4" r="4" fill="custom"/>
+                        <svg class="feedback__dot" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="4" cy="4" r="4" fill="custom" />
                         </svg>
                     </div>
 
-                    <img class="feedback__arrow feedback__arrow--right" src="../dist/assets/icons/pagination-arrow.svg" alt="Botão para ir para o comentário seguinte">
+                    <img class="feedback__arrow feedback__arrow--right" src="../dist/assets/icons/pagination-arrow.svg"
+                        alt="Botão para ir para o comentário seguinte">
                 </div>
             </div>
         </div>
@@ -337,6 +347,97 @@
         <div class="feedback__round-bottom--right"></div>
         <div class="feedback__round-bottom--left"></div>
     </section>
+
+    <section class="form">
+        <div class="form__content">
+            <div class="form__left">
+                <div class="form__header">
+                    <h2 class="form__title">Fale com a gente</h2>
+                    <h3 class="form__subtitle">Estamos a uma mensagem de distância!</h3>
+                </div>
+
+
+                <form class="form__form" action="#" method="POST">
+                    <div class="form__field">
+                        <label for="name" class="form__label">Nome completo <span
+                                class="form__label--required">*</span></label>
+                        <input type="text" id="name" name="name" class="form__input" placeholder="Seu nome" required>
+                    </div>
+
+                    <div class="form__field">
+                        <label for="email" class="form__label">Telefone <span class="form__label--required">*</span></label>
+                        <input type="tel" id="phone" name="phone" class="form__input" placeholder="Telefone/whatsapp"
+                            required>
+                    </div>
+
+                    <div class="form__field">
+                        <label for="message" class="form__label">Mensagem <span
+                                class="form__label--required">*</span></label>
+                       <input type="text" id="message" name="message" class="form__input form__input--message" placeholder="Em quê podemos ajudar?" required>
+                    </div>
+
+                    <div class="form__checkbox-group">
+                        <input type="checkbox" id="contact" name="contact" class="form__checkbox" required>
+                        <label for="contact" class="form__checkbox-label">
+                            Aceito contato via WhatsApp <span class="form__checkbox-label--required">*</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="form__button">Enviar mensagem</button>
+                </form>
+
+            </div>
+
+            <div class="form__right">
+                <div class="form__contact">
+                    <div class="form__contact-icons">
+                        <img class="form__contact-icons--paw" src="../dist/assets/icons/paw-3.svg" aria-hidden="true">
+                        <img class="form__contact-icons--heart" src="../dist/assets/icons/heart-2.svg" aria-hidden="true">
+                        <img class="form__contact-icons--bone" src="../dist/assets/icons/bone-2.svg" aria-hidden="true">
+                    </div>
+
+                    <p class="form__contact-text">Nos acompanhe nas redes sociais</p>
+
+                    <div class="form__social">
+                        <a href="#" class="form__social-link">
+                            <img class="form__social-img" src="../dist/assets/icons/facebook.svg" aria-hidden="true">
+                        </a>
+
+                        <a href="#" class="form__social-link">
+                            <img class="form__social-img" src="../dist/assets/icons/instagram.svg" aria-hidden="true">
+                        </a>
+
+                        <a href="#" class="form__social-link form__social-link--tiktok">
+                            <img class="form__social-img" src="../dist/assets/icons/tiktok.svg" aria-hidden="true">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="form__image">
+                    <img class="form__image-img" src="../dist/assets/images/people/stefane-2.webp"
+                        alt="Doutora Stefane segurando as patinhas de um cachorrinho">
+                </div>
+
+                <div class="form__card">
+                    <h2 class="form__card-title">Visite-nos</h2>
+                    <div class="form__card-body">
+                        <img class="form__card-icon" src="../dist/assets/icons/pin.svg" aria-hidden="true">
+                        <p class="form__card-text">Rua Atílio Pereira de Oliveira, 540, Bairro Sandoval Moraes, Guanambi - BA</p>
+                    </div>
+                </div>
+
+                <img class="form__decoration" src="../dist/assets/images/paws-retangle.svg" aria-hidden="true">
+            </div>
+        </div>
+    </section>
+
+    <svg width="0" height="0" style="position:absolute; left:-100%;">
+        <defs>
+            <clipPath id="form__path" clipPathUnits="objectBoundingBox">
+                <path d="M 0 0.17778 A 0.03338 0.17778 0 0 1 0.03338 0 L 0.96662 0 A 0.03338 0.17778 0 0 1 1 0.17778 L 1 0.82222 A 0.03338 0.17778 0 0 1 0.96662 1 L 0.60501 1 A 0.03338 0.17778 0 0 1 0.57163 0.82222 L 0.57163 0.55556 A 0.03338 0.17778 0 0 0 0.53825 0.37778 L 0.03338 0.37778 A 0.03338 0.17778 0 0 1 0 0.2 Z"></path>
+            </clipPath>
+        </defs>
+    </svg>
 
     <script>
         const navbar = document.getElementById("page-navbar");
