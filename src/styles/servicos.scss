@@ -16,7 +16,7 @@
 
 .main-service {
     display: flex;
-    padding: 2.831vw v.$padding-x;
+    padding: 0.9vw v.$padding-x 2.831vw v.$padding-x;
     background-color: v.$brand-1;
 
     @media (max-width: 768px) {
