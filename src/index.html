@@ -274,8 +274,11 @@
 
 
     <section class="feedback">
-        <div class="feedback__round-top--right"></div>
-        <div class="feedback__round-top--left"></div>
+        <div class="feedback__header">
+            <h2 class="feedback__title">O que nossos clientes dizem</h2>
+            <img class="feedback__header-icon" src="../dist/assets/images/animals/hamister.svg" aria-hidden="true">
+        </div>
+
         <div class="feedback__container">
             <div class="feedback__image-side">
                 <img class="feedback__icon" src="../dist/assets/icons/message.svg" aria-hidden="true">
@@ -295,22 +298,12 @@
             </div>
 
             <div class="feedback__content-side">
-                <div class="feedback__header">
-                    <h2 class="feedback__title">O que nossos clientes dizem</h2>
-                    <img class="feedback__header-icon" src="../dist/assets/images/animals/hamister.svg"
-                        aria-hidden="true">
-                </div>
-
                 <div class="feedback__testimonial">
                     <img class="feedback__testimonial-quote" src="../dist/assets/icons/double-quote.svg"
                         aria-hidden="true">
-                    <h3 class="feedback__testimonial-author">Day Novack, tutor da Amora 🐶</h3>
+                    <h3 class="feedback__testimonial-author">Diniz Jeni, tutora do José 🐱</h3>
                     <p class="feedback__testimonial-text">
-                        Minha princesinha enfrentou um dos momentos mais difíceis de sua vida ao ser diagnosticada com
-                        cinomose. Foi um período muito delicado, em que ela esteve à beira da morte, e o medo de
-                        perdê-la era enorme. [...] Hoje, com imensa gratidão e felicidade, posso dizer que Xuxinha está
-                        100% curada, cheia de energia e alegria. Sou muito grata a todos que fizeram parte dessa
-                        jornada! ❤️
+                        A minha experiência foi muita boa! Graças a Deus toda a equipe foi super humana e acolhedora com José, meu gatinho. Tenho muita confiança em todos e agradeço a cada um desde a limpeza, recepção, atendimento on-line e médicos veterinários pelo carinho sempre!
                     </p>
                 </div>
 
@@ -344,8 +337,6 @@
         <div class="feedback__logo">
             <img class="feedback__logo-img" src="../dist/assets/images/logo/logo-dotted-dark.svg" aria-hidden="true">
         </div>
-        <div class="feedback__round-bottom--right"></div>
-        <div class="feedback__round-bottom--left"></div>
     </section>
 
     <section class="form">
@@ -365,7 +356,8 @@
                     </div>
 
                     <div class="form__field">
-                        <label for="email" class="form__label">Telefone <span class="form__label--required">*</span></label>
+                        <label for="email" class="form__label">Telefone <span
+                                class="form__label--required">*</span></label>
                         <input type="tel" id="phone" name="phone" class="form__input" placeholder="Telefone/whatsapp"
                             required>
                     </div>
@@ -373,7 +365,8 @@
                     <div class="form__field">
                         <label for="message" class="form__label">Mensagem <span
                                 class="form__label--required">*</span></label>
-                       <input type="text" id="message" name="message" class="form__input form__input--message" placeholder="Em quê podemos ajudar?" required>
+                        <input type="text" id="message" name="message" class="form__input form__input--message"
+                            placeholder="Em quê podemos ajudar?" required>
                     </div>
 
                     <div class="form__checkbox-group">
@@ -392,7 +385,8 @@
                 <div class="form__contact">
                     <div class="form__contact-icons">
                         <img class="form__contact-icons--paw" src="../dist/assets/icons/paw-3.svg" aria-hidden="true">
-                        <img class="form__contact-icons--heart" src="../dist/assets/icons/heart-2.svg" aria-hidden="true">
+                        <img class="form__contact-icons--heart" src="../dist/assets/icons/heart-2.svg"
+                            aria-hidden="true">
                         <img class="form__contact-icons--bone" src="../dist/assets/icons/bone-2.svg" aria-hidden="true">
                     </div>
 
@@ -422,7 +416,8 @@
                     <h2 class="form__card-title">Visite-nos</h2>
                     <div class="form__card-body">
                         <img class="form__card-icon" src="../dist/assets/icons/pin.svg" aria-hidden="true">
-                        <p class="form__card-text">Rua Atílio Pereira de Oliveira, 540, Bairro Sandoval Moraes, Guanambi - BA</p>
+                        <p class="form__card-text">Rua Atílio Pereira de Oliveira, 540, Bairro Sandoval Moraes, Guanambi
+                            - BA</p>
                     </div>
                 </div>
 
@@ -431,10 +426,33 @@
         </div>
     </section>
 
+    
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <clipPath id="feedback__path--desktop" clipPathUnits="objectBoundingBox">
+                <path
+                d="M547 64C547 81.6731 561.327 96 579 96H1094C1111.67 96 1126 81.6731 1126 64V32C1126 14.3269 1140.33 0 1158 0H1174C1191.67 0 1206 14.3269 1206 32V410C1206 427.673 1191.67 442 1174 442H1161C1124 442 1094 471.997 1094 509V522C1094 539.673 1079.67 554 1062 554H32C14.3269 554 0 539.673 0 522V32C0 14.3269 14.3269 0 32 0H515C532.673 0 547 14.3269 547 32V64Z"
+                transform="scale(0.000829187, 0.001805054)" />
+            </clipPath>
+        </defs>
+    </svg>
+    
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <clipPath id="feedback__path--mobile" clipPathUnits="objectBoundingBox">
+                <path
+                    d="M33 64C33 81.6731 47.3269 96 65 96H329C346.673 96 361 110.327 361 128V636C361 649.255 350.255 660 337 660C306.072 660 281 685.072 281 716C281 729.255 270.255 740 257 740H32C14.3269 740 0 725.673 0 708V16.5C0 7.38732 7.3873 0 16.5 0C25.6127 0 33 7.3873 33 16.5V64Z"
+                    transform="scale(0.002770083, 0.001351351)" />
+            </clipPath>
+        </defs>
+    </svg>
+    
     <svg width="0" height="0" style="position:absolute; left:-100%;">
         <defs>
             <clipPath id="form__path--desktop" clipPathUnits="objectBoundingBox">
-                <path d="M 0 0.17778 A 0.03338 0.17778 0 0 1 0.03338 0 L 0.96662 0 A 0.03338 0.17778 0 0 1 1 0.17778 L 1 0.82222 A 0.03338 0.17778 0 0 1 0.96662 1 L 0.60501 1 A 0.03338 0.17778 0 0 1 0.57163 0.82222 L 0.57163 0.55556 A 0.03338 0.17778 0 0 0 0.53825 0.37778 L 0.03338 0.37778 A 0.03338 0.17778 0 0 1 0 0.2 Z"></path>
+                <path
+                    d="M 0 0.17778 A 0.03338 0.17778 0 0 1 0.03338 0 L 0.96662 0 A 0.03338 0.17778 0 0 1 1 0.17778 L 1 0.82222 A 0.03338 0.17778 0 0 1 0.96662 1 L 0.60501 1 A 0.03338 0.17778 0 0 1 0.57163 0.82222 L 0.57163 0.55556 A 0.03338 0.17778 0 0 0 0.53825 0.37778 L 0.03338 0.37778 A 0.03338 0.17778 0 0 1 0 0.2 Z">
+                </path>
             </clipPath>
         </defs>
     </svg>
@@ -443,7 +461,8 @@
     <svg width="0" height="0" style="position:absolute; left:-100%;" aria-hidden="true">
         <defs>
             <clipPath id="form__path--mobile" clipPathUnits="objectBoundingBox">
-                <path d="M 0 0.1778 A 0.0443 0.1778 0 0 1 0.0443 0 L 0.9557 0 A 0.0443 0.1778 0 0 1 1 0.1778 L 1 0.8222 A 0.0443 0.1778 0 0 1 0.9557 1 L 0.615 1 A 0.0443 0.1778 0 0 1 0.5706 0.8222 L 0.5706 0.6444 A 0.0443 0.1778 0 0 0 0.5263 0.4667 L 0.0443 0.4667 A 0.0443 0.1778 0 0 1 0 0.2889 Z" />
+                <path
+                    d="M 0 0.1778 A 0.0443 0.1778 0 0 1 0.0443 0 L 0.9557 0 A 0.0443 0.1778 0 0 1 1 0.1778 L 1 0.8222 A 0.0443 0.1778 0 0 1 0.9557 1 L 0.615 1 A 0.0443 0.1778 0 0 1 0.5706 0.8222 L 0.5706 0.6444 A 0.0443 0.1778 0 0 0 0.5263 0.4667 L 0.0443 0.4667 A 0.0443 0.1778 0 0 1 0 0.2889 Z" />
             </clipPath>
         </defs>
     </svg>
