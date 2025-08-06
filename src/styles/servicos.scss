@@ -1,1 +1,316 @@
 @use "index";
+@use "variables" as v;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Mixin para o efeito de glassmorphism
+@mixin glass-effect($color: rgb(255 255 255 / 0.25), $blur: 5px) {
+    background: $color;
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+}
+
+.header {
+    background-color: v.$brand-1;
+}
+
+.main-service {
+    display: flex;
+    padding: 2.831vw v.$padding-x;
+    background-color: v.$brand-1;
+
+    @media (max-width: 768px) {
+        & {
+            padding: 5.333vw v.$padding-x 8.533vw v.$padding-x;
+            gap: 5.333vw;
+        }
+    }
+
+    &__content {
+        position: relative;
+        width: 88.677vw;
+        height: 39.42vw;
+    }
+
+    @media (max-width: 768px) {
+        &__content {
+            width: 91.858vw;
+            height: 200.509vw;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: logo;
+        background-color: v.$brand-1-dark;
+        width: 17.339vw;
+        height: 16.844vw;
+        border-radius: 1.699vw;
+
+        &-img {
+            width: 11.96vw;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__logo {
+            bottom: 0;
+            right: 0;
+            z-index: 10;
+            width: 40.967vw;
+            height: 39.695vw;
+            border-radius: 6.107vw;
+
+            &-img {
+                width: 28.26vw;
+            }
+        }
+    }
+
+
+
+    &__container {
+        position: absolute;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        grid-area: container;
+        width: 69.639vw;
+        height: 29.016vw;
+        background-color: v.$gray-1;
+        padding: 2.123vw 1.699vw 1.699vw 2.831vw;
+        clip-path: url(#main-service__path--desktop);
+    }
+
+    @media (max-width: 768px) {
+        &__container {
+            width: 91.858vw;
+            height: 80.407vw;
+            right: auto;
+            top: 0;
+            clip-path: url(#main-service__path--mobile);
+            padding: 4.071vw;
+        }
+    }
+
+    &__icons {
+        display: grid;
+        grid-template-areas: "paw heart"
+            "dog bone";
+        gap: 2.269vw;
+        width: 13.69vw;
+        align-content: start;
+    }
+
+    @media (max-width: 768px) {
+        &__icons {
+            position: absolute;
+            grid-template-areas: "paw heart dog bone";
+            width: 36.132vw;
+            height: 7.634vw;
+            bottom: 4.071vw;
+            gap: 2.168vw;
+            clip-path: url(#main-service__path--mobile);
+            align-content: auto;
+        }
+    }
+
+
+    &__icon {
+
+        &--dog {
+            width: 4.777vw;
+            grid-area: "dog";
+        }
+
+        &--bone {
+            width: 5.874vw;
+            grid-area: "bone";
+        }
+
+        &--paw {
+            width: 5.874vw;
+            grid-area: "paw";
+        }
+
+        &--heart {
+            width: 5.662vw;
+            grid-area: "heart";
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__icon {
+            &--dog {
+                width: 6.616vw;
+                grid-area: "dog";
+            }
+
+            &--bone {
+                width: 7.888vw;
+                grid-area: "bone";
+            }
+
+            &--paw {
+                width: 7.379vw;
+                grid-area: "paw";
+            }
+
+            &--heart {
+                width: 7.634vw;
+                grid-area: "heart";
+            }
+        }
+    }
+
+    &__images {
+        display: flex;
+        gap: 1.699vw;
+    }
+
+    @media (max-width: 768px) {
+        &__images {
+            gap: 2.036vw;
+        }
+    }
+
+    &__image {
+        width: 19.604vw;
+        object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+        &__image {
+            width: 40.967vw;
+            height: 56.489vw;
+            border-radius: 4.071vw;
+        }
+    }
+
+    &__texts {
+        display: flex;
+        flex-direction: column;
+        gap: 1.537vw;
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        grid-area: info;
+        background-color: v.$brand-1-light;
+        width: 65.676vw;
+        height: 20.736vw;
+        padding: 2.265vw;
+        clip-path: url(#main-service__path-2--desktop);
+
+        &-title {
+            font-size: 1.274vw;
+            font-weight: bold;
+        }
+
+        &-description {
+            font-family: "Raleway", sans-serif;
+            font-size: 2.831vw;
+            width: 36.896vw;
+        }
+
+        &-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: v.$gray-1;
+            background-color: v.$brand-1;
+            font-size: 1.318vw;
+            padding: 0.878vw;
+            width: 17.716vw;
+            height: 3.807vw;
+            border-radius: 0.586vw;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__info {
+            flex-direction: column;
+            justify-content: auto;
+            align-items: start;
+            clip-path: url(#main-service__path-2--mobile);
+            bottom: auto;
+            top: 70vw;
+            width: 91.858vw;
+            height: 82.443vw;
+            padding: 20.356vw 4.071vw;
+            gap: 6.107vw;
+
+            &-title {
+                font-size: 4.58vw;
+            }
+
+            &-description {
+                font-size: 6.107vw;
+                width: 100%;
+            }
+
+            &-button {
+                width: 62.341vw;
+                height: 13.232vw;
+                padding: 3.053vw 6.107vw;
+                font-size: 4.58vw;
+                border-radius: 2.036vw;
+            }
+        }
+    }
+
+    &__decoration {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        grid-area: decoration;
+        align-items: end;
+        background-color: v.$brand-1-dark;
+        gap: 3.306vw;
+        width: 22.035vw;
+        height: 9.444vw;
+        padding: 0 1.07vw 0 1.83vw;
+        border-radius: 1.757vw;
+
+        &-img {
+            &--hamister {
+                width: 8.553vw;
+            }
+
+            &--bird {
+                width: 7.276vw;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__decoration {
+            right: auto;
+            left: 0;
+            gap: 5.598vw;
+            width: 45.802vw;
+            height: 39.44vw;
+            padding: 0 1.486vw 0 0.85vw;
+            border-radius: 4.071vw;
+
+            &-img {
+                &--hamister {
+                    width: 20.461vw;
+                }
+
+                &--bird {
+                    width: 17.407vw;
+                }
+            }
+        }
+    }
+}

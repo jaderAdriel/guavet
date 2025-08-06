@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="../dist/" />
+    <link rel="stylesheet" href="styles/servicos.css">
+</head>
+<body>
+    <header class="header --bg-brand-dark" id="page-header">
+        <nav class="nav " id="page-navbar" role="navigation" aria-label="Menu principal">
+            <!-- Depois substituir pelo link do home -->
+            <a href="." class="nav__logo-link" aria-label="Página inicial">
+                <img class="nav__logo" src="assets/images/logo/guavet-header-logo.svg"
+                    alt="Logo da Guavet no Cabeçalho">
+            </a>
+
+            <button class="nav__menu-button" id="nav__menu-button" aria-label="Abrir ou fechar menu"
+                aria-expanded="false" aria-controls="page-tabs">
+                <!-- icone é adicionado dinamicamente aqui -->
+            </button>
+
+            <ul class="nav__list" id="page-tabs">
+                <li class="nav__item"><a class="nav__link" href="#">Início</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Serviços</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Equipe</a></li>
+                <li class="nav__item"><a class="nav__link nav__link--active" href="#">Contate-nos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="main-service">
+        <div class="main-service__content">
+            <div class="main-service__logo">
+                <img class="main-service__logo-img" src="assets/images/logo/logo-darkgreen-letter.svg" aria-hidden="true">
+            </div>
+
+            <div class="main-service__container">
+                <div class="main-service__icons">
+                    <img class="main-service__icon main-service__icon--dog" src="assets/icons/dog-gray.svg" aria-hidden="true">
+                    <img class="main-service__icon main-service__icon--bone" src="assets/icons/bone-gray.svg" aria-hidden="true">
+                    <img class="main-service__icon main-service__icon--paw" src="assets/icons/paw-gray.svg" aria-hidden="true">
+                    <img class="main-service__icon main-service__icon--heart" src="assets/icons/heart-gray.svg" aria-hidden="true">
+                </div>
+
+                <div class="main-service__images">
+                    <img class="main-service__image" src="assets/images/people/stefane-3.webp" alt="Doutora Stefane sorrindo e ao lado de um cachorrinho">
+                    <img class="main-service__image" src="assets/images/people/mirella-1.webp" alt="Doutora Mirella com um estetoscópio">
+                </div>
+            </div>
+
+            <div class="main-service__info">
+                <div class="main-service__texts">
+                    <h2 class="main-service__info-title">Você confia. A gente cuida.</h2>
+                    <p class="main-service__info-description">
+                        Conheça os serviços que oferecemos para manter seu pet saudável e feliz
+                    </p>
+                </div>
+
+                <a href="#" class="main-service__info-button">Confira mais serviços</a>
+            </div>
+
+            <div class="main-service__decoration">
+                <img class="main-service__decoration-img main-service__decoration-img--hamister" src="assets/images/animals/hamister.svg" aria-hidden="true">
+                <img class="main-service__decoration-img main-service__decoration-img--bird" src="assets/images/animals/bird.svg" aria-hidden="true">
+            </div>
+        </div>
+    </section>
+
+    <svg width="0" height="0" style="position: absolute;">
+      <defs>
+        <clipPath id="main-service__path-2--desktop" clipPathUnits="objectBoundingBox">
+          <path d="M0.6315 0 C0.6457 0, 0.6573 0.0367, 0.6573 0.0819 V0.4744 C0.6573 0.5196, 0.6689 0.5563, 0.6832 0.5563 H0.9741 C0.9884 0.5563, 1 0.593, 1 0.6382 V0.918 C1 0.9633, 0.9884 1, 0.9741 1 H0.0259 C0.0116 1, 0 0.9633, 0 0.918 V0.0819 C0 0.0367, 0.0116 0, 0.0259 0 H0.6315Z"/>
+        </clipPath>
+      </defs>
+    </svg>
+
+    <svg width="0" height="0" style="position: absolute;">
+      <defs>
+        <clipPath id="main-service__path-2--mobile" clipPathUnits="objectBoundingBox">
+          <path d="M1 0.0493827C1 0.0221093 0.980158 0 0.955679 0H0.565097C0.540618 0 0.520776 0.0221094 0.520776 0.0493827V0.148148C0.520776 0.175421 0.500934 0.197531 0.476454 0.197531H0.0443213C0.0198433 0.197531 0 0.21964 0 0.246914V0.950617C0 0.977891 0.0198433 1 0.0443213 1H0.955679C0.980158 1 1 0.977891 1 0.950617V0.0493827Z" />
+        </clipPath>
+      </defs>
+    </svg>
+
+    <!-- VERSÃO CORRIGIDA E RESPONSIVA -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <!-- Note a mudança para objectBoundingBox e o novo path -->
+            <clipPath id="main-service__path--desktop" clipPathUnits="objectBoundingBox">
+                <path d="M1 0.0585C1 0.0262, 0.989 0, 0.9756 0H0.0244C0.0109 0, 0 0.0262, 0 0.0585V0.539C0 0.5713, 0.0109 0.5976, 0.0244 0.5976H0.3384C0.3519 0.5976, 0.3628 0.6238, 0.3628 0.6561V0.9415C0.3628 0.9738, 0.3737 1, 0.3872 1H0.9756C0.989 1, 1 0.9738, 1 0.9415V0.0585Z" />
+            </clipPath>
+        </defs>
+    </svg>
+
+    <svg width="0" height="0" style="position: absolute;">
+      <defs>
+        <clipPath id="main-service__path--mobile" clipPathUnits="objectBoundingBox">
+          <path d="M0 0.949367C0 0.977332 0.0198433 1 0.0443213 1H0.434903C0.45938 1 0.479224 0.977332 0.479224 0.949367V0.85443C0.479224 0.826465 0.499058 0.803797 0.523546 0.803797H0.955679C0.979152 0.803797 0.999999 0.781129 0.999999 0.753165V0.0506329C0.999999 0.0226678 0.979152 0 0.955679 0H0.0443213C0.0198433 0 0 0.0226678 0 0.0506329V0.949367Z" />
+        </clipPath>
+      </defs>
+    </svg>
+
+
+    <script>
+        const navbar = document.getElementById("page-navbar");
+        const header = document.getElementById("page-header")
+        const buttonMenu = navbar.querySelector(".nav__menu-button");
+        const logoImg = navbar.querySelector(".nav__logo")
+        const body = document.querySelector("body");
+
+        const closeMenuIconHTML = `
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.9844 2.42188L9.40625 8L14.9844 13.5781L13.5781 14.9844L8 9.40625L2.42188 14.9844L1.01562 13.5781L6.59375 8L1.01562 2.42188L2.42188 1.01562L8 6.59375L13.5781 1.01562L14.9844 2.42188Z" fill="currentColor"/>
+            </svg>`;
+
+        const openMenuIconHTMl = `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>`;
+
+
+        const handleWindowSize = () => {
+
+            if (window.innerWidth < 550) {
+                closeMenu();
+                navbar.classList.add("nav--mobile");
+            } else {
+                closeMenu();
+                navbar.classList.remove("nav--mobile");
+                navbar.classList.remove("nav--mobile--close");
+            }
+        }
+
+        window.addEventListener('load', (e) => { handleWindowSize() });
+        window.addEventListener('resize', (e) => { handleWindowSize() });
+
+        const openMenu = () => {
+            buttonMenu.innerHTML = closeMenuIconHTML;
+            // logoImg.src = 'assets/images/logo/guavet-header-logo-colorida.svg'
+
+            navbar.classList.add("nav--mobile--open");
+            navbar.classList.remove("nav--mobile--close");
+
+            buttonMenu.setAttribute("aria-expanded", "true");
+
+            header.classList.add("header--fixed");
+            body.classList.add("no-scroll");
+        }
+
+        const closeMenu = () => {
+            buttonMenu.innerHTML = openMenuIconHTMl;
+            // logoImg.src = 'assets/images/logo/guavet-header-logo.svg';
+
+            navbar.classList.add("nav--mobile--close");
+            navbar.classList.remove("nav--mobile--open");
+
+            buttonMenu.setAttribute("aria-expanded", "false");
+
+            header.classList.remove("header--fixed");
+            body.classList.remove("no-scroll");
+        }
+
+        buttonMenu.addEventListener("click", () => {
+            if (navbar.classList.contains("nav--mobile--open")) {
+                closeMenu();
+                return;
+            }
+
+            openMenu();
+        })
+
+    </script>
+</body>
+</html>
