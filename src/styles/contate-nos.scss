@@ -111,9 +111,8 @@ body {
         }
 
         .form {
-            width: 100%;
-            max-width: 27rem;
-            padding: v.$padding-md;
+            padding: 6rem;
+            padding-top: 4.4375rem;
             padding-bottom: 6rem;
             &__description {
                 color: v.$brand-1;
