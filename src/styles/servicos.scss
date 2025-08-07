@@ -21,7 +21,7 @@
 
     @media (max-width: 768px) {
         & {
-            padding: 5.333vw v.$padding-x 8.533vw v.$padding-x;
+            padding: 5.333vw 4.071vw 8.533vw 4.071vw;
             gap: 5.333vw;
         }
     }
@@ -311,6 +311,155 @@
                     width: 17.407vw;
                 }
             }
+        }
+    }
+}
+
+.appointment {
+    padding: 8.139vw v.$padding-x 9.554vw v.$padding-x;
+    &__content {
+        display: flex;
+        height: 33.404vw;
+        position: relative;
+    }
+
+    @media (max-width: 768px){
+        padding: 8.142vw 4.071vw 8.142vw 4.071vw;
+
+        &__content {
+            height: auto;
+        }
+    }
+
+    &__title {
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        font-size: 2.831vw;
+        color: v.$brand-1;
+        grid-area: title;
+        margin-bottom: 0.566vw;
+    }
+
+    @media (max-width:768px){
+        &__title {
+            font-size: 6.107vw;
+            margin-bottom: 47.837vw;
+            width: 100%;
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-areas: "title title . ."
+                             "eletro radio . ."
+                             "ultra lab clinical .";
+        grid-template-columns: 21.373vw 21.373vw 21.373vw 18.754vw; 
+        gap: 1.699vw;
+        width: 88.606vw;
+    }
+
+    @media (max-width: 768px){
+        &__container {
+            grid-template-areas: "title title"
+                                 ". ."
+                                 "eletro ."
+                                 "clinical ultra"
+                                 "lab radio";
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.036vw;
+            width: 100%;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        background-color: v.$brand-1-light;
+        color: v.$gray-10;
+        padding: 1.699vw;
+        gap: 1.132vw;
+        border-radius: 0.566vw;
+
+        &-icon {
+            width: 2.265vw;
+        }
+
+        &-title {
+            font-weight: bold;
+            font-size: 1.132vw;
+        }
+
+        &-description {
+            font-size: 0.991vw;
+            width: 16.702vw;
+        }
+
+        &--eletro {
+            grid-area: eletro;
+        }
+
+        &--radio {
+            grid-area: radio;
+        }
+
+        &--ultra {
+            grid-area: ultra;
+        }
+
+        &--lab {
+            grid-area: lab;
+        }
+
+        &--clinical {
+            grid-area: clinical;
+        }
+    }
+
+    @media (max-width: 768px){
+        &__card {
+            padding: 4.071vw;
+            gap: 2.036vw;
+            border-radius: 2.036vw;
+
+            &-icon {
+                width: 8.142vw;
+            }
+
+            &-title {
+                font-size: 3.562vw;
+            }
+
+            &-description {
+                font-size: 3.562vw;
+                width: 36.641vw;
+            }
+        }
+    }
+
+    &__image {
+        position: absolute;
+        right: 1vw;
+        top: -0.5vw;
+        width: 42vw;
+        height: 36.9vw;
+        clip-path: url(#appointment__path--desktop);
+
+        &-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 60% 20%;
+        }
+    }
+
+    @media (max-width: 768px){
+        &__image {
+            right: auto;
+            top: 15.267vw;
+            width: 100%;
+            height: 93.059vw;
+            clip-path: url(#appointment__path--mobile);
         }
     }
 }
