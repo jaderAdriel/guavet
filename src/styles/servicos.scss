@@ -10,6 +10,10 @@
     -webkit-backdrop-filter: blur($blur);
 }
 
+body {
+    background-color: v.$gray-2;
+}
+
 .header {
     background-color: v.$brand-1;
 }
@@ -471,6 +475,13 @@
     color: v.$gray-1;
     padding-bottom: 2.831vw;
 
+    @media (max-width: 768px){
+        & {
+            gap: 4.58vw;
+            padding-bottom: 4.071vw;
+        }
+    }
+
     &__content {
         &-top {
             display: flex;
@@ -485,6 +496,20 @@
         }
     }
 
+    @media (max-width: 768px){
+        &__content {
+            &-top {
+                flex-direction: column-reverse;
+                padding: 4.071vw;
+                gap: 6.107vw;
+            }
+
+            &-bottom {
+                height: 39.695vw;
+            }
+        }
+    }
+
     &__logo {
         width: 15.853vw;
         height: 15.853vw;
@@ -496,10 +521,24 @@
         }
     }
 
+    @media (max-width: 768px){
+        &__logo {
+            width: 20.356vw;
+            height: 20.356vw;
+        }
+    }
+
     &__container {
         display: grid;
         grid-template-columns: repeat(2, auto);
         gap: 1.132vw;
+    }
+
+    @media (max-width: 768px){
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 4.071vw;
+        }
     }
 
     &__card {
@@ -523,6 +562,25 @@
         }
     }
 
+    @media (max-width: 768px){
+        &__card {
+            gap: 2.036vw;
+            padding: 4.071vw;
+            width: 100%;
+            height: 27.481vw;
+            border-radius: 4.071vw;
+
+            &-title {
+                font-size: 4.58vw;
+            }
+
+            &-description {
+                font-size: 3.562vw;
+                width: 100%;
+            }
+        }
+    }
+
     &__band {
         display: flex;
         justify-content: start;
@@ -543,6 +601,22 @@
             height: 41.897vw;
             right: 5.662vw;
             bottom: 0;
+        }
+    }
+
+    @media (max-width: 768px){
+        &__band {
+            padding: 7.634vw 4.071vw;
+
+            &-text {
+                font-size: 8.142vw;
+                width: 70.483vw;
+            }
+
+            &-img {
+                width: 44.02vw;
+                height: 66.921vw;
+            }
         }
     }
 }
