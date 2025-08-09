@@ -762,3 +762,127 @@ body {
         }
     }
 }
+
+.hospitalization {
+    background-image: url(../../dist/assets/images/people/stefane-4.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 51.097vw;
+    padding: 32.13vw 5.662vw 2.831vw 5.662vw;
+    color: v.$gray-1;
+
+    @media (max-width: 768px){
+        & {
+            display: none;
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: 2.265vw;
+
+        &-left {
+
+        }
+
+        &-right {
+            display: grid;
+            grid-template-areas: "rectangle less"
+                                 "slogan slogan";
+            grid-template-columns: repeat(2, auto);
+            gap: 1.699vw;
+        }
+    }
+
+    &__maincard {
+        @include glass-effect($blur: 4px);
+        display: flex;
+        flex-direction: column;
+        gap: 3.397vw;
+        background-color: rgba(#092B1F, 0.25);
+        padding: 1.699vw;
+        border-radius: 1.699vw;
+        width: fit-content;
+        height: fit-content;
+
+        &-title {
+            font-size: 2.265vw;
+            font-weight: bold;
+        }
+
+        &-bodies {
+            display: flex;
+            gap: 5.662vw;
+        }
+
+        &-body {
+            display: flex;
+            flex-direction: column;
+            gap: 1.132vw;
+        }
+
+        &-subtitle {
+            font-size: 1.274vw;
+            font-weight: bold;
+        }
+        
+        &-description {
+            font-size: 1.132vw;
+            width: 21.161vw;
+        }
+    }
+
+    &__rectangle {
+        grid-area: rectangle;
+        background-color: v.$brand-1;
+        width: 4.034vw;
+        height: 7.643vw;
+        border-radius: 1.699vw;
+    }
+
+    &__lesscard {
+        grid-area: less;
+        @include glass-effect($blur: 4px);
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(#092B1F, 0.25);
+        padding: 1.132vw;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 1.699vw;
+        gap: 0.566vw;
+
+        &-row {
+            display: flex;
+            gap: 0.566vw;
+        }
+
+        &-icon {
+            width: 0.82vw;
+        }
+
+        &-text {
+            font-size: 0.991vw;
+        }
+    }
+
+    &__slogan {
+        grid-area: slogan;
+        display: flex;
+        background-color: v.$brand-1-light;
+        gap: 1.132vw;
+        padding: 1.699vw;
+        border-radius: 1.699vw;
+
+        &-icon {
+            width: 3.393vw;
+        }
+
+        &-text {
+            color: v.$brand-1-dark;
+            font-size: 0.991vw;
+            width: 12.527vw;
+        }
+    }
+}
