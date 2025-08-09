@@ -558,7 +558,7 @@ body {
 
         &-description {
             font-size: 1.132vw;
-            width: 20.099vw;
+            width: 21vw;
         }
     }
 
@@ -616,6 +616,148 @@ body {
             &-img {
                 width: 44.02vw;
                 height: 66.921vw;
+            }
+        }
+    }
+}
+
+.wellbeing {
+    overflow: hidden;
+    height: 51.097vw;
+
+    @media (max-width: 768px){
+        & {
+            height: 208.183vw;
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__card {
+        @include glass-effect($blur: 4px);
+        display: flex;
+        flex-direction: column;
+        gap: 2.265vw;
+        width: 39.137vw;
+        height: 25.195vw;
+        padding: 2.265vw;
+        border-radius: 1.132vw;
+        color: v.$gray-7;
+        background-color: rgba(v.$gray-7, 0.05);
+        z-index: 10;
+
+        &-title {
+            font-family: "Raleway", sans-serif;
+            font-weight: 600;
+            font-size: 2.831vw;
+            color: v.$brand-1;
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.3vw;
+        }
+
+        &-subtitle {
+            font-weight: bold;
+        }
+
+        &-description {
+            
+        }   
+    }
+
+    @media (max-width: 768px){
+        &__card {
+            @include glass-effect($blur: 3px);
+            margin: 0 4.071vw;
+            width: 100%;
+            height: fit-content;
+            gap: 6.107vw;
+            padding: 8.142vw;
+            background-color: rgba(v.$gray-7, 0.08);
+            border-radius: 4.071vw;
+            
+            &-content {
+                font-size: 4.3vw;
+            }
+
+            &-title {
+                font-size: 6.107vw;
+            }
+        }
+    }
+
+    &__image {
+        position: absolute;
+        width: 32.701vw;
+
+        &--delivery {
+            left: -1vw;
+            top: 1.486vw;
+        }
+
+        &--dog {
+            width: 34.5vw;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    @media (max-width: 768px){
+        &__image {
+            width: 62.98vw;
+
+            &--delivery {
+                left: -8vw;
+                transform: rotate(5deg);
+            }
+
+            &--dog {
+                right: -10vw;
+                bottom: 3vw;
+                transform: rotate(15deg);
+            }
+        }
+    }
+
+    &__paw {
+        position: absolute;
+        width: 20vw;
+
+        &--left {
+            left: 19vw;
+            bottom: 0;
+        }
+
+        &--right {
+            right: 18vw;
+            top: 0;
+            transform: scaleX(-1);
+        }
+    }
+
+    @media (max-width: 768px){
+        &__paw {
+            width: 35vw;
+            &--left {
+                bottom: auto;
+                top: 60vw;
+                left: -10vw;
+            }
+
+            &--right {
+                right: -10vw;
+                top: auto;
+                bottom: 65vw;
             }
         }
     }
