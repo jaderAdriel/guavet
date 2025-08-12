@@ -886,3 +886,158 @@ body {
         }
     }
 }
+
+.procedures {
+    padding: 6.936vw 5.662vw;
+
+    &__content {
+        display: flex;
+        gap: 5.662vw;
+    }
+
+    @media (max-width: 768px){
+        & {
+            padding: 4.071vw;
+
+            &__content {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__left {
+        position: relative;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 2.831vw;
+        margin-top: 7.714vw;
+    }
+
+    @media (max-width: 768px){
+        &__right {
+            gap: 6.107vw;
+            margin-top: 0;
+        }
+    }
+
+    &__employee {
+        &-top {
+            position: absolute;
+            width: 18.754vw;
+        }
+
+        &-bottom {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 18.047vw;
+        }
+    }
+
+    @media (max-width: 768px){
+        &__employee {
+            &-top {
+                width: 42.748vw;
+            }
+
+            &-bottom {
+                width: 41.73vw;
+            }
+        }
+    }
+
+    &__differential {
+        position: relative;
+        background-color: v.$brand-1;
+        width: 39.632vw;
+        height: 39.632vw;
+        clip-path: url(#procedures__path--desktop);
+        -webkit-clip-path: url(#procedures__path--desktop);
+
+        &-logo {
+            position: absolute;
+            top: 2.831vw;
+            right: 2.831vw;
+            width: 14.296vw;
+        }
+
+        &-icon {
+            position: absolute;
+            bottom: 4.529vw;
+            left: 4.529vw;
+            width: 10.757vw;
+        }
+    }
+
+    @media (max-width: 768px){
+        &__differential {
+            width: 91.858vw;
+            height: 91.858vw;
+
+            &-logo {
+                width: 36.641vw;
+                top: 4.835vw;
+                right: 4.071vw;
+            }
+
+            &-icon {
+                left: 9.16vw;
+                bottom: 7.125vw;
+                width: 27.735vw;
+            }
+        }
+    }
+
+    
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 2.265vw;
+        color: v.$gray-7;
+        width: 34.466vw;
+    }
+
+    @media (max-width: 768px){
+        &__text {
+            gap: 6.107vw;
+            width: 100%;
+        }
+    }
+    
+    &__title {
+        font-family: "Raleway", sans-serif;
+        color: v.$brand-1;
+        font-size: 2.831vw;
+        font-weight: 600;
+    }
+
+    @media (max-width: 768px){
+        &__title {
+            font-size: 7.125vw;
+        }
+    }
+
+    &__subtitle {
+        font-weight: bold;
+        font-size: 1.274vw;
+    }
+
+    @media (max-width: 768px){
+        &__subtitle {
+            font-size: 4.071vw;
+        }
+    }
+
+    &__description {
+        font-size: 1.274vw;
+    }
+
+    @media (max-width: 768px){
+        &__description {
+            font-size: 4.071vw;
+        }
+    }
+}
