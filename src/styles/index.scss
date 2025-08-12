@@ -170,18 +170,22 @@ body.no-scroll {
 }
 
 .footer-section {
+    padding-left: 5.857vw;
+
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     min-height: 19.75rem;
     padding-top: 2.5rem;
     padding-bottom: 4.125rem;
+    justify-content: center;
     overflow: hidden;
     z-index: -2;
     gap: 2.5rem;
 
     &__pata-img {
         position: absolute;
-        z-index: 0;
+        z-index: -1;
         object-fit: fill;
 
         &:first-child {
@@ -213,18 +217,19 @@ body.no-scroll {
         }
     }
 
-    .card--logo {
+    .footer__item--logo {
         display: flex;
         transform: translateY(-0.5rem);
+        width: 25.842vw;
 
-        .card__animals {
+        .footer__item__animals {
             display: flex;
             height: fit-content;
             align-items: baseline;
             gap: 3.125rem;
 
             img:nth-child(1) {
-                width: 6.375rem;
+                width: clamp(4.4rem, 7.467vw, 6.4rem);
             }
 
             img:nth-child(2) {
@@ -232,12 +237,12 @@ body.no-scroll {
                 transform: translateY(-0.8rem);
             }
         }
-        .card__logo {
+        .footer__item__logo {
             align-self: center;
         }
     }
 
-    .card__content {
+    .footer__item__content {
         .nav__item {
             width: fit-content;
             padding-bottom: 0.375rem;
@@ -247,11 +252,15 @@ body.no-scroll {
         }
     }
 
-    .card {
+    .footer__item {
         border-left: 2px solid  v.$gray-3;
         padding: 1rem;
         padding-top: 0;
-        color: #fff;
+
+        &__title {
+            font-weight: 700;
+            color: v.$gray-1;
+        }
 
         .item-icon {
             width: 1rem;
@@ -274,6 +283,62 @@ body.no-scroll {
             align-items: center;
             gap: 1rem;
             font-size: 0.75rem;
+        }
+    }
+
+    @media (max-width: 1100px) {
+        justify-content: space-between;
+        
+        .footer__item--logo {
+            width: 100%;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            .footer__item__logo img {
+                width: 7.1875rem;
+            }
+        }
+
+        &__pata-img {
+            &:first-child, &:nth-child(2) {display: none;}
+            
+            &:nth-child(3) {
+                width: 9.656vw;
+                bottom: 9.222vw;
+                left: 0;
+                transform: translate(-20%, 20%) rotate(15deg);
+            }
+            &:nth-child(4) {
+                width: 19.847vw;
+                transform: translate(-20%, 50%) scaleX(-1) rotate(30deg);
+                bottom: 0; left: 0;
+            }
+        }
+    }
+
+    @media (min-width: 300px) and (max-width: 570px) {
+        justify-content: space-between;
+        padding-bottom: 1.5rem;
+        .footer__item {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid white;
+            
+            padding-left: 0;
+
+            &--nav {
+                border-bottom: none;
+            }
+        }
+
+        .footer__item--logo {
+            width: 100%;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            .footer__item__logo img {
+                width: 7.1875rem;
+            }
         }
     }
 }

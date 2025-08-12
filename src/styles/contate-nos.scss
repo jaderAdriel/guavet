@@ -111,8 +111,9 @@ body {
         }
 
         .form {
-            padding: 6rem;
-            padding-top: 4.4375rem;
+            padding: clamp(1rem, 5vw, 6rem);
+            padding-top: clamp(1rem, 4vw, 4.4375rem);
+
             padding-bottom: 6rem;
             &__description {
                 color: v.$brand-1;
