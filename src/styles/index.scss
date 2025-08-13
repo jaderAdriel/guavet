@@ -178,7 +178,6 @@ body.no-scroll {
     min-height: 19.75rem;
     padding-top: 2.5rem;
     padding-bottom: 4.125rem;
-    justify-content: center;
     overflow: hidden;
     z-index: -2;
     gap: 2.5rem;
@@ -217,10 +216,30 @@ body.no-scroll {
         }
     }
 
+    .animals {
+        position: absolute;
+        display: flex;
+        align-items: baseline;
+        bottom: 0;
+        right: 14.934vw;
+        gap: 2.94rem;
+        
+
+        .animals-dog {
+            width: 5.8125rem;
+            transform: scaleX(-1);
+        }
+        .animals-hamster {
+            width: 2.9rem;
+            transform: scaleX(-1);
+        }
+
+    }
+
     .footer__item--logo {
         display: flex;
         transform: translateY(-0.5rem);
-        width: 25.842vw;
+        gap: 2.635vw;
 
         .footer__item__animals {
             display: flex;
