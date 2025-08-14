@@ -321,13 +321,14 @@ body {
 
 .appointment {
     padding: 8.139vw v.$padding-x 9.554vw v.$padding-x;
+
     &__content {
         display: flex;
         height: 33.404vw;
         position: relative;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         padding: 8.142vw 4.071vw 8.142vw 4.071vw;
 
         &__content {
@@ -344,7 +345,7 @@ body {
         margin-bottom: 0.566vw;
     }
 
-    @media (max-width:768px){
+    @media (max-width:768px) {
         &__title {
             font-size: 6.107vw;
             margin-bottom: 47.837vw;
@@ -355,20 +356,20 @@ body {
     &__container {
         display: grid;
         grid-template-areas: "title title . ."
-                             "eletro radio . ."
-                             "ultra lab clinical .";
-        grid-template-columns: 21.373vw 21.373vw 21.373vw 18.754vw; 
+            "eletro radio . ."
+            "ultra lab clinical .";
+        grid-template-columns: 21.373vw 21.373vw 21.373vw 18.754vw;
         gap: 1.699vw;
         width: 88.606vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__container {
             grid-template-areas: "title title"
-                                 ". ."
-                                 "eletro ."
-                                 "clinical ultra"
-                                 "lab radio";
+                ". ."
+                "eletro ."
+                "clinical ultra"
+                "lab radio";
             grid-template-columns: repeat(2, 1fr);
             gap: 2.036vw;
             width: 100%;
@@ -420,7 +421,7 @@ body {
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__card {
             padding: 4.071vw;
             gap: 2.036vw;
@@ -457,7 +458,7 @@ body {
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__image {
             right: auto;
             top: 15.267vw;
@@ -475,7 +476,7 @@ body {
     color: v.$gray-1;
     padding-bottom: 2.831vw;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         & {
             gap: 4.58vw;
             padding-bottom: 4.071vw;
@@ -496,7 +497,7 @@ body {
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__content {
             &-top {
                 flex-direction: column-reverse;
@@ -521,7 +522,7 @@ body {
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__logo {
             width: 20.356vw;
             height: 20.356vw;
@@ -534,7 +535,7 @@ body {
         gap: 1.132vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__container {
             grid-template-columns: 1fr;
             gap: 4.071vw;
@@ -562,7 +563,7 @@ body {
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__card {
             gap: 2.036vw;
             padding: 4.071vw;
@@ -604,7 +605,7 @@ body {
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__band {
             padding: 7.634vw 4.071vw;
 
@@ -625,7 +626,7 @@ body {
     overflow: hidden;
     height: 51.097vw;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         & {
             height: 208.183vw;
         }
@@ -670,12 +671,10 @@ body {
             font-weight: bold;
         }
 
-        &-description {
-            
-        }   
+        &-description {}
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__card {
             @include glass-effect($blur: 3px);
             margin: 0 4.071vw;
@@ -685,7 +684,7 @@ body {
             padding: 8.142vw;
             background-color: rgba(v.$gray-7, 0.08);
             border-radius: 4.071vw;
-            
+
             &-content {
                 font-size: 4.3vw;
             }
@@ -712,7 +711,7 @@ body {
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__image {
             width: 62.98vw;
 
@@ -745,9 +744,10 @@ body {
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__paw {
             width: 35vw;
+
             &--left {
                 bottom: auto;
                 top: 60vw;
@@ -772,9 +772,25 @@ body {
     padding: 32.13vw 5.662vw 2.831vw 5.662vw;
     color: v.$gray-1;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         & {
-            display: none;
+            position: relative;
+            background-image: none;
+            height: 196.438vw;
+            padding: 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../../dist/assets/images/people/stefane-5.webp);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
         }
     }
 
@@ -782,16 +798,34 @@ body {
         display: flex;
         gap: 2.265vw;
 
-        &-left {
-
-        }
+        &-left {}
 
         &-right {
             display: grid;
             grid-template-areas: "rectangle less"
-                                 "slogan slogan";
+                "slogan slogan";
             grid-template-columns: repeat(2, auto);
             gap: 1.699vw;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__content {
+            position: relative;
+            flex-direction: column;
+            padding: 13.74vw 2.545vw 10.433vw 2.545vw;
+            gap: 0;
+            width: 100%;
+            height: 142.494vw;
+
+            &-right {
+                display: block;
+                width: fit-content;
+                height: fit-content;
+                grid-template-areas: none;
+                grid-template-columns: auto;
+                gap: 0;
+            }
         }
     }
 
@@ -826,10 +860,46 @@ body {
             font-size: 1.274vw;
             font-weight: bold;
         }
-        
+
         &-description {
             font-size: 1.132vw;
             width: 21.161vw;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__maincard {
+            position: absolute;
+            top: 78vw;
+            left: 2.545vw;
+            gap: 5.852vw;
+            padding: 8.142vw;
+            border-radius: 8.142vw;
+            width: 94.911vw;
+            height: fit-content;
+
+            &-title {
+                font-size: 4.071vw;
+            }
+
+            &-bodies {
+                flex-direction: column;
+                gap: 5.598vw;
+            }
+
+            &-body {
+                gap: 4.071vw;
+            }
+
+            &-subtitle {
+                font-size: 3.562vw;
+                width: 70.992vw;
+            }
+
+            &-description {
+                font-size: 3.562vw;
+                width: 70.992vw;
+            }
         }
     }
 
@@ -839,6 +909,12 @@ body {
         width: 4.034vw;
         height: 7.643vw;
         border-radius: 1.699vw;
+    }
+
+    @media (max-width: 768px) {
+        &__rectangle {
+            display: none;
+        }
     }
 
     &__lesscard {
@@ -867,6 +943,28 @@ body {
         }
     }
 
+    @media (max-width: 768px) {
+        &__lesscard {
+            padding: 4.071vw;
+            width: 52.926vw;
+            height: 27.481vw;
+            border-radius: 6.107vw;
+            gap: 2.036vw;
+
+            &-row {
+                gap: 2.036vw;
+            }
+
+            &-icon {
+                width: 2.949vw;
+            }
+
+            &-text {
+                font-size: 3.562vw;
+            }
+        }
+    }
+
     &__slogan {
         grid-area: slogan;
         display: flex;
@@ -885,6 +983,26 @@ body {
             width: 12.527vw;
         }
     }
+
+    @media (max-width: 768px) {
+        &__slogan {
+            position: absolute;
+            bottom: -38vw;
+            right: 15.776vw;
+            gap: 4.071vw;
+            padding: 5.115vw 3.695vw;
+            border-radius: 6.107vw;
+
+            &-icon {
+                width: 12.201vw;
+            }
+
+            &-text {
+                font-size: 3.053vw;
+                width: 45.038vw;
+            }
+        }
+    }
 }
 
 .procedures {
@@ -895,7 +1013,7 @@ body {
         gap: 5.662vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         & {
             padding: 4.071vw;
 
@@ -916,7 +1034,7 @@ body {
         margin-top: 7.714vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__right {
             gap: 6.107vw;
             margin-top: 0;
@@ -937,7 +1055,7 @@ body {
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__employee {
             &-top {
                 width: 42.748vw;
@@ -972,7 +1090,7 @@ body {
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__differential {
             width: 91.858vw;
             height: 91.858vw;
@@ -991,7 +1109,7 @@ body {
         }
     }
 
-    
+
     &__text {
         display: flex;
         flex-direction: column;
@@ -1000,13 +1118,13 @@ body {
         width: 34.466vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__text {
             gap: 6.107vw;
             width: 100%;
         }
     }
-    
+
     &__title {
         font-family: "Raleway", sans-serif;
         color: v.$brand-1;
@@ -1014,7 +1132,7 @@ body {
         font-weight: 600;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__title {
             font-size: 7.125vw;
         }
@@ -1025,7 +1143,7 @@ body {
         font-size: 1.274vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__subtitle {
             font-size: 4.071vw;
         }
@@ -1035,7 +1153,7 @@ body {
         font-size: 1.274vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__description {
             font-size: 4.071vw;
         }
