@@ -236,6 +236,11 @@ body {
             height: 3.807vw;
             border-radius: 0.586vw;
         }
+
+        &-button:hover {
+            color: v.$gray-1;
+            background-color: color-mix(in srgb, v.$gray-1 30%, v.$brand-1);
+        }
     }
 
     @media (max-width: 768px) {

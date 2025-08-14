@@ -112,6 +112,10 @@
         }
     }
 
+    &__button:hover {
+        background-color: rgba(v.$brand-1, 0.80);
+    }
+
     &__right {
         display: flex;
         position: relative;
@@ -346,6 +350,10 @@
         color: v.$gray-1;
         border-radius: clamp(0.5rem, 0.5rem + 0vw, 0.5rem);
         margin-left: 5.857vw;
+    }
+
+    &__button:hover {
+        background: color-mix(in srgb, v.$brand-1 80%, black);
     }
 
     &__grass {
@@ -586,6 +594,11 @@
         height: clamp(2.037rem, 3.807vw, 4.568rem);
         color: v.$brand-1;
         border-radius: clamp(0.314rem, 0.586vw, 0.703rem);
+    }
+
+    &__button:hover {
+        color: v.$gray-1;
+        background-color: color-mix(in srgb, v.$gray-1 30%, v.$brand-1);
     }
 
     @media (max-width: 768px){
@@ -1728,12 +1741,18 @@
     }
 
     &__button {
+        cursor: pointer;
         background-color: v.$gray-1;
         color: v.$brand-1;
         font-size: 1.171vw;
         width: 13.031vw;
         height: 2.928vw;
         border-radius: 0.586vw;
+    }
+
+    &__button:hover {
+        color: v.$gray-1;
+        background-color: color-mix(in srgb, v.$gray-1 30%, v.$brand-1);
     }
 
     @media (max-width: 768px){
