@@ -5,11 +5,7 @@
 
 body {
   overflow: auto;
-  scrollbar-width: none;        /* Firefox */
-  -ms-overflow-style: none;     /* IE 10+ */
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body::-webkit-scrollbar {
@@ -258,6 +254,10 @@ body.no-scroll {
         }
         .footer__item__logo {
             align-self: center;
+
+            img {
+                width: 7.5rem;
+            }
         }
     }
 
@@ -335,13 +335,13 @@ body.no-scroll {
         }
     }
 
-    @media (min-width: 300px) and (max-width: 570px) {
+    @media (max-width: 570px) {
         justify-content: space-between;
         padding-bottom: 1.5rem;
         .footer__item {
             width: 100%;
             border: none;
-            border-bottom: 2px solid white;
+            border-bottom: 1px solid v.$gray-2;
             
             padding-left: 0;
 
