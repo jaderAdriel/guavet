@@ -331,6 +331,8 @@ body {
         display: flex;
         height: 33.404vw;
         position: relative;
+        transform: translateZ(0);
+        will-change: transform;
     }
 
     @media (max-width: 768px) {
@@ -453,7 +455,13 @@ body {
         top: -0.5vw;
         width: 42vw;
         height: 36.9vw;
+        -webkit-clip-path: url(#appointment__path--desktop);
         clip-path: url(#appointment__path--desktop);
+
+        @-moz-document url-prefix() {
+            top: -0.5vw;
+            right: 2vw; 
+        }
 
         &-img {
             width: 100%;

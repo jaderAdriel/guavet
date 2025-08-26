@@ -24,10 +24,11 @@
             </button>
 
             <ul class="nav__list" id="page-tabs">
-                <li class="nav__item"><a class="nav__link"  href="../src/index.html">Início</a></li>
+                <li class="nav__item"><a class="nav__link" href="../src/index.html">Início</a></li>
                 <li class="nav__item"><a class="nav__link" href="../src/servicos.html">Serviços</a></li>
                 <li class="nav__item"><a class="nav__link" href="./equipe.html">Equipe</a></li>
-                <li class="nav__item"><a class="nav__link nav__link--active" href="../src/contate-nos.html">Contate-nos</a></li>
+                <li class="nav__item"><a class="nav__link nav__link--active"
+                        href="../src/contate-nos.html">Contate-nos</a></li>
             </ul>
         </nav>
     </header>
@@ -60,20 +61,17 @@
                 </div>
 
                 <div class="hero__image">
-                    <img class="hero__img" src="assets/images/people/employees-1.png" alt="Funcionários da Guavet">
+                    <img class="hero__img" src="assets/images/people/employees-1.webp" alt="Funcionários da Guavet">
                 </div>
             </div>
         </div>
-
+        
         <div class="hero__info">
-            <div class="hero__info-top">
-                <div class="hero__info-corner hero__info-corner--left"></div>
-                <div class="hero__info-center">
-                    <img class="hero__info-center-img" src="../dist/assets/images/hospital-24h.svg"
+            <div class="hero__info-wrapper">
+                <div class="hero__info-container">
+                    <img class="hero__info-info" src="../dist/assets/images/hospital-24h.svg"
                         alt="Aqui tem hospital 24h">
                 </div>
-                <div class="hero__info-corner hero__info-corner--right"></div>
-
                 <div class="hero__info-cat">
                     <img class="hero__info-cat-img" src="../dist/assets/images/animals/cat-1.svg"
                         alt="Gatinho espreguiçando">
@@ -82,9 +80,6 @@
                     <img class="hero__info-dog-img" src="../dist/assets/images/animals/dog-2.svg"
                         alt="Cachorrinho olhando para o lado">
                 </div>
-            </div>
-
-            <div class="hero__info-bottom">
             </div>
         </div>
     </section>
@@ -303,7 +298,9 @@
                         aria-hidden="true">
                     <h3 class="feedback__testimonial-author">Diniz Jeni, tutora do José 🐱</h3>
                     <p class="feedback__testimonial-text">
-                        A minha experiência foi muita boa! Graças a Deus toda a equipe foi super humana e acolhedora com José, meu gatinho. Tenho muita confiança em todos e agradeço a cada um desde a limpeza, recepção, atendimento on-line e médicos veterinários pelo carinho sempre!
+                        A minha experiência foi muita boa! Graças a Deus toda a equipe foi super humana e acolhedora com
+                        José, meu gatinho. Tenho muita confiança em todos e agradeço a cada um desde a limpeza,
+                        recepção, atendimento on-line e médicos veterinários pelo carinho sempre!
                     </p>
                 </div>
 
@@ -426,17 +423,38 @@
         </div>
     </section>
 
-    
+
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <clipPath id="hero__path--desktop" clipPathUnits="objectBoundingBox">
+                <path
+                    d="M0.332,0 C0.344,0,0.353,0.136,0.353,0.304 L0.353,0.38 C0.353,0.548,0.362,0.685,0.373,0.685 H0.989 C0.995,0.685,1,0.755,1,0.842 L1,0.842 C1,0.929,0.995,1,0.989,1 H0.011 C0.005,1,0,0.929,0,0.842 L0,0.842 C0,0.755,0.005,0.685,0.011,0.685 H0.038 C0.05,0.685,0.059,0.548,0.059,0.38 L0.059,0.304 C0.059,0.136,0.068,0,0.079,0 H0.332 Z" />
+            </clipPath>
+        </defs>
+    </svg>
+
+
     <svg width="0" height="0" style="position: absolute;">
         <defs>
             <clipPath id="feedback__path--desktop" clipPathUnits="objectBoundingBox">
                 <path
-                d="M547 64C547 81.6731 561.327 96 579 96H1094C1111.67 96 1126 81.6731 1126 64V32C1126 14.3269 1140.33 0 1158 0H1174C1191.67 0 1206 14.3269 1206 32V410C1206 427.673 1191.67 442 1174 442H1161C1124 442 1094 471.997 1094 509V522C1094 539.673 1079.67 554 1062 554H32C14.3269 554 0 539.673 0 522V32C0 14.3269 14.3269 0 32 0H515C532.673 0 547 14.3269 547 32V64Z"
-                transform="scale(0.000829187, 0.001805054)" />
+                    d="M547 64C547 81.6731 561.327 96 579 96H1094C1111.67 96 1126 81.6731 1126 64V32C1126 14.3269 1140.33 0 1158 0H1174C1191.67 0 1206 14.3269 1206 32V410C1206 427.673 1191.67 442 1174 442H1161C1124 442 1094 471.997 1094 509V522C1094 539.673 1079.67 554 1062 554H32C14.3269 554 0 539.673 0 522V32C0 14.3269 14.3269 0 32 0H515C532.673 0 547 14.3269 547 32V64Z"
+                    transform="scale(0.000829187, 0.001805054)" />
             </clipPath>
         </defs>
     </svg>
-    
+
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <clipPath id="hero__path--mobile" clipPathUnits="objectBoundingBox">
+                <path
+                    transform="scale(0.0025445, 0.0095238)"
+                    d="M393 80.5C393 94.031 382.031 105 368.5 105H24.5C10.969 105 0 94.031 0 80.5V64C0 59.5817 3.58172 56 8 56V56C12.4183 56 16 52.4183 16 48V28C16 12.536 28.536 0 44 0H234C249.464 0 262 12.536 262 28V28C262 43.464 274.536 56 290 56H368.5C382.031 56 393 66.969 393 80.5V80.5Z"
+                />
+            </clipPath>
+        </defs>
+    </svg>
+
     <svg width="0" height="0" style="position: absolute;">
         <defs>
             <clipPath id="feedback__path--mobile" clipPathUnits="objectBoundingBox">
@@ -446,7 +464,7 @@
             </clipPath>
         </defs>
     </svg>
-    
+
     <svg width="0" height="0" style="position:absolute; left:-100%;">
         <defs>
             <clipPath id="form__path--desktop" clipPathUnits="objectBoundingBox">
@@ -481,7 +499,7 @@
             </div>
 
             <picture class="footer__item__logo">
-            <!-- Para telas maiores que 800px -->
+                <!-- Para telas maiores que 800px -->
                 <source srcset="assets/images/logo/logo-em-pe-branca.svg" media="(min-width: 800px)">
                 <img src="assets/images/logo/guavet-header-logo.svg" alt="Logo da guavet">
             </picture>
@@ -494,7 +512,7 @@
             </div>
             <div class="footer__item__content">
                 <a href="" class="footer__item__content__item">
-                    <img src="assets/icons/facebook.svg" class="item-icon item-icon--white"  alt="Logo do facebook">
+                    <img src="assets/icons/facebook.svg" class="item-icon item-icon--white" alt="Logo do facebook">
                     <span>Guavet pet</span>
                 </a>
                 <a href="" class="footer__item__content__item">
@@ -516,16 +534,18 @@
                 <a href="" class="footer__item__content__item">
                     <img src="assets/icons/pin.svg" aria-hidden="true" class="item-icon item-icon--white">
                     <span class="">
-                            Rua Atílio Pereira de Oliveira, 540, Bairro<br />
-                            Sandoval Moraes, Guanambi - BA
+                        Rua Atílio Pereira de Oliveira, 540, Bairro<br />
+                        Sandoval Moraes, Guanambi - BA
                     </span>
                 </a>
                 <a href="social-item" class="footer__item__content__item">
-                    <img src="assets/icons/perm_phone_msg.svg" class="item-icon item-icon--white" alt="Logo de telefone">
+                    <img src="assets/icons/perm_phone_msg.svg" class="item-icon item-icon--white"
+                        alt="Logo de telefone">
                     <span>(77) 3451-4236</span>
                 </a>
                 <a href="social-item" class="footer__item__content__item">
-                    <img src="assets/icons/perm_phone_msg.svg" class="item-icon item-icon--white" alt="Logo de telefone">
+                    <img src="assets/icons/perm_phone_msg.svg" class="item-icon item-icon--white"
+                        alt="Logo de telefone">
                     <span>(77) 98809-2899</span>
                 </a>
                 <a href="social-item" class="footer__item__content__item">

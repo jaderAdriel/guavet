@@ -37,7 +37,7 @@
     background-repeat: no-repeat;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .section--hero {
         background-image: url(../../dist/assets/images/background-paws-2.svg);
         background-size: contain;
@@ -48,9 +48,9 @@
 
 
 .hero {
+    position: relative;
     display: flex;
-    gap: clamp(2rem, 0.9145rem + 4.4193vw, 4.6875rem);
-    margin-bottom: 5.49vw;
+    gap: 3.66vw;
     justify-content: space-between;
     overflow: hidden;
 
@@ -58,21 +58,21 @@
         display: flex;
         flex-grow: 0;
         flex-direction: column;
-        gap: clamp(1.5rem, 0.8437rem + 2.6721vw, 3.125rem);
+        gap: 3.66vw;
     }
 
     &__text {
         display: flex;
         flex-direction: column;
-        gap: clamp(1.5rem, 1.0961rem + 1.6444vw, 2.5rem);
+        gap: 2.928vw;
 
         &-title {
             font-family: "Raleway", sans-serif;
             font-weight: 400;
-            font-size: clamp(2rem, 1.5961rem + 1.6444vw, 3rem);
+            font-size: 3.514vw;
             line-height: 1.5;
             color: v.$gray-1;
-            width: clamp(20.375rem, 16.3359rem + 16.444vw, 30.375rem);
+            width: 35.6vw;
 
             &-highlight {
                 color: v.$brand-1;
@@ -80,11 +80,11 @@
         }
 
         &-subtitle {
-            font-size: clamp(1rem, 0.798rem + 0.8222vw, 1.5rem);
+            font-size: 1.757vw;
             font-weight: 400;
             line-height: 1.25;
             color: v.$gray-1;
-            width: clamp(20.1875rem, 16.0727rem + 16.7523vw, 30.375rem);
+            width: 35.578vw;
         }
     }
 
@@ -92,23 +92,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: clamp(0.5rem, 0.5rem + 0vw, 0.5rem);
+        gap: 0.586vw;
         background-color: v.$brand-1;
         border: none;
         outline: none;
-        padding: clamp(1.125rem, 1.125rem + 0vw, 1.125rem) clamp(1.5rem, 1.5rem + 0vw, 1.5rem);
+        padding: 0.878vw 1.83vw;
         width: fit-content;
-        max-width: clamp(15.0625rem, 15.0625rem + 0vw, 15.0625rem);
-        border-radius: clamp(0.5rem, 0.5rem + 0vw, 0.5rem);
+        border-radius: 0.586vw;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
-
-        &-link {
-            color: white;
-            font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-        }
+        font-size: 1.318vw;
 
         &-icon {
-            width: clamp(1rem, 1rem + 0vw, 1rem);
+            width: 1.171vw;
         }
     }
 
@@ -125,7 +120,7 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        gap: clamp(0.56125rem, 0.384rem + 0.7215vw, 1rem);
+        gap: 1.171vw;
     }
 
     &__cube {
@@ -133,68 +128,61 @@
         justify-content: center;
         align-items: center;
         background-color: v.$brand-1;
-        border-radius: clamp(1rem, 0.6971rem + 1.2333vw, 1.75rem);
-        width: clamp(2.799375rem, 1.9105rem + 3.6187vw, 5rem);
-        height: clamp(2.799375rem, 1.9105rem + 3.6187vw, 5rem);
+        border-radius: 2.05vw;
+        width: 5.2vw;
+        height: 5.2vw;
 
         &-hamister,
         &-logo {
-            width: clamp(1.959375rem, 1.3371rem + 2.5334vw, 3.5rem);
+            width: 3.6vw;
         }
+    }
+
+    &__image {
+        width: fit-content;
+        height: fit-content;
     }
 
     &__img {
-        width: 47.218vw;
-        height: 39.605vw;
+        width: 41.73vw;
+        height: 35vw;
     }
 
     &__info {
+        position: relative;
+        bottom: -0.6vw;
+        left: -8.4vw;
         display: flex;
+        margin-top: -1vw;
         flex-direction: column;
         gap: 0;
 
-        &-top {
-            display: flex;
-            align-items: flex-end;
+        &-wrapper {
             position: relative;
+            width: 100vw;
         }
 
-        &-corner--left {
-            @include glass-effect($blur: 4px);
-            width: 3vw;
-            height: 3vw;
-            -webkit-mask: radial-gradient(circle 3.021vw at top left, transparent 100%, black 100%);
-            mask: radial-gradient(circle 3.021vw at top left, transparent 100%, black 100%);
+        &-info {
+            position: relative;
+            top: 1vw;
+            left: 7.5vw;
+            width: 26.192vw;
+            height: 2.928vw;
         }
 
-        &-corner--right {
-            @include glass-effect($blur: 4px);
-            width: 3vw;
-            height: 3vw;
-            -webkit-mask: radial-gradient(circle 3.021vw at top right, transparent 100%, black 100%);
-            mask: radial-gradient(circle 3.021vw at top right, transparent 100%, black 100%);
-        }
-
-        &-center {
-            @include glass-effect($blur: 4px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 29.429vw;
-            height: 5.5vw;
-            margin-top: 2.928vw;
-            border-radius: 2.05vw 2.05vw 0 0;
-
-            &-img {
-                width: 26.192vw;
-                height: 2.928vw;
-            }
+        &-container {
+            @include glass-effect($blur: 2.5px);
+            background-color: rgba(v.$gray-1, 0.25);
+            clip-path: url(#hero__path--desktop);
+            -webkit-clip-path: url(#hero__path--desktop);
+            width: 100vw;
+            height: 6.735vw;
         }
 
         &-cat {
             position: absolute;
-            margin-bottom: 4vw;
-            margin-left: 3vw;
+            bottom: 5vw;
+            left: 5.857vw;
 
             &-img {
                 width: 11.493vw;
@@ -202,21 +190,10 @@
             }
         }
 
-        &-bottom {
-            @include glass-effect($blur: 4px);
-            position: relative;
-            // width: 99.2vw;
-            width: 100%;
-            height: 1.8vw;
-            margin: 0 -6.5vw;
-            border-radius: 2.928vw 2.928vw 0 0;
-        }
-
         &-dog {
             position: absolute;
-            right: 0;
-            top: 0;
-            margin-right: 5vw;
+            right: 2vw;
+            bottom: 1.8vw;
             z-index: 1;
 
             &-img {
@@ -225,34 +202,9 @@
         }
     }
 
-    // Media Queries aninhadas
-    @media (max-width: 1150px) {
-        &__img {
-            width: 40.218vw;
-            height: 32.605vw;
-        }
-
-        &__cubes {
-            gap: 1.171vw;
-        }
-
-        &__cube {
-            border-radius: 2.05vw;
-            width: 5vw;
-            height: 5vw;
-
-            &-hamister {
-                width: 3.3vw;
-            }
-
-            &-logo {
-                width: 3.5vw;
-            }
-        }
-    }
-
     @media (max-width: 768px) {
         flex-direction: column;
+        gap: 8.142vw;
 
         &__cubes {
             gap: 2.285vw;
@@ -272,22 +224,61 @@
         &__img {
             width: 91.858vw;
             height: 77.099vw;
+            margin-bottom: 12vw;
+        }
+
+        &__text {
+            gap: 2.928vw;
+
+            &-title {
+                font-size: 8.142vw;
+                line-height: 1.5;
+                color: v.$gray-1;
+                width: 100%;
+            }
+
+            &-subtitle {
+                font-size: 4.071vw;
+                width: 100%;
+            }
+        }
+
+        &__button {
+            gap: 2.036vw;
+            padding: 3.053vw 6.107vw;
+            border-radius: 2.036vw;
+            font-size: 4.58vw;
+
+            &-icon {
+                width: 4.071vw;
+            }
         }
 
         &__info {
-            &-center {
-                width: 58vw;
-                height: 14.249vw;
-                margin-top: 22vw;
-                border-radius: 7.125vw 7.125vw 0 0;
+            top: 5vw;
+            left: -7vw;
 
-                &-img {
-                    width: 54.707vw;
-                    height: 6.107vw;
-                }
+            margin-top: 14vw;
+
+            &-info {
+                position: relative;
+                top: 4vw;
+                left: 7.5vw;
+                width: 58vw;
+                height: auto;
+            }
+
+            &-container {
+                @include glass-effect($blur: 2.5px);
+                -webkit-clip-path: url(#hero__path--mobile);
+                clip-path: url(#hero__path--mobile);
+                width: 103%;
+                height: 26.718vw;
             }
 
             &-cat {
+                bottom: 12vw;
+                left: auto;
                 margin-bottom: 10vw;
                 margin-left: 7vw;
 
@@ -297,21 +288,9 @@
                 }
             }
 
-            &-corner--right {
-                width: 10vw;
-                height: 10vw;
-                -webkit-mask: radial-gradient(circle 10vw at top right, transparent 100%, black 100%);
-                mask: radial-gradient(circle 10.3vw at top right, transparent 100%, black 100%);
-            }
-
-            &-bottom {
-                width: 99vw;
-                height: 7.379vw;
-                border-radius: 7.125vw 7.125vw 0 0;
-            }
-
             &-dog {
-                top: 11.5vw;
+                bottom: 11.5vw;
+                right: 0;
                 margin-right: 3vw;
 
                 &-img {
@@ -373,7 +352,7 @@
         width: 12.518vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__list {
             flex-direction: column;
             margin-bottom: 4.071vw;
@@ -388,7 +367,7 @@
         }
 
         &__grass {
-            
+
             background-image: url(../../dist/assets/images/grass-2.svg);
             background-position: bottom;
             background-size: cover;
@@ -466,7 +445,7 @@
         height: 4.685vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         & {
             width: 100%;
             height: clamp(8.302rem, 36.896vw, 17.710rem);
@@ -531,7 +510,7 @@
         gap: clamp(2.037rem, 3.807vw, 4.568rem);
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         padding: clamp(0.916rem, 4.071vw, 1.399rem) clamp(0.916rem, 4.071vw, 1.399rem) clamp(3.836rem, 17.048vw, 5.860rem) clamp(0.916rem, 4.071vw, 1.399rem);
 
         &__content {
@@ -561,7 +540,7 @@
         line-height: 1.50;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__title {
             font-size: clamp(1.374rem, 6.107vw, 2.099rem);
             width: 100%;
@@ -576,7 +555,7 @@
         width: clamp(20.327rem, 37.994vw, 45.593rem);
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__text {
             gap: clamp(0.458rem, 2.036vw, 0.700rem);
             font-size: clamp(0.916rem, 4.071vw, 1.399rem);
@@ -601,7 +580,7 @@
         background-color: color-mix(in srgb, v.$gray-1 30%, v.$brand-1);
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__button {
             font-size: clamp(1.030rem, 4.58vw, 1.574rem);
             width: clamp(8.530rem, 37.913vw, 13.033rem);
@@ -630,7 +609,7 @@
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__image {
             &--veterinarian {
                 width: 14.308vw;
@@ -666,13 +645,13 @@
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__logo {
             padding: clamp(0.458rem, 2.036vw, 0.700rem);
             border-radius: clamp(0.916rem, 4.071vw, 1.399rem);
             right: 1.2vw;
             top: -5vw;
-            
+
 
             &-img {
                 width: clamp(3.550rem, 15.776vw, 5.423rem);
@@ -714,7 +693,7 @@
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__card {
             padding-left: clamp(0.916rem, 4.071vw, 1.399rem);
             width: clamp(11.908rem, 52.926vw, 18.193rem);
@@ -750,8 +729,9 @@
         gap: 7.028vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         padding: clamp(0.916rem, 4.071vw, 1.221rem);
+
         &__content {
             flex-direction: column-reverse;
             gap: clamp(0.916rem, 4.071vw, 1.221rem);
@@ -762,14 +742,14 @@
         width: 47.176vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__left {
             margin: 0 auto;
             width: 60%;
         }
     }
 
-    @media (max-width: 480px){
+    @media (max-width: 480px) {
         &__left {
             width: 100%;
         }
@@ -781,7 +761,7 @@
         margin-left: -4.1vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__image {
             margin: 0;
         }
@@ -795,7 +775,7 @@
         margin-top: 18.521vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__right {
             width: fit-content;
             margin: 0;
@@ -809,7 +789,7 @@
         font-size: 2.343vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__title {
             font-size: clamp(1.145rem, 5.089vw, 1.527rem);
         }
@@ -822,7 +802,7 @@
         color: v.$gray-10;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__text {
             gap: clamp(0.916rem, 4.071vw, 1.221rem);
         }
@@ -833,7 +813,7 @@
         font-size: 1.318vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__paragraph {
             font-size: clamp(1.030rem, 4.58vw, 1.374rem)
         }
@@ -845,7 +825,7 @@
         margin-bottom: -0.586vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__slogan {
             font-size: clamp(0.916rem, 4.071vw, 1.221rem);
             margin-bottom: clamp(0.458rem, 2.036vw, 0.611rem);
@@ -868,8 +848,9 @@
         gap: clamp(0.563rem, 1.171vw, 1.405rem);
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         padding: 0 4.071vw 2.928vw 4.071vw;
+
         &__content {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
@@ -937,7 +918,7 @@
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__card {
             flex-direction: column;
             height: 69.211vw;
@@ -948,6 +929,7 @@
             &-info {
                 width: 100%;
                 gap: clamp(0.458rem, 2.036vw, 0.624rem);
+
                 &--stefane {
                     padding-left: clamp(0.458rem, 2.036vw, 0.624rem);
                     right: auto;
@@ -1014,7 +996,7 @@
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__image {
             &--stefane {
                 position: absolute;
@@ -1075,22 +1057,22 @@
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__icon {
             &--heart {
                 width: 8.481vw;
                 left: 0;
             }
-    
+
             &--bone {
                 width: 8.481vw;
             }
-    
+
             &--dog {
                 height: 8.481vw;
                 left: auto;
             }
-    
+
             &--paw {
                 width: 9.5vw;
                 padding-left: 2.036vw;
@@ -1106,7 +1088,7 @@
         grid-row: 1;
         width: clamp(12.596rem, 26.208vw, 31.450rem);
         height: clamp(9.465rem, 19.693vw, 23.632rem);
-        
+
 
         &-title {
             font-family: "Raleway", sans-serif;
@@ -1117,13 +1099,13 @@
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__info {
             grid-column: 1 / -1;
             grid-row: 1;
             width: 100%;
             height: clamp(9.389rem, 41.73vw, 12.780rem);
-            
+
 
             &-title {
                 font-size: clamp(1.374rem, 6.107vw, 1.870rem);
@@ -1148,7 +1130,7 @@
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__button {
             width: clamp(12.767rem, 56.743vw, 17.378rem);
             height: clamp(2.290rem, 10.178vw, 3.117rem);
@@ -1172,6 +1154,7 @@
     position: relative;
     background-color: v.$gray-2;
     overflow: hidden;
+
     &__container {
         display: flex;
         align-items: center;
@@ -1186,8 +1169,9 @@
         margin-bottom: 4.1vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         padding: 4.071vw;
+
         &__container {
             flex-direction: column;
             width: 100%;
@@ -1206,7 +1190,7 @@
         flex-shrink: 0;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__image-side {
             right: auto;
             bottom: auto;
@@ -1222,7 +1206,7 @@
         width: clamp(2.346rem, 4.881vw, 5.857rem);
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__icon {
             width: 9.669vw;
             top: 4vw;
@@ -1236,7 +1220,7 @@
         z-index: 0;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__image {
             width: 100%;
             height: auto;
@@ -1276,12 +1260,10 @@
             }
         }
 
-        &-rating {
-
-        }
+        &-rating {}
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__card {
             width: 41.476vw;
             height: 34.097vw;
@@ -1290,21 +1272,21 @@
             border-radius: 4.071vw;
             padding: 4.071vw;
             gap: 1.018vw;
-            
+
             &-logo {
                 width: 6.107vw;
             }
-    
+
             &-texts {
                 &--title {
                     font-size: 6.107vw;
                 }
-    
+
                 &--subtitle {
                     font-size: 3.053vw;
                 }
             }
-    
+
             &-rating {
                 width: 26.463vw;
             }
@@ -1319,7 +1301,7 @@
     &__header {
         position: absolute;
         display: flex;
-        
+
         border-radius: 0 0 clamp(1.126rem, 2.343vw, 2.812rem) clamp(1.126rem, 2.343vw, 2.812rem);
         padding: 2.8vw 3.001vw 2.196vw 3.001vw;
         z-index: 30;
@@ -1327,7 +1309,7 @@
         top: -2vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__header {
             position: absolute;
             z-index: 20;
@@ -1347,7 +1329,7 @@
         color: v.$brand-1;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__title {
             width: 55.98vw;
             font-size: 8.142vw;
@@ -1363,7 +1345,7 @@
         width: clamp(2.390rem, 4.972vw, 5.966rem);
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__header-icon {
             width: 15.247vw;
             top: 16vw;
@@ -1383,7 +1365,7 @@
         margin-bottom: clamp(0.481rem, 1vw, 1.200rem);
     }
 
-    @media (max-width:768px){
+    @media (max-width:768px) {
         &__testimonial {
             width: 100%;
             border-radius: 4.071vw;
@@ -1398,7 +1380,7 @@
         bottom: clamp(8.651rem, 18vw, 21.600rem);
     }
 
-    @media (max-width:768px){
+    @media (max-width:768px) {
         &__testimonial-quote {
             width: 14.504vw;
             right: 3vw;
@@ -1412,7 +1394,7 @@
         font-weight: bold;
     }
 
-    @media (max-width:768px){
+    @media (max-width:768px) {
         &__testimonial-author {
             z-index: 3;
             font-size: 4.58vw;
@@ -1423,7 +1405,7 @@
         font-size: clamp(0.633rem, 1.318vw, 1.582rem);
     }
 
-    @media (max-width:768px){
+    @media (max-width:768px) {
         &__testimonial-text {
             font-size: 3.562vw;
         }
@@ -1436,9 +1418,8 @@
     }
 
     &__arrow {
-        width: clamp(0.288rem, 0.6vw, 0.720rem)
-        &--left {
-        }
+        width: clamp(0.288rem, 0.6vw, 0.720rem) &--left {}
+
         &--right {
             transform: scaleX(-1);
         }
@@ -1451,14 +1432,13 @@
 
     &__dot {
         fill: v.$gray-6;
-        width: clamp(0.282rem, 0.586vw, 0.703rem)
-    
-        &--active {
+
+        width: clamp(0.282rem, 0.586vw, 0.703rem) &--active {
             fill: v.$gray-1;
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__pagination {
             margin-top: 10vw;
             gap: 5.089vw;
@@ -1478,7 +1458,7 @@
     }
 
     &__logo {
-        
+
         position: absolute;
         background-color: v.$gray-2;
         right: 5.5vw;
@@ -1487,7 +1467,7 @@
         z-index: 2;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__logo {
             // outline: solid v.$gray-2 3.562vw;
             right: 5vw;
@@ -1501,7 +1481,7 @@
         width: clamp(3.378rem, 7.028vw, 8.434rem);
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__logo-img {
             width: 16.794vw;
         }
@@ -1523,7 +1503,7 @@
     }
 
 
-    @media (max-width: 1800px){
+    @media (max-width: 1800px) {
         &__round {
             &-bottom {
                 &--left {
@@ -1534,7 +1514,7 @@
         }
     }
 
-    @media (max-width: 1050px){
+    @media (max-width: 1050px) {
         &__round {
             &-bottom {
                 &--left {
@@ -1546,7 +1526,7 @@
     }
 
 
-    @media (max-width: 800px){
+    @media (max-width: 800px) {
         &__round {
             &-bottom {
                 &--left {
@@ -1568,13 +1548,13 @@
 
     &__content {
         display: flex;
-        
+
         align-items: center;
         gap: 2.928vw;
         padding: 9.37vw 5.857vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__content {
             flex-direction: column;
             gap: 6.107vw;
@@ -1600,7 +1580,7 @@
         font-size: 2.343vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__title {
             font-size: 6.107vw;
         }
@@ -1610,7 +1590,7 @@
         font-size: 1.318vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__subtitle {
             font-size: 3.562vw;
         }
@@ -1622,7 +1602,7 @@
         gap: 1.757vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__form {
             gap: 4.071vw;
         }
@@ -1638,12 +1618,13 @@
         font-size: 0.878vw;
         padding-left: 1.171vw;
         padding-bottom: 0.293vw;
+
         &--required {
             color: v.$error-dark;
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__label {
             font-size: 3.053vw;
             padding-left: 4.071vw;
@@ -1665,12 +1646,12 @@
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__input {
             width: 100%;
             font-size: 4.071vw;
             border: 0.254vw solid v.$gray-5;
-            border-radius: 2.036vw; 
+            border-radius: 2.036vw;
             padding: 2.036vw 4.071vw;
         }
     }
@@ -1680,21 +1661,21 @@
         gap: 1.171vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__checkbox-group {
             gap: 2.5vw;
         }
     }
 
-    &__checkbox {
-    }
+    &__checkbox {}
 
     &__checkbox-label {
         color: v.$gray-1;
         padding-top: 0.23vw;
         font-size: 1.171vw;
+
         &--required {
-            color:v.$error-dark;
+            color: v.$error-dark;
         }
     }
 
@@ -1712,7 +1693,7 @@
 
     input[type="checkbox"]:checked {
         background: v.$brand-1-dark;
-        border:none;
+        border: none;
     }
 
     input[type="checkbox"]:checked::before {
@@ -1724,7 +1705,7 @@
         font-size: 14px;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         input[type="checkbox"] {
             width: 4.071vw;
             height: 4.071vw;
@@ -1734,7 +1715,7 @@
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__checkbox-label {
             font-size: 4.071vw;
         }
@@ -1755,7 +1736,7 @@
         background-color: color-mix(in srgb, v.$gray-1 30%, v.$brand-1);
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__button {
             width: 45.293vw;
             height: 10.178vw;
@@ -1771,7 +1752,7 @@
         height: 40.556vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__right {
             height: 83.461vw;
         }
@@ -1789,7 +1770,7 @@
         z-index: 2;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__contact {
             width: 92.858vw;
             height: 22.901vw;
@@ -1804,6 +1785,7 @@
         left: 1.171vw;
         top: 1.025vw;
         gap: 1.757vw;
+
         &--paw {
             width: 1.698vw;
         }
@@ -1817,7 +1799,7 @@
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__contact-icons {
             left: 4.071vw;
             top: 2.5vw;
@@ -1844,7 +1826,7 @@
         right: 4.539vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__contact-text {
             font-size: 3.053vw;
             width: 31.552vw;
@@ -1861,7 +1843,7 @@
         bottom: 1.632vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__social {
             bottom: 2vw;
             right: 3.3vw;
@@ -1881,13 +1863,13 @@
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__social-link {
             width: 8vw;
 
             &--tiktok {
                 width: 8.5vw;
-                
+
             }
         }
     }
@@ -1902,7 +1884,7 @@
         width: 52.635vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__image {
             width: 90.76vw;
             top: 14vw;
@@ -1943,10 +1925,9 @@
         width: 1.83vw;
     }
 
-    &__card-text {
-    }
+    &__card-text {}
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__card {
             width: 77.354vw;
             height: 22.392vw;
@@ -1977,7 +1958,7 @@
         bottom: -5vw;
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         &__decoration {
             width: 90vw;
             right: -60vw;
