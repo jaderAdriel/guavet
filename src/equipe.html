@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="../dist/"/>
+    <link rel="stylesheet" href="styles/equipe.css">
+</head>
+
+<body>
+    <header class="header --bg-white" id="page-header">
+        <nav class="nav " id="page-navbar" role="navigation" aria-label="Menu principal">
+            <!-- Depois substituir pelo link do home -->
+            <a href="." class="nav__logo-link" aria-label="Página inicial">
+                <img class="nav__logo" src="assets/images/logo/guavet-header-logo-colorida.svg" alt="Logo da Guavet no Cabeçalho">
+            </a>
+
+            <button class="nav__menu-button" id="nav__menu-button" aria-label="Abrir ou fechar menu" aria-expanded="false" aria-controls="page-tabs">
+                <!-- icone é adicionado dinamicamente aqui -->
+            </button>
+
+            <ul class="nav__list" id="page-tabs">
+                <li class="nav__item"><a class="nav__link"  href="../src/index.html">Início</a></li>
+                <li class="nav__item"><a class="nav__link" href="../src/servicos.html">Serviços</a></li>
+                <li class="nav__item"><a class="nav__link nav__link--active" href="../src/equipe.html">Equipe</a></li>
+                <li class="nav__item"><a class="nav__link" href="../src/contate-nos.html">Contate-nos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2 class="hero__title">
+            <span>
+                Temos uma equipe de profissionais escolhida a dedo para garantir o melhor cuidado para o seu pet.
+            </span>
+        </h2>
+
+        <div class="bullets">
+            <div class="bullet__item bullet__item--person bullet__item--person-01">
+                <img src="assets/images/equipe/01-sm.png" alt="">
+            </div>
+
+            <div class="bullet__item bullet__item--person bullet__item--person-02">
+                <img src="assets/images/equipe/02-sm.png" alt="">
+            </div>
+
+            <div class="bullet__item bullet__item--person bullet__item--person-03">
+                <img src="assets/images/equipe/03-sm.png" alt="">
+            </div>
+
+            <div class="bullet__item bullet__item--person bullet__item--person-04">
+                <img src="assets/images/equipe/04-sm.png" alt="">
+            </div>
+
+            <div class="bullet__item bullet__item--person bullet__item--person-05">
+                <img src="assets/images/equipe/05-sm.png" alt="">
+            </div>
+
+            <div class="bullet__item bullet__item--person bullet__item--person-06">
+                <img src="assets/images/equipe/06-sm.png" alt="">
+            </div>
+
+            <div class="bullet__item bullet__item--icon bullet__item--dog">
+                <img src="assets/icons/dog-1.svg" alt="">
+            </div>
+
+            <div class="bullet__item bullet__item--icon bullet__item--bone">
+                <img src="assets/icons/bone.svg" alt="">
+            </div>
+
+            <div class="bullet__item bullet__item--icon bullet__item--heart">
+                <img src="assets/icons/heart.svg" alt="">
+            </div>
+
+            <div class="bullet__item bullet__item--icon bullet__item--paw">
+                <img src="assets/icons/paw.svg" alt="">
+            </div>
+
+            <div class="bullet__item bullet__item--icon bullet__item--rabbit">
+                <img src="assets/icons/rabbit.svg" alt="">
+            </div>
+        </div>
+        <div class="hero__bg">
+            <img class="hero__bg__img" src="assets/images/bg-hero-equipe.png" aria-hidden="true" alt="">
+        </div>
+    </section>
+
+    <footer class="footer-section --bg-brand --pd-x" id="page-footer">
+        <img class="footer-section__pata-img" src="assets/images/pata.png" aria-hidden="true" alt="imagem de pata">
+        <img class="footer-section__pata-img" src="assets/images/pata.png" aria-hidden="true" alt="imagem de pata">
+        <img class="footer-section__pata-img" src="assets/images/pata.png" aria-hidden="true" alt="imagem de pata">
+        <img class="footer-section__pata-img" src="assets/images/pata.png" aria-hidden="true" alt="imagem de pata">
+
+
+        <div class="footer__item--logo">
+            <div class="footer__item__animals">
+                <img src="assets/images/animals/cat-1.svg" alt="" aria-hidden="true">
+                <img src="assets/images/animals/bird.svg" alt="" aria-hidden="true">
+            </div>
+
+            <picture class="footer__item__logo">
+            <!-- Para telas maiores que 800px -->
+                <source srcset="assets/images/logo/logo-em-pe-branca.svg" media="(min-width: 800px)">
+                <img src="assets/images/logo/guavet-header-logo.svg" alt="Logo da guavet">
+            </picture>
+        </div>
+
+
+        <div class="footer__item footer__item--siga-nos">
+            <div class="footer__item__header">
+                <h3 class="footer__item__title">Siga-nos</h3>
+            </div>
+            <div class="footer__item__content">
+                <a href="" class="footer__item__content__item">
+                    <img src="assets/icons/facebook.svg" class="item-icon item-icon--white"  alt="Logo do facebook">
+                    <span>Guavet pet</span>
+                </a>
+                <a href="" class="footer__item__content__item">
+                    <img src="assets/icons/instagram.svg" class="item-icon item-icon--white" alt="Logo do instagram">
+                    <span>@guavetpet</span>
+                </a>
+                <a href="" class="footer__item__content__item">
+                    <img src="assets/icons/tiktok.svg" class="item-icon item-icon--white" alt="Logo do tiktok">
+                    <span>@guavetpet</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__item footer__item--contate-nos">
+            <div class="footer__item__header">
+                <h3 class="footer__item__title">Contate-nos</h3>
+            </div>
+            <div class="footer__item__content">
+                <a href="" class="footer__item__content__item">
+                    <img src="assets/icons/pin.svg" aria-hidden="true" class="item-icon item-icon--white">
+                    <span class="">
+                            Rua Atílio Pereira de Oliveira, 540, Bairro<br />
+                            Sandoval Moraes, Guanambi - BA
+                    </span>
+                </a>
+                <a href="social-item" class="footer__item__content__item">
+                    <img src="assets/icons/perm_phone_msg.svg" class="item-icon item-icon--white" alt="Logo de telefone">
+                    <span>(77) 3451-4236</span>
+                </a>
+                <a href="social-item" class="footer__item__content__item">
+                    <img src="assets/icons/perm_phone_msg.svg" class="item-icon item-icon--white" alt="Logo de telefone">
+                    <span>(77) 98809-2899</span>
+                </a>
+                <a href="social-item" class="footer__item__content__item">
+                    <img src="assets/icons/mail.svg" class="item-icon item-icon--white" alt="Logo de email">
+                    <span>contato@guavetpet.com.br</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__item footer__item--nav">
+            <div class="footer__item__header">
+                <h3 class="footer__item__title">Contate-nos</h3>
+            </div>
+            <ul class="footer__item__content" id="page-tabs">
+                <li class="nav__item"><a class="nav__link" href="#">Início</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Serviços</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Equipe</a></li>
+            </ul>
+        </div>
+        
+        <div class="animals" aria-hidden="true">
+            <img class="animals-hamster" src="assets/images/animals/hamister.svg" alt="" aria-hidden="true">
+            <img class="animals-dog" src="assets/images/animals/dog-1.svg" alt="" aria-hidden="true">
+        </div>
+    </footer>
+</body>
+<script>
+    const navbar = document.getElementById("page-navbar");
+    const header = document.getElementById("page-header")
+    const buttonMenu = navbar.querySelector(".nav__menu-button");
+    const logoImg = navbar.querySelector(".nav__logo")
+    const body = document.querySelector("body");
+
+    const closeMenuIconHTML = `
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.9844 2.42188L9.40625 8L14.9844 13.5781L13.5781 14.9844L8 9.40625L2.42188 14.9844L1.01562 13.5781L6.59375 8L1.01562 2.42188L2.42188 1.01562L8 6.59375L13.5781 1.01562L14.9844 2.42188Z" fill="currentColor"/>
+        </svg>`;
+
+    const openMenuIconHTMl = `
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`;
+
+
+    const handleWindowSize = () => {
+
+        if (window.innerWidth < 550) {
+            closeMenu();
+            navbar.classList.add("nav--mobile");
+        } else {
+            closeMenu();
+            navbar.classList.remove("nav--mobile");
+            navbar.classList.remove("nav--mobile--close");
+        }
+    }
+
+    window.addEventListener('load', (e) => { handleWindowSize() });
+    window.addEventListener('resize', (e) => { handleWindowSize() });
+
+    const openMenu = () => {
+        buttonMenu.innerHTML = closeMenuIconHTML;
+        // logoImg.src = 'assets/images/logo/guavet-header-logo-colorida.svg'
+
+        navbar.classList.add("nav--mobile--open");
+        navbar.classList.remove("nav--mobile--close");
+
+        buttonMenu.setAttribute("aria-expanded", "true");
+        
+        header.classList.add("header--fixed");
+        body.classList.add("no-scroll");
+    }
+
+    const closeMenu = () => {
+        buttonMenu.innerHTML = openMenuIconHTMl;
+        // logoImg.src = 'assets/images/logo/guavet-header-logo.svg';
+
+        navbar.classList.add("nav--mobile--close");
+        navbar.classList.remove("nav--mobile--open");
+        
+        buttonMenu.setAttribute("aria-expanded", "false");
+
+        header.classList.remove("header--fixed");
+        body.classList.remove("no-scroll");
+    }
+
+    buttonMenu.addEventListener("click", () => {
+        if (navbar.classList.contains("nav--mobile--open")) {
+            closeMenu();
+            return;
+        }
+
+        openMenu();
+    })
+
+</script>
+</html>
