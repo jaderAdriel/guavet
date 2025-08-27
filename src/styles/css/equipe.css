@@ -1111,8 +1111,9 @@ html, body {
 }
 @media (max-width: 41.25rem) {
   .team-section .animal-icon--middle {
-    top: 83rem;
-    left: 2rem;
+    top: 0;
+    left: 0;
+    transform: translateY(-150%);
     width: 5.4rem;
   }
   .team-section .animal-icon--end {
@@ -1226,6 +1227,7 @@ html, body {
     margin-top: 2rem;
   }
   .team-section .member--04 {
+    position: relative;
     margin-top: 15rem;
   }
   .team-section .member--04 .member__attributes {

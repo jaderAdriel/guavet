@@ -866,8 +866,9 @@ html, body {
         .animal-icon {
 
             &--middle {
-                top: 83rem;
-                left: 2rem;
+                top: 0;
+                left: 0;
+                transform: translateY(-150%);
                 width: 5.4rem;
             }
 
@@ -1009,6 +1010,7 @@ html, body {
         }
 
         .member--04 {
+            position: relative;
             margin-top: 15rem;
             .member__attributes {
                 max-width: 10.625rem;
