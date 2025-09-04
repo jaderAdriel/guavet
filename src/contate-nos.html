@@ -10,7 +10,7 @@
 
 <body>
     <header class="header --bg-white" id="page-header">
-        <nav class="nav " id="page-navbar" role="navigation" aria-label="Menu principal">
+        <nav class="nav nav--mobile--close" id="page-navbar" role="navigation" aria-label="Menu principal">
             <!-- Depois substituir pelo link do home -->
             <a href="." class="nav__logo-link" aria-label="Página inicial">
                 <img class="nav__logo" src="assets/images/logo/guavet-header-logo-colorida.svg" alt="Logo da Guavet no Cabeçalho">
@@ -58,8 +58,8 @@
                         <input class="form__input" required type="text" name="nome" placeholder="Seu nome" >
                     </div>
                     <div class="form__field">
-                        <label class="form__label" for="telefone">Telefone <span aria-label="Campo obrigatório">*</span> </label>
-                        <input class="form__input" required type="text" name="nome" placeholder="Telefone/WhatsApp">
+                        <label class="form__label" for="phone">Telefone <span aria-label="Campo obrigatório">*</span> </label>
+                        <input class="form__input" required type="text" name="phone" placeholder="Telefone/WhatsApp">
                     </div>
                     <div class="form__field">
                         <label class="form__label" for="mensagem">Mensagem<span aria-label="Campo obrigatório">*</span> </label>
@@ -76,6 +76,28 @@
 
 
             </form>
+            <script>
+                document.querySelector(".form").addEventListener("submit", function(event) {
+                    event.preventDefault(); // evita envio padrão
+
+                    // pega os valores do formulário
+                    const nome = document.querySelector('input[name="nome"]').value.trim();
+                    const telefone = document.querySelector('input[name="phone"]').value.trim(); // segundo input (telefone)
+                    const mensagem = document.querySelector('#mensagemTextarea').value.trim();
+
+                    // número fixo da empresa (inclua DDI 55 para Brasil)
+                    const numeroEmpresa = "5577988092899"; 
+
+                    // monta o texto para o WhatsApp
+                    const texto = `Olá, meu nome é ${nome}. Telefone/WhatsApp: ${telefone}. Mensagem: ${mensagem}`;
+
+                    // codifica o texto para URL
+                    const url = `https://wa.me/${numeroEmpresa}?text=${encodeURIComponent(texto)}`;
+
+                    // redireciona para o WhatsApp
+                    window.location.href = url;
+                });
+            </script>
 
         </div>
     </section>
@@ -144,10 +166,12 @@
 
             <div class="contact__header">
                     <h2 class="contact__title">Estamos ansiosos pelo seu contato</h2>
-                    <button>
-                        Liga pra gente
-                        <img src="assets/icons/perm_phone_msg.svg" alt="">
-                    </button>
+                    <a href="https://wa.me/5577988092899?text=Ol%C3%A1%2C%20vim%20do%20seu%20site">
+                        <button>
+                            Liga pra gente
+                            <img src="assets/icons/perm_phone_msg.svg" alt="">
+                        </button>
+                    </a>
                 </div>
         </div>
     </section>

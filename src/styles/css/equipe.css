@@ -481,28 +481,28 @@ html, body {
   display: inline-block;
 }
 .hero .bullet__item--icon .bullet__float {
-  animation: bullet-float 6s ease-in-out infinite;
+  animation: bullet-float 4s ease-in-out infinite;
 }
 .hero .bullet__item--person .bullet__float {
-  animation: person-float 6s ease-in-out infinite;
+  animation: person-float 3s ease-in-out infinite;
 }
 .hero .bullet__item--person-01 .bullet__float {
   animation-delay: 0s;
 }
 .hero .bullet__item--person-02 .bullet__float {
-  animation-delay: 1s;
-}
-.hero .bullet__item--person-03 .bullet__float {
   animation-delay: 2s;
 }
-.hero .bullet__item--person-04 .bullet__float {
-  animation-delay: 3s;
-}
-.hero .bullet__item--person-05 .bullet__float {
+.hero .bullet__item--person-03 .bullet__float {
   animation-delay: 4s;
 }
+.hero .bullet__item--person-04 .bullet__float {
+  animation-delay: 6s;
+}
+.hero .bullet__item--person-05 .bullet__float {
+  animation-delay: 8s;
+}
 .hero .bullet__item--person-06 .bullet__float {
-  animation-delay: 5s;
+  animation-delay: 10s;
 }
 .hero .bullet__item--dog .bullet__float {
   animation-delay: 0s;
@@ -851,7 +851,7 @@ html, body {
 }
 .team-section .member__image-container {
   padding: clamp(0.6125rem, 1.435vw, 1.1875rem);
-  background-color: #FFF6E7;
+  background-color: #E9ECEF;
   width: fit-content;
   height: fit-content;
   border-radius: min(max(0.5rem, 1.171vw), 1rem);

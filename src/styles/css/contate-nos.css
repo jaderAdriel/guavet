@@ -488,7 +488,7 @@ body {
 }
 #hero-section .form-container {
   background-color: #E9ECEF;
-  background-image: url("./../assets/images/grama.svg");
+  background-image: url("./../../assets/images/grama.svg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -501,14 +501,19 @@ body {
 #hero-section .form-container:after {
   content: "";
   position: absolute;
-  bottom: clamp(1rem, 2vw, 2rem);
+  bottom: 0.89rem;
   right: clamp(1rem, 2vw, 2rem);
   width: clamp(4.671rem, 7vw, 6.502rem);
   height: clamp(6rem, 9vw, 8.352rem);
-  background-image: url("./../assets/images/animals/cat-2.svg");
+  background-image: url("./../../assets/images/animals/cat-2.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+@media (max-width: 45rem) {
+  #hero-section .form-container:after {
+    bottom: 0rem;
+  }
 }
 #hero-section .form-container .form {
   padding: clamp(1rem, 5vw, 6rem);
