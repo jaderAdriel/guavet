@@ -837,7 +837,7 @@ body.no-scroll {
 }
 
 .services__grass {
-  background-image: url(../../dist/assets/images/grass-1.svg);
+  background-image: url(../../assets/images/grass-1.svg);
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
