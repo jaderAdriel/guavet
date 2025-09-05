@@ -6,6 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/css/home.css">
+    <style>
+        /* Estilos para transição suave dos depoimentos */
+        #testimonial-container {
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .feedback__arrow,
+        .feedback__dot {
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+        
+        .feedback__arrow:hover {
+            opacity: 0.7;
+        }
+        
+        .feedback__dot:hover {
+            opacity: 0.8;
+        }
+        
+        .feedback__dot {
+            width: 8px !important;
+            height: 8px !important;
+        }
+        
+        .feedback__dot circle {
+            fill: #ADB5BD !important;
+            transition: fill 0.3s ease;
+        }
+        
+        .feedback__dot--active circle {
+            fill: #FFFFFF !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -361,10 +395,10 @@
             </div>
 
             <div class="feedback__content-side">
-                <div class="feedback__testimonial">
+                <div class="feedback__testimonial" id="testimonial-container">
                     <img class="feedback__testimonial-quote" src="assets/icons/double-quote.svg" aria-hidden="true">
-                    <h3 class="feedback__testimonial-author">Diniz Jeni, tutora do José 🐱</h3>
-                    <p class="feedback__testimonial-text">
+                    <h3 class="feedback__testimonial-author" id="testimonial-author">Diniz Jeni, tutora do José 🐱</h3>
+                    <p class="feedback__testimonial-text" id="testimonial-text">
                         A minha experiência foi muita boa! Graças a Deus toda a equipe foi super humana e acolhedora com
                         José, meu gatinho. Tenho muita confiança em todos e agradeço a cada um desde a limpeza,
                         recepção, atendimento on-line e médicos veterinários pelo carinho sempre!
@@ -665,64 +699,64 @@
         </div>
     </footer>
 
-    <!-- <script>
-        const navbar = document.getElementById("page-navbar");
-        const header = document.getElementById("page-header")
-        const buttonMenu = navbar.querySelector(".nav__menu-button");
-        const logoImg = navbar.querySelector(".nav__logo")
-        const body = document.querySelector("body");
+    <script>
+        // const navbar = document.getElementById("page-navbar");
+        // const header = document.getElementById("page-header")
+        // const buttonMenu = navbar.querySelector(".nav__menu-button");
+        // const logoImg = navbar.querySelector(".nav__logo")
+        // const body = document.querySelector("body");
 
-        const closeMenuIconHTML = `
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.9844 2.42188L9.40625 8L14.9844 13.5781L13.5781 14.9844L8 9.40625L2.42188 14.9844L1.01562 13.5781L6.59375 8L1.01562 2.42188L2.42188 1.01562L8 6.59375L13.5781 1.01562L14.9844 2.42188Z" fill="currentColor"/>
-            </svg>`;
+        // const closeMenuIconHTML = `
+        //     <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        //         <path d="M14.9844 2.42188L9.40625 8L14.9844 13.5781L13.5781 14.9844L8 9.40625L2.42188 14.9844L1.01562 13.5781L6.59375 8L1.01562 2.42188L2.42188 1.01562L8 6.59375L13.5781 1.01562L14.9844 2.42188Z" fill="currentColor"/>
+        //     </svg>`;
 
-        const openMenuIconHTMl = `
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>`;
+        // const openMenuIconHTMl = `
+        //     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        //         <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        //     </svg>`;
 
 
-        const handleWindowSize = () => {
+        // const handleWindowSize = () => {
 
-            if (window.innerWidth < 550) {
-                closeMenu();
-                navbar.classList.add("nav--mobile");
-            } else {
-                closeMenu();
-                navbar.classList.remove("nav--mobile");
-                navbar.classList.remove("nav--mobile--close");
-            }
-        }
+        //     if (window.innerWidth < 550) {
+        //         closeMenu();
+        //         navbar.classList.add("nav--mobile");
+        //     } else {
+        //         closeMenu();
+        //         navbar.classList.remove("nav--mobile");
+        //         navbar.classList.remove("nav--mobile--close");
+        //     }
+        // }
 
-        window.addEventListener('load', (e) => { handleWindowSize() });
-        window.addEventListener('resize', (e) => { handleWindowSize() });
+        // window.addEventListener('load', (e) => { handleWindowSize() });
+        // window.addEventListener('resize', (e) => { handleWindowSize() });
 
-        const openMenu = () => {
-            buttonMenu.innerHTML = closeMenuIconHTML;
-            // logoImg.src = 'assets/images/logo/guavet-header-logo-colorida.svg'
+        // const openMenu = () => {
+        //     buttonMenu.innerHTML = closeMenuIconHTML;
+        //     // logoImg.src = 'assets/images/logo/guavet-header-logo-colorida.svg'
 
-            navbar.classList.add("nav--mobile--open");
-            navbar.classList.remove("nav--mobile--close");
+        //     navbar.classList.add("nav--mobile--open");
+        //     navbar.classList.remove("nav--mobile--close");
 
-            buttonMenu.setAttribute("aria-expanded", "true");
+        //     buttonMenu.setAttribute("aria-expanded", "true");
 
-            header.classList.add("header--fixed");
-            body.classList.add("no-scroll");
-        }
+        //     header.classList.add("header--fixed");
+        //     body.classList.add("no-scroll");
+        // }
 
-        const closeMenu = () => {
-            buttonMenu.innerHTML = openMenuIconHTMl;
-            // logoImg.src = 'assets/images/logo/guavet-header-logo.svg';
+        // const closeMenu = () => {
+        //     buttonMenu.innerHTML = openMenuIconHTMl;
+        //     // logoImg.src = 'assets/images/logo/guavet-header-logo.svg';
 
-            navbar.classList.add("nav--mobile--close");
-            navbar.classList.remove("nav--mobile--open");
+        //     navbar.classList.add("nav--mobile--close");
+        //     navbar.classList.remove("nav--mobile--open");
 
-            buttonMenu.setAttribute("aria-expanded", "false");
+        //     buttonMenu.setAttribute("aria-expanded", "false");
 
-            header.classList.remove("header--fixed");
-            body.classList.remove("no-scroll");
-        }
+        //     header.classList.remove("header--fixed");
+        //     body.classList.remove("no-scroll");
+        // }
 
         buttonMenu.addEventListener("click", () => {
             if (navbar.classList.contains("nav--mobile--open")) {
@@ -733,7 +767,85 @@
             openMenu();
         })
 
-    </script> -->
+        const testimonials = [
+            {
+                author: "Diniz Jeni, tutora do José 🐱",
+                text: "A minha experiência foi muita boa! Graças a Deus toda a equipe foi super humana e acolhedora com José, meu gatinho. Tenho muita confiança em todos e agradeço a cada um desde a limpeza, recepção, atendimento on-line e médicos veterinários pelo carinho sempre!"
+            },
+            {
+                author: "Tutora da Amora ❤️",
+                text: "Minha cachorrinha está se recuperando de um momento difícil, mas tem recebido um cuidado incrível da Dra. Diana e sua equipe. Com todo o carinho e profissionalismo deles, ela está melhorando dia após dia. Sou muito grata pelo excelente atendimento!"
+            },
+            {
+                author: "Tutores da Minnie 🐱",
+                text: "Ótima, excelente, atendimento de muita qualidade! O olho de nossa gatinha Minnie melhorou em menos de 1 semana, Dra. Mirella oftalmologista, é atenciosa, carinhosa com nossos bichinhos e cuidadosa também com nossas dificuldades."
+            }
+        ];
+
+        let currentTestimonialIndex = 0;
+        const testimonialAuthor = document.getElementById('testimonial-author');
+        const testimonialText = document.getElementById('testimonial-text');
+        const testimonialDots = document.querySelectorAll('.feedback__dot');
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (testimonialDots.length > 0) {
+                testimonialDots[0].classList.add('feedback__dot--active');
+            }
+        });
+
+        function updateTestimonial(index) {
+            const testimonialContainer = document.getElementById('testimonial-container');
+            testimonialContainer.style.opacity = '0.5';
+            
+            setTimeout(() => {
+                testimonialAuthor.textContent = testimonials[index].author;
+                testimonialText.textContent = testimonials[index].text;
+                
+                testimonialDots.forEach((dot, i) => {
+                    dot.classList.remove('feedback__dot--active');
+                    if (i === index) {
+                        dot.classList.add('feedback__dot--active');
+                        console.log(`Dot ${i} ativado para depoimento: ${testimonials[index].author}`);
+                    }
+                });
+                
+                testimonialContainer.style.opacity = '1';
+            }, 150);
+        }
+
+        function nextTestimonial() {
+            currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+            updateTestimonial(currentTestimonialIndex);
+        }
+
+        setInterval(nextTestimonial, 10000);
+
+        const leftArrow = document.querySelector('.feedback__arrow--left');
+        const rightArrow = document.querySelector('.feedback__arrow--right');
+
+        leftArrow.addEventListener('click', () => {
+            currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
+            updateTestimonial(currentTestimonialIndex);
+        });
+
+        rightArrow.addEventListener('click', () => {
+            currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+            updateTestimonial(currentTestimonialIndex);
+        });
+
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentTestimonialIndex = index;
+                updateTestimonial(currentTestimonialIndex);
+            });
+            
+            dot.style.cursor = 'pointer';
+        });
+
+        leftArrow.style.cursor = 'pointer';
+        rightArrow.style.cursor = 'pointer';
+
+    </script>
 </body>
 
 </html>

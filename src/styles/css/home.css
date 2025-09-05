@@ -524,6 +524,7 @@ body.no-scroll {
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -1647,6 +1648,7 @@ body.no-scroll {
 .feedback__container {
   display: flex;
   align-items: center;
+  position: relative;
   background-color: #72A45C;
   width: clamp(42.433rem, 88.287vw, 105.944rem);
   height: clamp(19.492rem, 40.556vw, 48.667rem);
@@ -1781,7 +1783,7 @@ body.no-scroll {
 }
 
 .feedback__content-side {
-  position: relative;
+  
 }
 
 .feedback__header {
@@ -1843,6 +1845,7 @@ body.no-scroll {
   flex-direction: column;
   position: relative;
   width: clamp(20.302rem, 42.24vw, 50.688rem);
+  height: clamp(10rem, 17vw, 20rem);
   border-radius: clamp(0.563rem, 1.171vw, 1.405rem);
   padding: clamp(0.844rem, 1.757vw, 2.108rem);
   background-color: #DDE9D8;
@@ -1855,6 +1858,8 @@ body.no-scroll {
     width: 100%;
     border-radius: 4.071vw;
     gap: 2.036vw;
+    height: 48vw;
+    padding: 5vw;
   }
 }
 
@@ -1888,6 +1893,13 @@ body.no-scroll {
 
 .feedback__testimonial-text {
   font-size: clamp(0.633rem, 1.318vw, 1.582rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  line-height: 1.4;
 }
 
 @media (max-width: 768px) {
@@ -1897,9 +1909,13 @@ body.no-scroll {
 }
 
 .feedback__pagination {
+  position: absolute;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 3.5vw;
+  right: 38vw;
   gap: clamp(0.704rem, 1.464vw, 1.757rem);
-  margin: clamp(1.442rem, 3vw, 3.6rem) 0 0 clamp(0.481rem, 1vw, 1.2rem);
 }
 
 .feedback__arrow {
@@ -1917,14 +1933,19 @@ body.no-scroll {
 
 .feedback__dot {
   fill: #ADB5BD;
-  width: clamp(0.282rem, 0.586vw, 0.703rem) .feedback__dot --active;
-  width-fill: #FFFFFF;
+  width: clamp(0.282rem, 0.586vw, 0.703rem);
+  height: clamp(0.282rem, 0.586vw, 0.703rem);
+}
+
+.feedback__dot--active {
+  fill: #FFFFFF;
 }
 
 @media (max-width: 768px) {
   .feedback__pagination {
-    margin-top: 10vw;
     gap: 5.089vw;
+    bottom: 7vw;
+    left: -18vw;
   }
 
   .feedback__arrow {
