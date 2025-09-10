@@ -83,7 +83,7 @@
             navbar.classList.add("nav--mobile--close");
             navbar.classList.remove("nav--mobile--open");
 
-             Menu.setAttribute("aria-expanded", "false");
+            buttonMenu.setAttribute("aria-expanded", "false");
 
             header.classList.remove("header--fixed");
             body.classList.remove("no-scroll");
@@ -435,14 +435,16 @@
                 <h3 class="footer__item__title">Siga-nos</h3>
             </div>
             <div class="footer__item__content">
-                <a href="" class="footer__item__content__item">
-                    <img src="assets/icons/facebook.svg" class="item-icon item-icon--white"  alt="Logo do facebook">
+                <a href="https://www.facebook.com/Guavet/" class="footer__item__content__item" target="_blank" rel="noopener noreferrer">
+                    <img class="form__social-img" src="assets/icons/facebook.svg" aria-hidden="true">
                     <span>Guavet pet</span>
                 </a>
-                <a href="" class="footer__item__content__item">
-                    <img src="assets/icons/instagram.svg" class="item-icon item-icon--white" alt="Logo do instagram">
+
+                <a href="https://www.instagram.com/guavetpet/" class="footer__item__content__item" target="_blank" rel="noopener noreferrer">
+                    <img class="form__social-img" src="assets/icons/instagram.svg" aria-hidden="true">
                     <span>@guavetpet</span>
                 </a>
+
                 <a href="" class="footer__item__content__item">
                     <img src="assets/icons/tiktok.svg" class="item-icon item-icon--white" alt="Logo do tiktok">
                     <span>@guavetpet</span>
@@ -462,18 +464,21 @@
                             Sandoval Moraes, Guanambi - BA
                     </span>
                 </a>
-                <a href="social-item" class="footer__item__content__item">
+                <a href="https://wa.me/557734514236" target="_blank" rel="noopener noreferrer" class="footer__item__content__item">
                     <img src="assets/icons/perm_phone_msg.svg" class="item-icon item-icon--white" alt="Logo de telefone">
                     <span>(77) 3451-4236</span>
                 </a>
-                <a href="social-item" class="footer__item__content__item">
+
+                <a href="https://wa.me/5577988092899" target="_blank" rel="noopener noreferrer" class="footer__item__content__item">
                     <img src="assets/icons/perm_phone_msg.svg" class="item-icon item-icon--white" alt="Logo de telefone">
                     <span>(77) 98809-2899</span>
                 </a>
-                <a href="social-item" class="footer__item__content__item">
+
+                <div class="footer__item__content__item">
                     <img src="assets/icons/mail.svg" class="item-icon item-icon--white" alt="Logo de email">
                     <span>contato@guavetpet.com.br</span>
-                </a>
+                </div>
+
             </div>
         </div>
 
@@ -482,11 +487,13 @@
                 <h3 class="footer__item__title">Contate-nos</h3>
             </div>
             <ul class="footer__item__content" id="page-tabs">
-                <li class="nav__item"><a class="nav__link" href="#">Início</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">Serviços</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">Equipe</a></li>
+                <li class="nav__item"><a class="nav__link" href="index.html">Início</a></li>
+                <li class="nav__item"><a class="nav__link nav__link--active" href=".">Serviços</a></li>
+                <li class="nav__item"><a class="nav__link" href="equipe.html">Equipe</a></li>
+                <li class="nav__item"><a class="nav__link" href="contate-nos.html">Contate-nos</a></li>
             </ul>
         </div>
+        
         <div class="animals" aria-hidden="true">
             <img class="animals-hamster" src="assets/images/animals/hamister.svg" alt="" aria-hidden="true">
             <img class="animals-dog" src="assets/images/animals/dog-1.svg" alt="" aria-hidden="true">

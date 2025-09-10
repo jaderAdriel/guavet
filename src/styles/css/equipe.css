@@ -255,7 +255,7 @@ body.no-scroll {
   padding-top: 2.5rem;
   padding-bottom: 4.125rem;
   overflow: hidden;
-  z-index: -2;
+  z-index: 0;
   gap: 2.5rem;
 }
 .footer-section__pata-img {
