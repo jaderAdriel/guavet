@@ -525,10 +525,8 @@ body.no-scroll {
   width: 3.6vw;
 }
 .hero__image {
-  width: 91.858vw;
-  height: 95vw;
-  -webkit-clip-path: url(#hero__path2--mobile);
-  clip-path: url(#hero__path2--mobile);
+  width: fit-content;
+  height: fit-content;
 }
 .hero__img {
   width: 41.73vw;
@@ -600,8 +598,10 @@ body.no-scroll {
   }
   .hero__img {
     width: 91.858vw;
-    height: 77.099vw;
-    margin-bottom: 12vw;
+    height: 95vw;
+    -webkit-clip-path: url(#hero__path2--mobile);
+    clip-path: url(#hero__path2--mobile);
+    overflow: hidden;
   }
   .hero__text {
     gap: 2.928vw;
