@@ -525,8 +525,10 @@ body.no-scroll {
   width: 3.6vw;
 }
 .hero__image {
-  width: fit-content;
-  height: fit-content;
+  width: 91.858vw;
+  height: 95vw;
+  -webkit-clip-path: url(#hero__path2--mobile);
+  clip-path: url(#hero__path2--mobile);
 }
 .hero__img {
   width: 41.73vw;
