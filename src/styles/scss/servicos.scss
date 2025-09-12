@@ -233,8 +233,13 @@ body {
             font-size: 1.318vw;
             padding: 0.878vw;
             width: 17.716vw;
+            gap: 0.5rem;
             height: 3.807vw;
             border-radius: 0.586vw;
+        }
+
+        &-button-icon {
+            height: 0.7rem;
         }
 
         &-button:hover {
@@ -266,7 +271,7 @@ body {
             }
 
             &-button {
-                width: 62.341vw;
+                width: 67.341vw;
                 height: 13.232vw;
                 padding: 3.053vw 6.107vw;
                 font-size: 4.58vw;

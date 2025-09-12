@@ -106,6 +106,10 @@ body.no-scroll {
   overflow: hidden !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .--pd-x {
   padding-left: clamp(1em, 5vw, 5.625em);
   padding-right: clamp(1em, 5vw, 5.625em);
@@ -601,8 +605,12 @@ body {
   font-size: 1.318vw;
   padding: 0.878vw;
   width: 17.716vw;
+  gap: 0.5rem;
   height: 3.807vw;
   border-radius: 0.586vw;
+}
+.main-service__info-button-icon {
+  height: 0.7rem;
 }
 .main-service__info-button:hover {
   color: #FFFFFF;
@@ -629,7 +637,7 @@ body {
     width: 100%;
   }
   .main-service__info-button {
-    width: 62.341vw;
+    width: 67.341vw;
     height: 13.232vw;
     padding: 3.053vw 6.107vw;
     font-size: 4.58vw;

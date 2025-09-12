@@ -17,6 +17,9 @@ body.no-scroll {
     overflow: hidden !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 .--pd-x {
     padding-left: v.$padding-x;

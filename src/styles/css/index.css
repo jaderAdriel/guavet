@@ -105,6 +105,10 @@ body.no-scroll {
   overflow: hidden !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .--pd-x {
   padding-left: clamp(1em, 5vw, 5.625em);
   padding-right: clamp(1em, 5vw, 5.625em);
