@@ -720,6 +720,7 @@ body {
   font-size: clamp(1.5rem, 1.318vw, 2rem);
   line-height: 125%;
   letter-spacing: 0%;
+  text-align: center;
 }
 .contact .contact__header button {
   padding: 0.75rem 1.5rem;
