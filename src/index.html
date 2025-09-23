@@ -5,37 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16884844156"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-16884844156');
+    </script>
     <link rel="stylesheet" href="styles/css/home.css">
     <style>
         /* Estilos para transição suave dos depoimentos */
         #testimonial-container {
             transition: opacity 0.3s ease-in-out;
         }
-        
+
         .feedback__arrow,
         .feedback__dot {
             cursor: pointer;
             transition: opacity 0.2s ease;
         }
-        
+
         .feedback__arrow:hover {
             opacity: 0.7;
         }
-        
+
         .feedback__dot:hover {
             opacity: 0.8;
         }
-        
+
         .feedback__dot {
             width: 8px !important;
             height: 8px !important;
         }
-        
+
         .feedback__dot circle {
             fill: #ADB5BD !important;
             transition: fill 0.3s ease;
         }
-        
+
         .feedback__dot--active circle {
             fill: #FFFFFF !important;
         }
@@ -478,7 +485,7 @@
                 </form>
 
                 <script>
-                    document.querySelector("form").addEventListener("submit", function(event) {
+                    document.querySelector("form").addEventListener("submit", function (event) {
                         event.preventDefault(); // evita envio padrão
 
                         // pega os valores do formulário
@@ -487,7 +494,7 @@
                         const mensagem = document.querySelector('#message').value.trim();
 
                         // número fixo da empresa (inclua DDI 55 para Brasil)
-                        const numeroEmpresa = "5577988092899"; 
+                        const numeroEmpresa = "5577988092899";
 
                         // monta o texto para o WhatsApp
                         const texto = `Olá, meu nome é ${nome}. Telefone/WhatsApp: ${telefone}. Mensagem: ${mensagem}`;
@@ -627,7 +634,7 @@
             </div>
 
             <picture class="footer__item__logo">
-            <!-- Para telas maiores que 800px -->
+                <!-- Para telas maiores que 800px -->
                 <source srcset="assets/images/logo/logo-em-pe-branca.svg" media="(min-width: 800px)">
                 <img src="assets/images/logo/guavet-header-logo.svg" alt="Logo da guavet">
             </picture>
@@ -639,12 +646,14 @@
                 <h3 class="footer__item__title">Siga-nos</h3>
             </div>
             <div class="footer__item__content">
-                <a href="https://www.facebook.com/Guavet/" class="footer__item__content__item" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/Guavet/" class="footer__item__content__item" target="_blank"
+                    rel="noopener noreferrer">
                     <img class="item-icon " src="assets/icons/facebook.svg" aria-hidden="true">
                     <span>Guavet pet</span>
                 </a>
 
-                <a href="https://www.instagram.com/guavetpet/" class="footer__item__content__item" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/guavetpet/" class="footer__item__content__item" target="_blank"
+                    rel="noopener noreferrer">
                     <img class="item-icon " src="assets/icons/instagram.svg" aria-hidden="true">
                     <span>@guavetpet</span>
                 </a>
@@ -664,17 +673,21 @@
                 <a href="" class="footer__item__content__item">
                     <img src="assets/icons/pin.svg" aria-hidden="true" class="item-icon item-icon--white">
                     <span class="">
-                            Rua Atílio Pereira de Oliveira, 540, Bairro<br />
-                            Sandoval Moraes, Guanambi - BA
+                        Rua Atílio Pereira de Oliveira, 540, Bairro<br />
+                        Sandoval Moraes, Guanambi - BA
                     </span>
                 </a>
-                <a href="https://wa.me/557734514236" target="_blank" rel="noopener noreferrer" class="footer__item__content__item">
-                    <img src="assets/icons/perm_phone_msg.svg" class="item-icon item-icon--white" alt="Logo de telefone">
+                <a href="https://wa.me/557734514236" target="_blank" rel="noopener noreferrer"
+                    class="footer__item__content__item">
+                    <img src="assets/icons/perm_phone_msg.svg" class="item-icon item-icon--white"
+                        alt="Logo de telefone">
                     <span>(77) 3451-4236</span>
                 </a>
 
-                <a href="https://wa.me/5577988092899" target="_blank" rel="noopener noreferrer" class="footer__item__content__item">
-                    <img src="assets/icons/perm_phone_msg.svg" class="item-icon item-icon--white" alt="Logo de telefone">
+                <a href="https://wa.me/5577988092899" target="_blank" rel="noopener noreferrer"
+                    class="footer__item__content__item">
+                    <img src="assets/icons/perm_phone_msg.svg" class="item-icon item-icon--white"
+                        alt="Logo de telefone">
                     <span>(77) 98809-2899</span>
                 </a>
 
@@ -697,7 +710,7 @@
                 <li class="nav__item"><a class="nav__link" href="contate-nos.html">Contate-nos</a></li>
             </ul>
         </div>
-        
+
         <div class="animals" aria-hidden="true">
             <img class="animals-hamster" src="assets/images/animals/hamister.svg" alt="" aria-hidden="true">
             <img class="animals-dog" src="assets/images/animals/dog-1.svg" alt="" aria-hidden="true">
@@ -726,7 +739,7 @@
         const testimonialText = document.getElementById('testimonial-text');
         const testimonialDots = document.querySelectorAll('.feedback__dot');
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             if (testimonialDots.length > 0) {
                 testimonialDots[0].classList.add('feedback__dot--active');
             }
@@ -735,11 +748,11 @@
         function updateTestimonial(index) {
             const testimonialContainer = document.getElementById('testimonial-container');
             testimonialContainer.style.opacity = '0.5';
-            
+
             setTimeout(() => {
                 testimonialAuthor.textContent = testimonials[index].author;
                 testimonialText.textContent = testimonials[index].text;
-                
+
                 testimonialDots.forEach((dot, i) => {
                     dot.classList.remove('feedback__dot--active');
                     if (i === index) {
@@ -747,7 +760,7 @@
                         console.log(`Dot ${i} ativado para depoimento: ${testimonials[index].author}`);
                     }
                 });
-                
+
                 testimonialContainer.style.opacity = '1';
             }, 150);
         }
@@ -777,7 +790,7 @@
                 currentTestimonialIndex = index;
                 updateTestimonial(currentTestimonialIndex);
             });
-            
+
             dot.style.cursor = 'pointer';
         });
 
